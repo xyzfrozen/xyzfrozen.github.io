@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="xyzfrozen">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+            <link rel="preconnect" href="https://evan.beee.top" crossorigin>
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://xyzfrozen.github.io/undefined/hash/hash/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hash">
+<meta property="og:url" content="https://xyzfrozen.github.io/undefined/Hash/Hash/">
+<meta property="og:site_name" content="xyzfrozen の 小站">
+<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xyzfrozen.github.io/images/redefine-og.webp">
+<meta property="article:published_time" content="2023-10-13T15:09:44.000Z">
+<meta property="article:modified_time" content="2023-12-09T16:19:15.339Z">
+<meta property="article:author" content="xyzfrozen">
+<meta property="article:tag" content="字符串">
+<meta property="article:tag" content="Hash">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xyzfrozen.github.io/images/redefine-og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            Hash | xyzfrozen の 小站
+        
+    </title>
+
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fonts/Chillax/chillax.css">
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/css/build/tailwind.css">
+    
+
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fonts/GeistMono/geist-mono.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fonts/Geist/geist.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"xyzfrozen.github.io","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":6,"number":true,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/image/miku x Darling.png","dark":"/image/Miku.png"},"title":"xyzfrozen の 小站","subtitle":{"text":["My darling,stay gold"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":"https://github.com/xyzfrozen","instagram":null,"zhihu":null,"twitter":null,"email":"1685550699@qq.com","Luogu":"https://www.luogu.com.cn/user/749714","cnblogs":"https://www.cnblogs.com/xyzfrozen/"},"qrs":{"weixin":"w6861k2k"}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"https://xyzfrozen.github.io/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"About":{"icon":"fa-regular fa-user","submenus":null,"Me":"/about"}},"search":{"enable":true,"preload":true},"tags":{"Tags":{"icon":"fa-solid fa-tags","path":"/tags"}},"categories":{"Categories":{"icon":"fa-solid fa-folder","path":"/categories"}}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":"Welcome","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":10}},"footerStart":"2023/9/30 23:45:14"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fontawesome/regular.min.css">
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+	<span class="scroll-progress-bar"></span>
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                xyzfrozen の 小站
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="https://xyzfrozen.github.io/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    归档
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    关于
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="https://xyzfrozen.github.io/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                归档
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-regular fa-user fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">118</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">9</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">121</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			<div class="w-full flex items-center pt-6 justify-start">
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">Hash</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/image/author.jpg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">xyzfrozen</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv5</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-10-13 23:09:44</span>
+        <span class="mobile">2023-10-13 23:09:44</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-12-10 00:19:15</span>
+            <span class="mobile">2023-12-10 00:19:15</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/note/">note</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Hash/">Hash</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<h1 id="Hash"><a href="#Hash" class="headerlink" title="Hash"></a>Hash</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/xyzfrozen/Cdn/img/202310132311740.png"
+                      alt="img"
+                ></p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ull <span class="title">get</span><span class="params">(<span class="type">int</span> l,<span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> h[r]-h[l<span class="number">-1</span>]*p[r-l<span class="number">+1</span>];        <span class="comment">//这步其实是将h[l-1]左移</span></span><br><span class="line">&#125;                                       <span class="comment">//其目的事实上是为了将h[l-1]的高位与h[r]相对齐从而才可以未完成计算</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%s&quot;</span>,&amp;n,&amp;m,str<span class="number">+1</span>);</span><br><span class="line"></span><br><span class="line">    p[<span class="number">0</span>]=<span class="number">1</span>;                         <span class="comment">//注意这步千万不要忘了 最开始的权值必须赋值为1 否则接下来就会出错</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        p[i]=p[i<span class="number">-1</span>]*P;                  <span class="comment">//计算每个位上的相应权值</span></span><br><span class="line">        h[i]=h[i<span class="number">-1</span>]*P+str[i]-<span class="string">&#x27;a&#x27;</span><span class="number">+1</span>;     <span class="comment">//计算字符串前缀值</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>已知一个字符串被称为 $k$-回文串的充要条件是它自身是回文串，并且它长为 $\lfloor \frac{n}{2} \rfloor$ 的前缀和后缀是 $(k-1)$-回文串</p>
+<p>任意字符串 (包括空串) 都是 $0$-回文串</p>
+<p>一个字符串的回文度数就是这个字符串的 $k$ 的最大值</p>
+<p>对于一个给定的字符串，求所有前缀的回文度数之和</p>
+<p>考虑 $hash$ 只要自己是回文串，就可以靠儿子 $[n&gt;&gt;1]$ 转移，因为自己回文，所以前&#x2F;后缀相同，就不用判断后缀了</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">5e6</span><span class="number">+10</span>,P=<span class="number">131</span>;</span><br><span class="line"><span class="type">int</span> n,ans,L,R; <span class="comment">//前/后缀 hash 值</span></span><br><span class="line"><span class="type">int</span> p[N],f[N];</span><br><span class="line"><span class="type">char</span> s[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,s<span class="number">+1</span>);</span><br><span class="line">    n=<span class="built_in">strlen</span>(s<span class="number">+1</span>);</span><br><span class="line">    p[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n<span class="number">+1</span>;i++) p[i]=p[i<span class="number">-1</span>]*P;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        L=L+(s[i]-<span class="string">&#x27;a&#x27;</span><span class="number">+1</span>)*p[i<span class="number">-1</span>];</span><br><span class="line">        R=R*P+(s[i]-<span class="string">&#x27;a&#x27;</span><span class="number">+1</span>);</span><br><span class="line">        <span class="keyword">if</span>(L==R) f[i]=f[i&gt;&gt;<span class="number">1</span>]<span class="number">+1</span>;</span><br><span class="line">        ans+=f[i];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%llu&quot;</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<hr>
+<p>双 $hash$</p>
+<p>为了防止 $H(S_1)&#x3D;H(S_2)$ 的字符串冲突</p>
+<p>用两个 $hash$ 函数或更多算</p>
+<hr>
+<p>$hash$ 为什么模数取质数？</p>
+<p>防止等差数列等具有特殊性质的序列，这样会浪费空间 $(Q,d)$</p>
+<p>取质数能最小化浪费的空间</p>
+<hr>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4503"  title="P4503 [CTSC2014] 企鹅 QQ">P4503 [CTSC2014] 企鹅 QQ<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>枚举不同的那个字符 $now$，考虑 $hash$ $[1,now-1]$ 和 $[now+1,n]$ 然后给后缀 $hash$ $\times p^{now-1}$</p>
+<p>这样暴力比较还是 $O(n^2)$ 的</p>
+<p>我们把刚才的 $hash$ 排个序，然后每个点往后找就行了</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">3e4</span><span class="number">+10</span>,M=<span class="number">210</span>,P=<span class="number">131</span>;</span><br><span class="line"><span class="type">int</span> n,m,z,ans;</span><br><span class="line">ull hl[N][M],hr[N][M],p[M],h[N];</span><br><span class="line"><span class="type">char</span> s[N][M];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">calc</span><span class="params">(<span class="type">int</span> x)</span></span>&#123;<span class="keyword">return</span> (x&lt;<span class="number">2</span>)?(<span class="number">0</span>):(x*(x<span class="number">-1</span>)/<span class="number">2</span>);&#125; <span class="comment">//C_n^2</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    n=<span class="built_in">fr</span>(),m=<span class="built_in">fr</span>(),z=<span class="built_in">fr</span>();</span><br><span class="line">    p[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;M;i++) p[i]=p[i<span class="number">-1</span>]*P;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,s[i]<span class="number">+1</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>,k=m;j&lt;=m;j++,k--)</span><br><span class="line">            hl[i][j]=hl[i][j<span class="number">-1</span>]*P+s[i][j],hr[i][k]=hr[i][k<span class="number">+1</span>]+s[i][k]*p[m-k];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> now=<span class="number">1</span>;now&lt;=m;now++) <span class="comment">//不同的那个字符</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">            h[i]=hl[i][now<span class="number">-1</span>]+hr[i][now<span class="number">+1</span>]*p[now<span class="number">-1</span>];</span><br><span class="line">        <span class="built_in">sort</span>(h<span class="number">+1</span>,h<span class="number">+1</span>+n);</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> j=i<span class="number">+1</span>;</span><br><span class="line">            <span class="keyword">while</span>(j&lt;=n &amp;&amp; h[j]==h[i]) j++;</span><br><span class="line">            ans+=<span class="built_in">calc</span>(j<span class="number">-1</span>-i<span class="number">+1</span>);</span><br><span class="line">            i=j<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">fw</span>(ans);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<hr>
+<p>一个字符串</p>
+<ol>
+<li><p>修改字符 $a[x]&#x3D;c$</p>
+</li>
+<li><p>查询子串 $[l,r]$ 的 $hash$ 值</p>
+</li>
+</ol>
+<p>线段树维护，t.hl*p[qr-t.r];</p>
+<p>$O((n+m)\log n)$</p>
+<hr>
+<p><a class="link"   target="_blank" rel="noopener" href="https://loj.ac/p/3520" >#3520. 「JOI Open 2021」杂交 - 题目 - LibreOJ (loj.ac)<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>同一个字符串杂交两次，相邻等价于一次杂交，否则等价于不杂交</p>
+<p>于是一个串的杂交次一定是 $0&#x2F;1$，考虑顺序共有 $9$ 种，直接暴力维护 $Hash$，然后询问修改并线段树维护即可</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ins insert</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pt putchar(<span class="string">&#x27; &#x27;</span>)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> nl puts(<span class="string">&quot;&quot;</span>)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pi pair<span class="string">&lt;int,int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> go(it) for(auto &amp;it:as[x])</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">2e5</span><span class="number">+10</span>,P=<span class="number">1331</span>,Q=<span class="number">1e9</span><span class="number">+7</span>;</span><br><span class="line"><span class="type">int</span> n,m,cnt,l,r;</span><br><span class="line"><span class="type">int</span> A[N],B[N],C[N],p[N],one[N],two[N],tmp[N];</span><br><span class="line"><span class="type">char</span> s[N];</span><br><span class="line">map&lt;<span class="type">char</span>,<span class="type">int</span>&gt; cast&#123;&#123;<span class="string">&#x27;J&#x27;</span>,<span class="number">0</span>&#125;,&#123;<span class="string">&#x27;O&#x27;</span>,<span class="number">1</span>&#125;,&#123;<span class="string">&#x27;I&#x27;</span>,<span class="number">2</span>&#125;&#125;;</span><br><span class="line">unordered_set&lt;<span class="type">int</span>&gt; ok;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span>&#123;</span><br><span class="line">    <span class="type">int</span> l,r;</span><br><span class="line">    <span class="type">int</span> h,tag;</span><br><span class="line">    <span class="built_in">node</span>()&#123;&#125;</span><br><span class="line">    <span class="built_in">node</span>(<span class="type">int</span> l,<span class="type">int</span> r,<span class="type">int</span> h=<span class="number">0</span>,<span class="type">int</span> tag=<span class="number">-1</span>):</span><br><span class="line">        <span class="built_in">l</span>(l),<span class="built_in">r</span>(r),<span class="built_in">h</span>(h),<span class="built_in">tag</span>(tag)&#123;&#125;</span><br><span class="line">&#125;tr[N*<span class="number">4</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">fr</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> x=<span class="number">0</span>,flag=<span class="number">1</span>;</span><br><span class="line">    <span class="type">char</span> ch=<span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">while</span>(ch&lt;<span class="string">&#x27;0&#x27;</span> || ch&gt;<span class="string">&#x27;9&#x27;</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(ch==<span class="string">&#x27;-&#x27;</span>) flag=<span class="number">-1</span>;</span><br><span class="line">        ch=<span class="built_in">getchar</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(ch&gt;=<span class="string">&#x27;0&#x27;</span> &amp;&amp; ch&lt;=<span class="string">&#x27;9&#x27;</span>)&#123;</span><br><span class="line">        x=x*<span class="number">10</span>+(ch-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">        ch=<span class="built_in">getchar</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> x*flag;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">fw</span><span class="params">(<span class="type">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x&lt;<span class="number">0</span>) <span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>),x=-x;</span><br><span class="line">    <span class="keyword">if</span>(x&gt;<span class="number">9</span>) <span class="built_in">fw</span>(x/<span class="number">10</span>);</span><br><span class="line">    <span class="built_in">putchar</span>(x%<span class="number">10</span>+<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">max</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span>&#123;<span class="keyword">return</span> a&gt;b?a:b;&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">min</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span>&#123;<span class="keyword">return</span> a&lt;b?a:b;&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">mod</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y)</span></span>&#123;<span class="keyword">if</span>((x+=y)&gt;=Q) x-=Q;<span class="keyword">return</span> x;&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">add</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y)</span></span>&#123;<span class="keyword">return</span> (<span class="number">6</span>-x-y)%<span class="number">3</span>;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">chf</span><span class="params">(<span class="type">int</span> idx)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    node &amp;t=tr[idx],&amp;ls=tr[idx&lt;&lt;<span class="number">1</span>],&amp;rs=tr[idx&lt;&lt;<span class="number">1</span>|<span class="number">1</span>];</span><br><span class="line">    <span class="type">int</span> mid=(t.l+t.r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    t.h=(ls.h*p[t.r-mid]%Q+rs.h)%Q;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Tag</span><span class="params">(<span class="type">int</span> idx,<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    node &amp;t=tr[idx];</span><br><span class="line">    <span class="keyword">if</span>(!x) t.h=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(x==<span class="number">1</span>) t.h=one[t.r-t.l<span class="number">+1</span>];</span><br><span class="line">    <span class="keyword">else</span> t.h=two[t.r-t.l<span class="number">+1</span>];</span><br><span class="line">    t.tag=x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">chs</span><span class="params">(<span class="type">int</span> idx)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    node &amp;t=tr[idx];</span><br><span class="line">    <span class="keyword">if</span>(!~t.tag) <span class="keyword">return</span>;</span><br><span class="line">    <span class="built_in">Tag</span>(idx&lt;&lt;<span class="number">1</span>,t.tag),<span class="built_in">Tag</span>(idx&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,t.tag);</span><br><span class="line">    t.tag=<span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">build</span><span class="params">(<span class="type">int</span> ql,<span class="type">int</span> qr,<span class="type">int</span> idx)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    tr[idx]=<span class="built_in">node</span>(ql,qr);</span><br><span class="line">    <span class="keyword">if</span>(ql==qr) <span class="keyword">return</span> <span class="built_in">void</span>(tr[idx].h=cast[s[ql]]);</span><br><span class="line">    <span class="type">int</span> mid=(ql+qr)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    <span class="built_in">build</span>(ql,mid,idx&lt;&lt;<span class="number">1</span>),<span class="built_in">build</span>(mid<span class="number">+1</span>,qr,idx&lt;&lt;<span class="number">1</span>|<span class="number">1</span>);</span><br><span class="line">    <span class="built_in">chf</span>(idx);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">modify</span><span class="params">(<span class="type">int</span> ql,<span class="type">int</span> qr,<span class="type">int</span> idx,<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    node &amp;t=tr[idx];</span><br><span class="line">    <span class="keyword">if</span>(ql&lt;=t.l &amp;&amp; qr&gt;=t.r)</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">void</span>(<span class="built_in">Tag</span>(idx,x));</span><br><span class="line">    <span class="built_in">chs</span>(idx);</span><br><span class="line">    <span class="type">int</span> mid=(t.l+t.r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(ql&lt;=mid) <span class="built_in">modify</span>(ql,qr,idx&lt;&lt;<span class="number">1</span>,x);</span><br><span class="line">    <span class="keyword">if</span>(qr&gt;mid) <span class="built_in">modify</span>(ql,qr,idx&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,x);</span><br><span class="line">    <span class="built_in">chf</span>(idx);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">calc</span><span class="params">(<span class="type">int</span> s[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> v=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        v=(v*P%Q+s[i])%Q;</span><br><span class="line">    <span class="keyword">return</span> v;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    n=<span class="built_in">fr</span>();</span><br><span class="line">    p[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) p[i]=p[i<span class="number">-1</span>]*P%Q;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) one[i]=<span class="built_in">mod</span>(one[i<span class="number">-1</span>]*P%Q,<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) two[i]=<span class="built_in">mod</span>(two[i<span class="number">-1</span>]*P%Q,<span class="number">2</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,s<span class="number">+1</span>);<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) A[i]=cast[s[i]];</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,s<span class="number">+1</span>);<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) B[i]=cast[s[i]];</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,s<span class="number">+1</span>);<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) C[i]=cast[s[i]];</span><br><span class="line"></span><br><span class="line">    <span class="comment">//A B C AB AC BC ABC ACB BCA</span></span><br><span class="line">    ok.<span class="built_in">ins</span>(<span class="built_in">calc</span>(A));ok.<span class="built_in">ins</span>(<span class="built_in">calc</span>(B));ok.<span class="built_in">ins</span>(<span class="built_in">calc</span>(C));</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) tmp[i]=<span class="built_in">add</span>(A[i],B[i]);ok.<span class="built_in">ins</span>(<span class="built_in">calc</span>(tmp));</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) tmp[i]=<span class="built_in">add</span>(B[i],C[i]);ok.<span class="built_in">ins</span>(<span class="built_in">calc</span>(tmp));</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) tmp[i]=<span class="built_in">add</span>(A[i],C[i]);ok.<span class="built_in">ins</span>(<span class="built_in">calc</span>(tmp));</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) tmp[i]=<span class="built_in">add</span>(<span class="built_in">add</span>(A[i],B[i]),C[i]);ok.<span class="built_in">ins</span>(<span class="built_in">calc</span>(tmp));</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) tmp[i]=<span class="built_in">add</span>(<span class="built_in">add</span>(A[i],C[i]),B[i]);ok.<span class="built_in">ins</span>(<span class="built_in">calc</span>(tmp));</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) tmp[i]=<span class="built_in">add</span>(<span class="built_in">add</span>(B[i],C[i]),A[i]);ok.<span class="built_in">ins</span>(<span class="built_in">calc</span>(tmp));</span><br><span class="line"></span><br><span class="line">    m=<span class="built_in">fr</span>(),<span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,s<span class="number">+1</span>);</span><br><span class="line">    <span class="built_in">build</span>(<span class="number">1</span>,n,<span class="number">1</span>);</span><br><span class="line">    <span class="built_in">puts</span>(ok.<span class="built_in">find</span>(tr[<span class="number">1</span>].h)!=ok.<span class="built_in">end</span>()?<span class="string">&quot;Yes&quot;</span>:<span class="string">&quot;No&quot;</span>);</span><br><span class="line">    <span class="keyword">while</span>(m--)</span><br><span class="line">    &#123;</span><br><span class="line">        l=<span class="built_in">fr</span>(),r=<span class="built_in">fr</span>();</span><br><span class="line">        <span class="built_in">modify</span>(l,r,<span class="number">1</span>,cast[<span class="built_in">getchar</span>()]);</span><br><span class="line">        <span class="built_in">puts</span>(ok.<span class="built_in">find</span>(tr[<span class="number">1</span>].h)!=ok.<span class="built_in">end</span>()?<span class="string">&quot;Yes&quot;</span>:<span class="string">&quot;No&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/xyzfrozen/Cdn/img/202310132310688.png"
+                      alt="image"
+                ></p>
+<p>Hash + 二分</p>
+<p>首先这个最长回文子串是具有二分性的，可以二分</p>
+<p>其次，要高效判断子串相等，就用到 $hash$ 判断了</p>
+<p>答案子串可以分成两类，长度为奇数和长度为偶数</p>
+<p>对于奇数，枚举中间那个字符，判断两侧即可</p>
+<p>对于偶数，同样枚举，考虑如何变成奇数类</p>
+<p>一个 $trick$ 将字符串中每两个字符之间加上一个特殊字符，假设加上一个’#’</p>
+<p>对于奇数个的字符串，a#b#c#d#f，添加后还是奇数个。对于偶数个的字符串，a#b#c#d，添加后变成了奇数个</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/xyzfrozen/Cdn/img/202310132310803.png"
+                      alt="image"
+                ></p>
+<p>$O(n\log n)$</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">2e6</span><span class="number">+10</span>,P=<span class="number">131</span>;</span><br><span class="line"><span class="type">int</span> hl[N],hr[N],p[N],T=<span class="number">0</span>;</span><br><span class="line"><span class="type">char</span> s[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">getl</span><span class="params">(<span class="type">int</span> l,<span class="type">int</span> r)</span> </span>&#123;<span class="keyword">return</span> hl[r]-hl[l<span class="number">-1</span>]*p[r-l<span class="number">+1</span>];&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">getr</span><span class="params">(<span class="type">int</span> l,<span class="type">int</span> r)</span> </span>&#123;<span class="keyword">return</span> hr[l]-hr[r<span class="number">+1</span>]*p[r-l<span class="number">+1</span>];&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    p[<span class="number">0</span>]=<span class="number">1</span>;<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;N;i++) p[i]=p[i<span class="number">-1</span>]*P;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,s<span class="number">+1</span>),<span class="built_in">strcmp</span>(s<span class="number">+1</span>,<span class="string">&quot;END&quot;</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> n=<span class="built_in">strlen</span>(s<span class="number">+1</span>)*<span class="number">2</span>,ans=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=n;i;i-=<span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            s[i]=s[i/<span class="number">2</span>];</span><br><span class="line">            s[i<span class="number">-1</span>]=<span class="string">&#x27;#&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>,j=n;i&lt;=n;i++,j--)</span><br><span class="line">        &#123;</span><br><span class="line">            hl[i]=hl[i<span class="number">-1</span>]*P+s[i]-<span class="string">&#x27;a&#x27;</span><span class="number">+1</span>;</span><br><span class="line">            hr[j]=hr[j<span class="number">+1</span>]*P+s[j]-<span class="string">&#x27;a&#x27;</span><span class="number">+1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> l=<span class="number">0</span>,r=<span class="built_in">min</span>(i<span class="number">-1</span>,n-i),res=<span class="number">0</span>; <span class="comment">//二分扩展的半径 mid-c-mid</span></span><br><span class="line">            <span class="keyword">while</span>(l&lt;=r)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="type">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span>(<span class="built_in">getl</span>(i-mid,i<span class="number">-1</span>)==<span class="built_in">getr</span>(i<span class="number">+1</span>,i+mid)) l=mid<span class="number">+1</span>,res=mid;</span><br><span class="line">                <span class="keyword">else</span> r=mid<span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            ans=<span class="built_in">max</span>(ans,res+(s[i-res]!=<span class="string">&#x27;#&#x27;</span>));</span><br><span class="line">            <span class="comment">//这里加的是半径相当于去除了&#x27;#&#x27;</span></span><br><span class="line">            <span class="comment">//然后本来是还要加上这个中心字符 ch 的，如果边界的字符是&#x27;#&#x27;的话，半径还减一，抵消了，不是&#x27;#&#x27;就得补回来</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Case %llu: %llu\n&quot;</span>,++T,ans);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>$O(n)$ 解法</p>
+<p>设 $f_i$ 表示以 $i$ 结尾的最长回文串长度</p>
+<p>有一个显然的性质是 $f_i \leq f_{i-1}+2$</p>
+<p>我们从 $f_{i-1}+2$ 开始，每次暴力 $-1$，直到找到回文串或者减到 $0$</p>
+<p>复杂度分析</p>
+<p>每次 $i-1 \to i$ 可以看做往栈里加入两个数，每次 $-1$ 相当于取数，根据势能分析，可得是线性的，可看复杂度分析一章</p>
+<hr>
+<p>给定 $s,p$，求 $s$ 中有多少子串 $s’$，满足 $|s’|&#x3D;|p|$，$s’$ 和 $p$ 最多 $k$ 个字符不同</p>
+<p>$|s|，|p| \leq 1e5$，$0 \leq k \leq 5$</p>
+<p>考虑 $hash$ $s;p$，暴力枚举 $s’$ 起点，然后二分第一个不同字符的位置，直接暴力跳，最多跳 $k$ 次</p>
+<p>$O(|s|+|p|+k|s|\log |p|)$</p>
+<hr>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/xyzfrozen/Cdn/img/202310132310834.png"
+                      alt="image"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/xyzfrozen/Cdn/img/202310132310700.png"
+                      alt="image"
+                ></p>
+<p>首先我们需要排序，最坏的时间复杂度 $O(nlogn \times n)$ 每次比较的时间复杂度最坏是 $O(n)$<br>考虑如何把这个 $O(n)$ 降下来，考虑维护最长公共前缀，二分+hash，实现是 $O(logn)$，然后比较后面一个字符<br>总体时间复杂度 $O(n^2logn+nlogn)$</p>
+<p>一个小 trick，存后缀不需要真正存子串，存下当前后缀的第一个字符在原串的下标 $sa[i]&#x3D;i \to s[i \to n]$</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">6e5</span><span class="number">+10</span>,P=<span class="number">131</span>;</span><br><span class="line"><span class="type">int</span> sa[N],p[N],h[N],n;</span><br><span class="line"><span class="type">char</span> s[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">get</span><span class="params">(<span class="type">int</span> l,<span class="type">int</span> r)</span></span>&#123;<span class="keyword">return</span> h[r]-h[l<span class="number">-1</span>]*p[r-l<span class="number">+1</span>];&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">solve</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> l=<span class="number">0</span>,r=<span class="built_in">min</span>(n-(a<span class="number">-1</span>),n-(b<span class="number">-1</span>)),res=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(l&lt;=r)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">get</span>(a,a+mid<span class="number">-1</span>)==<span class="built_in">get</span>(b,b+mid<span class="number">-1</span>)) l=mid<span class="number">+1</span>,res=mid;</span><br><span class="line">        <span class="keyword">else</span> r=mid<span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cop</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> res=<span class="built_in">solve</span>(a,b);</span><br><span class="line">    <span class="keyword">return</span> s[a+res]&lt;s[b+res];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,s<span class="number">+1</span>);</span><br><span class="line">    n=<span class="built_in">strlen</span>(s<span class="number">+1</span>),p[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        p[i]=p[i<span class="number">-1</span>]*P;</span><br><span class="line">        h[i]=h[i<span class="number">-1</span>]*P+s[i]-<span class="string">&#x27;a&#x27;</span><span class="number">+1</span>;</span><br><span class="line">        sa[i]=i;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    s[n<span class="number">+1</span>]=<span class="string">&#x27;#&#x27;</span>;</span><br><span class="line">    <span class="built_in">sort</span>(sa<span class="number">+1</span>,sa<span class="number">+1</span>+n,cop);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">fw</span>(sa[i]<span class="number">-1</span>),pt;</span><br><span class="line">    nl;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">fw</span>(<span class="built_in">solve</span>(sa[i],sa[i<span class="number">-1</span>])),pt;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/xyzfrozen/Cdn/img/202310132312095.png"
+                      alt="img"
+                ></p>
+<p>由于每次查询的矩阵大小都是固定的，是 $a \times b$，因此我们可以预处理所有 $a \times b$ 的矩阵的哈希值，然后查表即可</p>
+<p>现在的问题是如何处理一个二维矩阵的哈希值，其实是一样的，从第二行开始，将每一行移到上一行的末尾，最终就会变成一行字符串</p>
+<p>每一个矩阵都对应这样唯一的哈希值。如果要将第 $i+1$ 行加入到第 $i$ 行的末尾，哈希值应该是 $h_i \times p_b + h_{i+1}$</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">1010</span>,P=<span class="number">131</span>;</span><br><span class="line"><span class="type">int</span> n,m,a,b,q;</span><br><span class="line"><span class="type">int</span> h[N][N],p[N*N]=&#123;<span class="number">1</span>&#125;;</span><br><span class="line"><span class="type">char</span> str[N];</span><br><span class="line">unordered_set&lt;<span class="type">int</span>&gt; s;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">get</span><span class="params">(<span class="type">int</span> h[],<span class="type">int</span> l,<span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> h[r]-h[l<span class="number">-1</span>]*p[r-l<span class="number">+1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    n=<span class="built_in">fr</span>(),m=<span class="built_in">fr</span>(),a=<span class="built_in">fr</span>(),b=<span class="built_in">fr</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n*m;i++) p[i]=p[i<span class="number">-1</span>]*P;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,str<span class="number">+1</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=m;j++) h[i][j]=h[i][j<span class="number">-1</span>]*P+str[j]-<span class="string">&#x27;0&#x27;</span><span class="number">+1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=b;i&lt;=m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//如果j &gt; a，说明当前的哈希值是一个a+1 * b的矩阵</span></span><br><span class="line">            <span class="comment">//需要将上面多出来的一行删去，类似一个滑动窗口</span></span><br><span class="line">            sum=sum*p[b]+<span class="built_in">get</span>(h[j],i-b<span class="number">+1</span>,i);<span class="comment">//矩阵下移</span></span><br><span class="line">            <span class="keyword">if</span>(j&gt;a) sum-=<span class="built_in">get</span>(h[j-a],i-b<span class="number">+1</span>,i)*p[a*b];<span class="comment">//矩阵去掉最上面一行</span></span><br><span class="line">            <span class="keyword">if</span>(j&gt;=a) s.<span class="built_in">insert</span>(sum);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    q=<span class="built_in">fr</span>();</span><br><span class="line">    <span class="keyword">while</span>(q--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=a;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,str<span class="number">+1</span>);</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=b;j++) sum=sum*P+str[j]-<span class="string">&#x27;0&#x27;</span><span class="number">+1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(s.<span class="built_in">count</span>(sum)) <span class="built_in">puts</span>(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">puts</span>(<span class="string">&quot;0&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5043"  title="树同构模板">树同构模板<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>考虑有根树</p>
+<p>从根开始，设计 $hash$ 函数</p>
+<p>$$H(x)&#x3D;\sum_{v \in S} H(v) \times P^{\sum sz_v}$$</p>
+<p>$P&#x3D;13331;Q&#x3D;99994919$</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">60</span>,G=<span class="number">13331</span>,Q=<span class="number">99994919</span>;</span><br><span class="line"><span class="type">int</span> n,m,u,v;</span><br><span class="line"><span class="type">int</span> P[N],sz[N],d[N],h[N],H[N][<span class="number">2</span>];</span><br><span class="line">pi S[N];</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; as[N];</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; r;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_w</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> rt)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    sz[x]=<span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> mx=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">go</span>(v)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(v==rt) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="built_in">get_w</span>(v,x);</span><br><span class="line">        sz[x]+=sz[v],mx=<span class="built_in">max</span>(mx,sz[v]);</span><br><span class="line">    &#125;</span><br><span class="line">    mx=<span class="built_in">max</span>(mx,n-sz[x]);</span><br><span class="line">    <span class="keyword">if</span>(mx&lt;=(n&gt;&gt;<span class="number">1</span>)) r.<span class="built_in">pb</span>(x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> rt)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    h[x]=d[x]*P[<span class="number">1</span>]%Q,sz[x]=<span class="number">1</span>;</span><br><span class="line">    <span class="built_in">go</span>(v) &#123;<span class="keyword">if</span>(v!=rt) d[v]=d[x]<span class="number">+1</span>,<span class="built_in">dfs</span>(v,x);&#125;</span><br><span class="line">    <span class="type">int</span> cnt=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">go</span>(v) &#123;<span class="keyword">if</span>(v!=rt) S[++cnt]=&#123;h[v],sz[v]&#125;;&#125;</span><br><span class="line">    <span class="built_in">sort</span>(S<span class="number">+1</span>,S<span class="number">+1</span>+cnt);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=cnt;i++)</span><br><span class="line">        (h[x]+=S[i].fi*P[sz[x]])%=Q,sz[x]+=S[i].se;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(<span class="type">int</span> now)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    n=<span class="built_in">fr</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) as[i].<span class="built_in">clear</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> p=<span class="built_in">fr</span>();</span><br><span class="line">        <span class="keyword">if</span>(p) as[p].<span class="built_in">pb</span>(i),as[i].<span class="built_in">pb</span>(p);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    r.<span class="built_in">clear</span>();</span><br><span class="line">    <span class="built_in">get_w</span>(<span class="number">1</span>,<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;r.<span class="built_in">size</span>();i++)</span><br><span class="line">    &#123;</span><br><span class="line">        d[r[i]]=<span class="number">1</span>,<span class="built_in">dfs</span>(r[i],<span class="number">-1</span>);</span><br><span class="line">        H[now][i]=h[r[i]];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(H[now][<span class="number">0</span>]&gt;H[now][<span class="number">1</span>]) <span class="built_in">swap</span>(H[now][<span class="number">0</span>],H[now][<span class="number">1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    P[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">55</span>;i++) P[i]=P[i<span class="number">-1</span>]*G%Q;</span><br><span class="line">    m=<span class="built_in">fr</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++) <span class="built_in">insert</span>(i);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=i;j++)</span><br><span class="line">            <span class="keyword">if</span>(H[i][<span class="number">0</span>]==H[j][<span class="number">0</span>] &amp;&amp; H[i][<span class="number">1</span>]==H[j][<span class="number">1</span>]) &#123;<span class="built_in">fw</span>(j),nl;<span class="keyword">break</span>;&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+		</div>
+
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> Hash</li>
+        <li><strong>作者:</strong> xyzfrozen</li>
+        <li><strong>创建于
+                :</strong> 2023-10-13 23:09:44</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2023-12-10 00:19:15
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://xyzfrozen.github.io/undefined/Hash/Hash/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
+</div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">#字符串</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Hash/">#Hash</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/undefined/Boruvka/Boruvka/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">Borůvka</span>
+						<span class="post-nav-item">上一篇</span>
+					</span>
+				</a>
+			</div>
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/undefined/2-SAT/2-SAT/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">2-SAT</span>
+						<span class="post-nav-item">下一篇</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        评论
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://example.example.com',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: false,
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+		</div>
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">目录</div>
+		<div class="page-title">Hash</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hash"><span class="nav-number">1.</span> <span class="nav-text">Hash</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">xyzfrozen</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 121 篇文章
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.2</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="站内搜索您需要的内容..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
+
+
+<script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/Swup.min.js" ></script><script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/SwupSlideTheme.min.js" ></script><script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/SwupScriptsPlugin.min.js" ></script><script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/SwupProgressPlugin.min.js" ></script><script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/SwupScrollPlugin.min.js" ></script><script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/SwupPreloadPlugin.min.js" ></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+	<script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/imageViewer.js" ></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/utils.js" ></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/main.js" ></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/layouts/navbarShrink.js" ></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/scrollTopBottom.js" ></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/lightDarkSwitch.js" ></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/layouts/categoryList.js" ></script>
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/localSearch.js" ></script>
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/codeBlock.js" ></script>
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/layouts/lazyload.js" ></script>
+
+
+
+    <script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/runtime.js" ></script>
+    <script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/odometer.min.js" ></script>
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/Typed.min.js" ></script>
+  <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/plugins/typed.js" ></script>
+
+
+
+
+
+
+
+    <script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/anime.min.js" ></script>
+
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/tocToggle.js" data-swup-reload-script></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/layouts/toc.js" data-swup-reload-script></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/plugins/tabs.js" data-swup-reload-script></script>
+
+
+<script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/moment-with-locales.min.js" data-swup-reload-script></script>
+<script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/layouts/essays.js" data-swup-reload-script></script>
+
+
+
+
+	
+</body>
+
+</html>

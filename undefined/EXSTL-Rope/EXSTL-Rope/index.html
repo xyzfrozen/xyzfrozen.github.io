@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="xyzfrozen">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+            <link rel="preconnect" href="https://evan.beee.top" crossorigin>
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://xyzfrozen.github.io/undefined/exstl-rope/exstl-rope/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EXSTL-Rope">
+<meta property="og:url" content="https://xyzfrozen.github.io/undefined/EXSTL-Rope/EXSTL-Rope/">
+<meta property="og:site_name" content="xyzfrozen の 小站">
+<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xyzfrozen.github.io/images/redefine-og.webp">
+<meta property="article:published_time" content="2023-09-29T15:31:17.000Z">
+<meta property="article:modified_time" content="2023-10-13T14:19:20.722Z">
+<meta property="article:author" content="xyzfrozen">
+<meta property="article:tag" content="可持久化平衡树">
+<meta property="article:tag" content="可持久化并查集">
+<meta property="article:tag" content="可持久化线段树">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xyzfrozen.github.io/images/redefine-og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            EXSTL-Rope | xyzfrozen の 小站
+        
+    </title>
+
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fonts/Chillax/chillax.css">
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/css/build/tailwind.css">
+    
+
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fonts/GeistMono/geist-mono.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fonts/Geist/geist.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"xyzfrozen.github.io","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":6,"number":true,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/image/miku x Darling.png","dark":"/image/Miku.png"},"title":"xyzfrozen の 小站","subtitle":{"text":["My darling,stay gold"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":"https://github.com/xyzfrozen","instagram":null,"zhihu":null,"twitter":null,"email":"1685550699@qq.com","Luogu":"https://www.luogu.com.cn/user/749714","cnblogs":"https://www.cnblogs.com/xyzfrozen/"},"qrs":{"weixin":"w6861k2k"}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"https://xyzfrozen.github.io/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"About":{"icon":"fa-regular fa-user","submenus":null,"Me":"/about"}},"search":{"enable":true,"preload":true},"tags":{"Tags":{"icon":"fa-solid fa-tags","path":"/tags"}},"categories":{"Categories":{"icon":"fa-solid fa-folder","path":"/categories"}}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":"Welcome","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":10}},"footerStart":"2023/9/30 23:45:14"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fontawesome/regular.min.css">
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+	<span class="scroll-progress-bar"></span>
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                xyzfrozen の 小站
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="https://xyzfrozen.github.io/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    归档
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    关于
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="https://xyzfrozen.github.io/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                归档
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-regular fa-user fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">118</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">9</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">121</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			<div class="w-full flex items-center pt-6 justify-start">
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">EXSTL-Rope</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/image/author.jpg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">xyzfrozen</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv5</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-09-29 23:31:17</span>
+        <span class="mobile">2023-09-29 23:31:17</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-10-13 22:19:20</span>
+            <span class="mobile">2023-10-13 22:19:20</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/note/">note</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E5%B9%B3%E8%A1%A1%E6%A0%91/">可持久化平衡树</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E5%B9%B6%E6%9F%A5%E9%9B%86/">可持久化并查集</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91/">可持久化线段树</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<h1 id="奇淫巧技-Rope"><a href="#奇淫巧技-Rope" class="headerlink" title="奇淫巧技-Rope"></a>奇淫巧技-Rope</h1><p>$stl$ 的可持久化平衡树，无法做区间第 $k$ 大</p>
+<p>内部为块状链表实现</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ext/rope&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> __gnu_cxx;</span><br><span class="line"></span><br><span class="line">rope&lt;<span class="type">int</span>&gt; rp;</span><br><span class="line">rope&lt;<span class="type">int</span>&gt; rp[N]</span><br><span class="line"></span><br><span class="line">rp.<span class="built_in">push_back</span>(x);</span><br><span class="line">rp.<span class="built_in">insert</span>(pos,x); </span><br><span class="line"><span class="comment">//a[pos]=x 原来的 a[pos] 顶到后面去 也可以插入数组</span></span><br><span class="line">rp.<span class="built_in">erase</span>(pos,x); <span class="comment">// 在 pos 处删除 x 个元素</span></span><br><span class="line">rp.<span class="built_in">size</span>();</span><br><span class="line">rp.<span class="built_in">replace</span>(pos,x);</span><br><span class="line">rp.<span class="built_in">substr</span>(pos,x); <span class="comment">// 从 pos 处开始提取 x 个元素</span></span><br><span class="line">rp.<span class="built_in">copy</span>(pos,x,s); <span class="comment">// 从 pos 处开始复制 x 个元素到 s 中</span></span><br><span class="line">rp[x]/rp.<span class="built_in">at</span>(x);</span><br><span class="line">rp+=... <span class="comment">//字符串类型支持+=</span></span><br></pre></td></tr></table></figure></div>
+
+<p>指针复制 $O(1)$，数组复制 $O(n)$，其它操作 $O(\log n)$</p>
+<p>注意数组初始化，碰到 $0$ 停止，所以要保证用到的数组范围内没有元素 $0$ !!!!</p>
+<p>它甚至可以 $lower$_$bound$</p>
+<hr>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3919"  title="P3919 【模板】可持久化线段树 1（可持久化数组）">P3919 【模板】可持久化线段树 1（可持久化数组）<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;ext/rope&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> __gnu_cxx;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">1e6</span><span class="number">+10</span>;</span><br><span class="line"><span class="type">int</span> n,m,to,op,pos;</span><br><span class="line">rope&lt;<span class="type">int</span>&gt; a[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    n=<span class="built_in">fr</span>(),m=<span class="built_in">fr</span>();</span><br><span class="line">    a[<span class="number">0</span>].<span class="built_in">pb</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) a[<span class="number">0</span>].<span class="built_in">pb</span>(<span class="built_in">fr</span>());</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        to=<span class="built_in">fr</span>(),op=<span class="built_in">fr</span>(),pos=<span class="built_in">fr</span>();</span><br><span class="line">        a[i]=a[to];</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="number">1</span>) a[i].<span class="built_in">replace</span>(pos,<span class="built_in">fr</span>());</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">fw</span>(a[i][pos]),nl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4008"  title="P4008 [NOI2003] 文本编辑器">P4008 [NOI2003] 文本编辑器<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;ext/rope&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> __gnu_cxx;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,idx;</span><br><span class="line">rope&lt;<span class="type">char</span>&gt; a;</span><br><span class="line">string op;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    n=<span class="built_in">fr</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;op;</span><br><span class="line">        <span class="keyword">if</span>(op[<span class="number">0</span>]==<span class="string">&#x27;M&#x27;</span>) idx=<span class="built_in">fr</span>();</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(op[<span class="number">0</span>]==<span class="string">&#x27;I&#x27;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> cnt=<span class="built_in">fr</span>(),pos=idx;</span><br><span class="line">            <span class="keyword">while</span>(cnt)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">getline</span>(cin,op);</span><br><span class="line">                <span class="keyword">if</span>(op==<span class="string">&quot;\n&quot;</span>) <span class="built_in">getline</span>(cin,op);</span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;op.<span class="built_in">size</span>();i++)</span><br><span class="line">                    <span class="keyword">if</span>((<span class="type">int</span>)op[i]&gt;=<span class="number">32</span> &amp;&amp; (<span class="type">int</span>)op[i]&lt;=<span class="number">126</span>) a.<span class="built_in">insert</span>(pos++,op[i]),cnt--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(op[<span class="number">0</span>]==<span class="string">&#x27;D&#x27;</span>) a.<span class="built_in">erase</span>(idx,<span class="built_in">fr</span>());</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(op[<span class="number">0</span>]==<span class="string">&#x27;G&#x27;</span>) cout&lt;&lt;a.<span class="built_in">substr</span>(idx,<span class="built_in">fr</span>())&lt;&lt;endl;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(op[<span class="number">0</span>]==<span class="string">&#x27;P&#x27;</span>) idx--;</span><br><span class="line">        <span class="keyword">else</span> idx++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3835"  title="P3835 【模板】可持久化平衡树">P3835 【模板】可持久化平衡树<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;ext/rope&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> __gnu_cxx;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">5e5</span><span class="number">+10</span>;</span><br><span class="line"><span class="type">int</span> n,to,op,v;</span><br><span class="line">rope&lt;<span class="type">int</span>&gt; a[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    n=<span class="built_in">fr</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        to=<span class="built_in">fr</span>(),op=<span class="built_in">fr</span>(),v=<span class="built_in">fr</span>();</span><br><span class="line">        a[i]=a[to];</span><br><span class="line">        <span class="type">int</span> idx=<span class="built_in">lower_bound</span>(a[i].<span class="built_in">begin</span>(),a[i].<span class="built_in">end</span>(),v)-a[i].<span class="built_in">begin</span>(); <span class="comment">//第一个&gt;=v 的位置 从0开始</span></span><br><span class="line">        <span class="keyword">if</span>(op==<span class="number">1</span>) a[i].<span class="built_in">insert</span>(idx,v);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(op==<span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i][idx]!=v) <span class="keyword">continue</span>;</span><br><span class="line">            a[i].<span class="built_in">erase</span>(idx,<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(op==<span class="number">3</span>) <span class="built_in">fw</span>(idx<span class="number">+1</span>),nl;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(op==<span class="number">4</span>) <span class="built_in">fw</span>(a[i][v<span class="number">-1</span>]),nl;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(op==<span class="number">5</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(<span class="built_in">lower_bound</span>(a[i].<span class="built_in">begin</span>(),a[i].<span class="built_in">end</span>(),v)==a[i].<span class="built_in">begin</span>()) <span class="built_in">puts</span>(<span class="string">&quot;-2147483647&quot;</span>);</span><br><span class="line">            <span class="keyword">else</span> <span class="built_in">fw</span>(a[i][idx<span class="number">-1</span>]),nl;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(<span class="built_in">upper_bound</span>(a[i].<span class="built_in">begin</span>(),a[i].<span class="built_in">end</span>(),v)==a[i].<span class="built_in">end</span>()) <span class="built_in">puts</span>(<span class="string">&quot;2147483647&quot;</span>);</span><br><span class="line">            <span class="keyword">else</span> <span class="built_in">fw</span>(a[i][<span class="built_in">upper_bound</span>(a[i].<span class="built_in">begin</span>(),a[i].<span class="built_in">end</span>(),v)-a[i].<span class="built_in">begin</span>()]),nl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3402"  title="P3402 可持久化并查集">P3402 可持久化并查集<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;ext/rope&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> __gnu_cxx;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">2e5</span><span class="number">+10</span>;</span><br><span class="line"><span class="type">int</span> n,m,op,a,b,now;</span><br><span class="line"><span class="type">int</span> base[N];</span><br><span class="line">rope&lt;<span class="type">int</span>&gt; p[N];</span><br><span class="line"><span class="function">mt19937 <span class="title">Rand</span><span class="params">(time(<span class="number">0</span>))</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">get</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">unsigned</span> r=<span class="built_in">Rand</span>();</span><br><span class="line">    <span class="keyword">if</span>(r&gt;<span class="number">2147384647</span>) r-=<span class="number">2147384647</span>;</span><br><span class="line">    <span class="keyword">return</span> r;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x==p[now][x]) <span class="keyword">return</span> x;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="built_in">find</span>(p[now][x]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">merge</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> pa=<span class="built_in">find</span>(a),pb=<span class="built_in">find</span>(b);</span><br><span class="line">    <span class="keyword">if</span>(pa==pb) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span>(base[pa]&lt;base[pb]) p[now].<span class="built_in">replace</span>(pa,pb);</span><br><span class="line">    <span class="keyword">else</span> p[now].<span class="built_in">replace</span>(pb,pa);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    n=<span class="built_in">fr</span>(),m=<span class="built_in">fr</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) base[i]=i;</span><br><span class="line">    base[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    p[<span class="number">0</span>]=<span class="built_in">rope</span>&lt;<span class="type">int</span>&gt;(base); <span class="comment">//可以直接插入数组，到第一个0停止，字符串就是到 &#x27;\0&#x27;</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) base[i]=<span class="built_in">get</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(now=<span class="number">1</span>;now&lt;=m;now++)</span><br><span class="line">    &#123;</span><br><span class="line">        op=<span class="built_in">fr</span>();</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            a=<span class="built_in">fr</span>(),b=<span class="built_in">fr</span>();</span><br><span class="line">            p[now]=p[now<span class="number">-1</span>];</span><br><span class="line">            <span class="built_in">merge</span>(a,b);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(op==<span class="number">2</span>) p[now]=p[<span class="built_in">fr</span>()];</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            a=<span class="built_in">fr</span>(),b=<span class="built_in">fr</span>();</span><br><span class="line">            p[now]=p[now<span class="number">-1</span>];</span><br><span class="line">            <span class="keyword">if</span>(<span class="built_in">find</span>(a)==<span class="built_in">find</span>(b)) <span class="built_in">puts</span>(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">            <span class="keyword">else</span> <span class="built_in">puts</span>(<span class="string">&quot;0&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4567"  title="P4567 [AHOI2006]文本编辑器">P4567 [AHOI2006]文本编辑器<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>不好做的就是这个翻转</p>
+<p>我们直接暴力维护两个 $rope$ 一个正的一个逆的，用 $substr$ 进行凭借完成</p>
+<p>$Trick$ 因为 $rope$ 支持插入数组，我们直接用个字符输出存插入的更方便，就不用每次算指针了，注意在数组末尾要加上一个 ‘\0’</p>
+<p>注意每次修改的时候两个 $rope$ 都要变</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;ext/rope&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> __gnu_cxx;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=(<span class="number">1</span>&lt;&lt;<span class="number">22</span>)<span class="number">+10</span>;</span><br><span class="line"><span class="type">int</span> n,idx;</span><br><span class="line"><span class="type">char</span> x[N],y[N];</span><br><span class="line">rope&lt;<span class="type">char</span>&gt; a,b,base;</span><br><span class="line">string s;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    n=<span class="built_in">fr</span>();</span><br><span class="line">    <span class="keyword">while</span>(n--)</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;s;</span><br><span class="line">        <span class="keyword">if</span>(s==<span class="string">&quot;Move&quot;</span>) idx=<span class="built_in">fr</span>();</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(s==<span class="string">&quot;Insert&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> cnt=<span class="built_in">fr</span>(),len=a.<span class="built_in">size</span>();</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;cnt;i++) x[i]=y[cnt-i<span class="number">-1</span>]=<span class="built_in">getchar</span>();</span><br><span class="line">            x[cnt]=y[cnt]=<span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">            a.<span class="built_in">insert</span>(idx,x),b.<span class="built_in">insert</span>(len-idx,y);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(s==<span class="string">&quot;Delete&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> cnt=<span class="built_in">fr</span>(),len=a.<span class="built_in">size</span>();</span><br><span class="line">            a.<span class="built_in">erase</span>(idx,cnt);</span><br><span class="line">            b.<span class="built_in">erase</span>(len-idx-cnt,cnt);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(s==<span class="string">&quot;Rotate&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> cnt=<span class="built_in">fr</span>(),len=a.<span class="built_in">size</span>();</span><br><span class="line">            base=a.<span class="built_in">substr</span>(idx,cnt);</span><br><span class="line">            a=a.<span class="built_in">substr</span>(<span class="number">0</span>,idx)+b.<span class="built_in">substr</span>(len-idx-cnt,cnt)+a.<span class="built_in">substr</span>(idx+cnt,len-idx-cnt);</span><br><span class="line">            b=b.<span class="built_in">substr</span>(<span class="number">0</span>,len-idx-cnt)+base+b.<span class="built_in">substr</span>(len-idx,idx);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(s==<span class="string">&quot;Get&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">putchar</span>(a[idx]);</span><br><span class="line">            <span class="keyword">if</span>(a[idx]!=<span class="string">&#x27;\n&#x27;</span>) nl;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(s==<span class="string">&quot;Prev&quot;</span>) idx--;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(s==<span class="string">&quot;Next&quot;</span>) idx++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4309"  title="P4309 [TJOI2013]最长上升子序列">P4309 [TJOI2013]最长上升子序列<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>xxxxxxxxxx const int N&#x3D;2e6+10;int n,m,cnt;int e[N<em>5],ans[N</em>5];char s[N],t[N];vector<pi> dot;struct node{    int x,y,id,type;    bool operator&lt;(const node&amp;Q)const{        return (x&#x3D;&#x3D;Q.x)?((y&#x3D;&#x3D;Q.y?id&lt;Q.id:y&lt;Q.y)):(x&lt;Q.x);    }}q[N*5];​int id(char c){    if(c&#x3D;&#x3D;’A’) return 1;    if(c&#x3D;&#x3D;’G’) return 2;    if(c&#x3D;&#x3D;’U’) return 3;    return 0;}​struct Tire{    int tr[N&lt;&lt;1][4],dfn[N],sz[N],idx&#x3D;0,stm&#x3D;0;    int insert()    {        int now&#x3D;0;        for(int i&#x3D;0;s[i];i++)        {            int word&#x3D;id(s[i]);            if(!tr[now][word]) tr[now][word]&#x3D;++idx;            now&#x3D;tr[now][word];        }        return now;    }    int query(char s[])    {        int now&#x3D;0;        for(int i&#x3D;0;s[i];i++)        {            int word&#x3D;id(s[i]);            if(!tr[now][word]) return -1;            now&#x3D;tr[now][word];        }        return now;    }    void dfs(int x)    {        dfn[x]&#x3D;++stm;        sz[x]&#x3D;1;        for(int i&#x3D;0;i&lt;&#x3D;3;i++)            if(tr[x][i])                dfs(tr[x][i]),sz[x]+&#x3D;sz[tr[x][i]];    }}Tr1,Tr2;​struct Bit{    int s[N];    void add(int i,int x){for(;i&lt;&#x3D;n;i+&#x3D;i&amp;(-i)) s[i]+&#x3D;x;}    int query(int i)    {        int res&#x3D;0;        for(;i;i-&#x3D;i&amp;(-i)) res+&#x3D;s[i];        return res;    }   }Tr;​void strrev(int op){    if(op&#x3D;&#x3D;1)    {        for(int i&#x3D;0,j&#x3D;strlen(s)-1;i&lt;j;i++,j–)            swap(s[i],s[j]);    }    else    {        for(int i&#x3D;0,j&#x3D;strlen(t)-1;i&lt;j;i++,j–)            swap(t[i],t[j]);    }}​int main(){       n&#x3D;fr(),m&#x3D;fr();    for(int i&#x3D;1;i&lt;&#x3D;n;i++)    {        scanf(“%s”,s);        int p&#x3D;Tr1.insert();        strrev(1);        int q&#x3D;Tr2.insert();        dot.pb({p,q});    }        Tr1.dfs(0),Tr2.dfs(0);    for(auto &amp;v:dot)    {        v.fi&#x3D;Tr1.dfn[v.fi];        v.se&#x3D;Tr2.dfn[v.se];        q[++cnt]&#x3D;{v.fi,v.se,0,0};    }        for(int i&#x3D;1;i&lt;&#x3D;m;i++)    {        scanf(“%s%s”,s,t);        strrev(2);        int x&#x3D;Tr1.query(s),y&#x3D;Tr2.query(t);        if(!(<del>x) || !(</del>y)) {ans[i]&#x3D;0;continue;}                int a&#x3D;Tr1.dfn[x],b&#x3D;Tr2.dfn[y],c&#x3D;a+Tr1.sz[x]-1,d&#x3D;b+Tr2.sz[y]-1;        q[++cnt]&#x3D;{a-1,b-1,i,1};        q[++cnt]&#x3D;{c,d,i,1};        q[++cnt]&#x3D;{c,b-1,i,-1};        q[++cnt]&#x3D;{a-1,d,i,-1};    }        n&#x3D;cnt;    sort(q+1,q+1+n);    for(int i&#x3D;1;i&lt;&#x3D;n;i++) e[i]&#x3D;q[i].y;    sort(e+1,e+1+n);    cnt&#x3D;unique(e+1,e+1+n)-e-1;        for(int i&#x3D;1;i&lt;&#x3D;n;i++)    {        int y&#x3D;lower_bound(e+1,e+1+cnt,q[i].y)-e;        if(q[i].id) ans[q[i].id]+&#x3D;Tr.query(y)*q[i].type;        else Tr.add(y,1);    }    for(int i&#x3D;1;i&lt;&#x3D;m;i++) fw(ans[i]),nl;​    return 0;}cpp</p>
+<p>考虑加入 $i$ 的影响</p>
+<p>有一个很强的性质就是它是当前序列中最大的元素</p>
+<p>我们显然分段考虑，假设 $i$ 加入到 $pos$</p>
+<p>设 $i$ 表示当前序列到位置 $i$ 的最长上升子序列</p>
+<p>新的答案就是原来的 $ans$ 和 </p>
+<p>$$\max_{0\leq j \leq pos-1} f_j+1$$</p>
+<p>比较一下</p>
+<p>我们要维护每个点的 $f_x$ 和 $maxt_x$</p>
+<p>$Sol2$</p>
+<p>考虑直接离线，用 $rope$ 把整个序列造出来</p>
+<p>还有一个很强的性质就是影响的状态只会到 $pos$ 所以考虑在它之前的就行了</p>
+<p>重新设 $f_i$ 表示值在 $[1,i]$ 且最终位置在 $i$ 之前的最长上升子序列</p>
+<p>然后 $f_i$ 考虑所有 $f_j[j \lt i]$，用值域来算</p>
+<p>既考虑在它前面的，且值比它小的</p>
+<p>区间查+单点改 $\to$ 树状数组即可</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;ext/rope&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> __gnu_cxx;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">1e5</span><span class="number">+10</span>;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> s[N],ans[N];</span><br><span class="line">rope&lt;<span class="type">int</span>&gt; a;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">ins</span><span class="params">(<span class="type">int</span> i,<span class="type">int</span> x)</span> </span>&#123;<span class="keyword">for</span>(;i&lt;=n;i+=i&amp;(-i)) s[i]=<span class="built_in">max</span>(s[i],x);&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">query</span><span class="params">(<span class="type">int</span> i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> res=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(;i;i-=i&amp;(-i)) res=<span class="built_in">max</span>(res,s[i]);</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    n=<span class="built_in">fr</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) a.<span class="built_in">insert</span>(<span class="built_in">fr</span>(),i);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> v=a[i];</span><br><span class="line">        <span class="built_in">ins</span>(v,ans[v]=(<span class="built_in">query</span>(v<span class="number">-1</span>)<span class="number">+1</span>)); </span><br><span class="line">        <span class="comment">//max f_[1,v-1]+1 并且更新 f_[v+1,n]</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">fw</span>(ans[i]=<span class="built_in">max</span>(ans[i],ans[i<span class="number">-1</span>])),nl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3960"  title="P3960 [NOIP2017 提高组] 列队">P3960 [NOIP2017 提高组] 列队<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>$Sub 1\to 2$</p>
+<p>虽然 $n,m$ 很大，但是 $q$ 很小，我们考虑离线询问</p>
+<p>操作只有 $erase;pushback$ 和访问，这些都可以用 $rope$ 用 $O(\sqrt n)$ 的时间完成</p>
+<p>我们队每一行的 $m-1$ 个元素开一个 $rope$，再单独对最后一列开一个 $rope$ 这样就不用每次向前看齐的时候每一行都要修改</p>
+<p>$Sub 3 \to 5$</p>
+<p>我们只用维护第一行和最后一列，开两个 $rope$ 即可</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;ext/rope&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> __gnu_cxx;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">5e4</span><span class="number">+10</span>,M=<span class="number">510</span>;</span><br><span class="line"><span class="type">int</span> n,m,q;</span><br><span class="line"><span class="type">bool</span> vis[N];</span><br><span class="line">pi Query[M];</span><br><span class="line">rope&lt;<span class="type">int</span>&gt; tr[N],a,b;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve1</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=q;i++) Query[i]=&#123;<span class="built_in">fr</span>(),<span class="built_in">fr</span>()&#125;,vis[Query[i].fi]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        <span class="keyword">if</span>(vis[i]) &#123;<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;m;j++) tr[i].<span class="built_in">pb</span>((i<span class="number">-1</span>)*m+j);&#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;=n;i++) tr[<span class="number">0</span>].<span class="built_in">pb</span>(i*m);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=q;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> x=Query[i].fi,y=Query[i].se;</span><br><span class="line">        <span class="keyword">if</span>(y==m)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> t=tr[<span class="number">0</span>][x];</span><br><span class="line">            <span class="built_in">fw</span>(t),nl;</span><br><span class="line">            tr[<span class="number">0</span>].<span class="built_in">erase</span>(x,<span class="number">1</span>),tr[<span class="number">0</span>].<span class="built_in">pb</span>(t);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> t=tr[x][y];</span><br><span class="line">            <span class="built_in">fw</span>(t),nl;</span><br><span class="line">            tr[x].<span class="built_in">erase</span>(y,<span class="number">1</span>),tr[x].<span class="built_in">push_back</span>(tr[<span class="number">0</span>][x]);</span><br><span class="line">            tr[<span class="number">0</span>].<span class="built_in">erase</span>(x,<span class="number">1</span>),tr[<span class="number">0</span>].<span class="built_in">push_back</span>(t);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve2</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;m;i++) a.<span class="built_in">pb</span>(i);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;=n;i++) b.<span class="built_in">pb</span>(i*m);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=q;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> x=<span class="built_in">fr</span>(),y=<span class="built_in">fr</span>();</span><br><span class="line">        <span class="keyword">if</span>(y==m)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">fw</span>(b[<span class="number">1</span>]),nl;</span><br><span class="line">            b.<span class="built_in">pb</span>(b[<span class="number">1</span>]),b.<span class="built_in">erase</span>(<span class="number">1</span>,<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> t=a[y];</span><br><span class="line">            <span class="built_in">fw</span>(t),nl;</span><br><span class="line">            a.<span class="built_in">erase</span>(y,<span class="number">1</span>),a.<span class="built_in">pb</span>(b[<span class="number">1</span>]);</span><br><span class="line">            b.<span class="built_in">erase</span>(<span class="number">1</span>,<span class="number">1</span>),b.<span class="built_in">pb</span>(t);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    n=<span class="built_in">fr</span>(),m=<span class="built_in">fr</span>(),q=<span class="built_in">fr</span>();</span><br><span class="line">    <span class="keyword">if</span>(q&lt;=<span class="number">500</span>) <span class="built_in">solve1</span>();</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">solve2</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5459"  title="P5459 [BJOI2016]回转寿司">P5459 [BJOI2016]回转寿司<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>显然的 $rope$ 优化求</p>
+<p>但是前缀和可能会出现 $0$，所以不能用数组初始化，要用 $pb$ ！！！！</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">2e5</span><span class="number">+10</span>;</span><br><span class="line"><span class="type">int</span> n,l,r,ans;</span><br><span class="line"><span class="type">int</span> a[N],S[N],b[N];</span><br><span class="line">rope&lt;<span class="type">int</span>&gt; s;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    n=<span class="built_in">fr</span>(),l=<span class="built_in">fr</span>(),r=<span class="built_in">fr</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) a[i]=<span class="built_in">fr</span>(),b[i]=S[i]=S[i<span class="number">-1</span>]+a[i];</span><br><span class="line">    <span class="built_in">sort</span>(b<span class="number">+1</span>,b<span class="number">+1</span>+n);</span><br><span class="line">    b[<span class="number">0</span>]=<span class="number">-1e18</span>,b[n<span class="number">+1</span>]=<span class="number">1e18</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;=n<span class="number">+1</span>;i++) s.<span class="built_in">pb</span>(b[i]); <span class="comment">//!!!!</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//l&lt;=s[j]-s[i-1]&lt;=r</span></span><br><span class="line">        <span class="type">int</span> L=<span class="built_in">lower_bound</span>(s.<span class="built_in">begin</span>(),s.<span class="built_in">end</span>(),l+S[i<span class="number">-1</span>])-s.<span class="built_in">begin</span>();</span><br><span class="line">        <span class="type">int</span> R=<span class="built_in">upper_bound</span>(s.<span class="built_in">begin</span>(),s.<span class="built_in">end</span>(),r+S[i<span class="number">-1</span>])-s.<span class="built_in">begin</span>()<span class="number">-1</span>;</span><br><span class="line">        ans+=<span class="built_in">max</span>(R-L<span class="number">+1</span>,<span class="number">0</span>);</span><br><span class="line">        s.<span class="built_in">erase</span>(<span class="built_in">lower_bound</span>(s.<span class="built_in">begin</span>(),s.<span class="built_in">end</span>(),S[i])-s.<span class="built_in">begin</span>(),<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">fw</span>(ans);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+		</div>
+
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> EXSTL-Rope</li>
+        <li><strong>作者:</strong> xyzfrozen</li>
+        <li><strong>创建于
+                :</strong> 2023-09-29 23:31:17</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2023-10-13 22:19:20
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://xyzfrozen.github.io/undefined/EXSTL-Rope/EXSTL-Rope/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
+</div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E5%B9%B3%E8%A1%A1%E6%A0%91/">#可持久化平衡树</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E5%B9%B6%E6%9F%A5%E9%9B%86/">#可持久化并查集</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91/">#可持久化线段树</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/undefined/EXSTL-Pbds/EXSTL-Pbds/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">EXSTL-Pbds</span>
+						<span class="post-nav-item">上一篇</span>
+					</span>
+				</a>
+			</div>
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/undefined/Tarjan-%E5%9C%86%E6%96%B9%E6%A0%91/Tarjan-%E5%9C%86%E6%96%B9%E6%A0%91/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">Tarjan &amp;&amp; 圆方树</span>
+						<span class="post-nav-item">下一篇</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        评论
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://example.example.com',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: false,
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+		</div>
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">目录</div>
+		<div class="page-title">EXSTL-Rope</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A5%87%E6%B7%AB%E5%B7%A7%E6%8A%80-Rope"><span class="nav-number">1.</span> <span class="nav-text">奇淫巧技-Rope</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">xyzfrozen</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 121 篇文章
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.2</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="站内搜索您需要的内容..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
+
+
+<script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/Swup.min.js" ></script><script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/SwupSlideTheme.min.js" ></script><script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/SwupScriptsPlugin.min.js" ></script><script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/SwupProgressPlugin.min.js" ></script><script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/SwupScrollPlugin.min.js" ></script><script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/SwupPreloadPlugin.min.js" ></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+	<script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/imageViewer.js" ></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/utils.js" ></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/main.js" ></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/layouts/navbarShrink.js" ></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/scrollTopBottom.js" ></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/lightDarkSwitch.js" ></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/layouts/categoryList.js" ></script>
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/localSearch.js" ></script>
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/codeBlock.js" ></script>
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/layouts/lazyload.js" ></script>
+
+
+
+    <script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/runtime.js" ></script>
+    <script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/odometer.min.js" ></script>
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/Typed.min.js" ></script>
+  <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/plugins/typed.js" ></script>
+
+
+
+
+
+
+
+    <script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/anime.min.js" ></script>
+
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/tocToggle.js" data-swup-reload-script></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/layouts/toc.js" data-swup-reload-script></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/plugins/tabs.js" data-swup-reload-script></script>
+
+
+<script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/moment-with-locales.min.js" data-swup-reload-script></script>
+<script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/layouts/essays.js" data-swup-reload-script></script>
+
+
+
+
+	
+</body>
+
+</html>
