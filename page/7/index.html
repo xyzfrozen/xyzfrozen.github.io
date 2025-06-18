@@ -97,7 +97,10 @@
 
 
 <body>
-	<div class="progress-bar-container">
+	<meta name="referrer" content="no-referrer" />
+<meta http-equiv="Content-Security-Policy" ontent="upgrade-insecure-requests">
+
+<div class="progress-bar-container">
 	
 	<span class="scroll-progress-bar"></span>
 	
@@ -340,7 +343,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">120</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">119</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -421,7 +424,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">120</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">119</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -436,82 +439,6 @@
 			<div class="main-content">
 				<div class="home-content-container">
     <ul class="home-article-list">
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/undefined/P8817-CSP-S-2022-%E5%81%87%E6%9C%9F%E8%AE%A1%E5%88%92/P8817-CSP-S-2022-%E5%81%87%E6%9C%9F%E8%AE%A1%E5%88%92/">
-                            P8817 [CSP-S 2022] 假期计划
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            首先把 $k \operatorname{++}$， 转换成两点距离
-考虑到枚举四个点不行，但是 $O(n^2)$ 可以，我们考虑枚举两个点，然后 $O(1)$ 找出剩下两个点
-首先 $O(n^2)$ 预处理每个点 $d \leq k$ 之内的点，并求出这些点中到 $1$ 距离 $\leq k$ 的权值最大的点 $f_i$ ，注意不要选到自己了
-我们考虑答案为 $w_{f_i}+w_i+w_...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed Oct 11 2023 22:43:05 GMT+0800">
-                
-                    2023-10-11
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/problem/">problem</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/">最短路</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E9%9A%8F%E6%9C%BA%E5%8C%96/">随机化</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/undefined/P8817-CSP-S-2022-%E5%81%87%E6%9C%9F%E8%AE%A1%E5%88%92/P8817-CSP-S-2022-%E5%81%87%E6%9C%9F%E8%AE%A1%E5%88%92/">阅读全文<span class="seo-reader-text">P8817 [CSP-S 2022] 假期计划</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
         
             <li class="home-article-item">
 
@@ -1210,6 +1137,87 @@ $f_{i,j,0&#x2F;1}$ 考虑前 $i$ 个数，选了 $j$ 个，当前数选&#x2F;不
                 </div>
             </li>
         
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/undefined/P5522-yLOI2019-%E6%A3%A0%E6%A2%A8%E7%85%8E%E9%9B%AA/P5522-yLOI2019-%E6%A3%A0%E6%A2%A8%E7%85%8E%E9%9B%AA/">
+                            P5522 [yLOI2019] 棠梨煎雪
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            题意：能否把编号在 $[l,r]$ 通过填 $?$ 的方式把它变成同一个字符串 $S$，求 $S$ 的个数
+我们考虑按每一列来做，这一列的情况有几种
+
+$1,0$ 都有，不合法
+只有 $1,?&#x2F;0,?$ 答案为 $1$
+只有 $?$ 答案为 $2$
+
+我们考虑把每一行出现 $0$ 和 $1$ 的地方压成两个二进制数，然后直接放到线段树上维护即可
+具体就是合并两个儿子 $or$ 一下...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Mon Oct 09 2023 21:52:37 GMT+0800">
+                
+                    2023-10-09
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/problem/">problem</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/">状态压缩</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/undefined/P5522-yLOI2019-%E6%A3%A0%E6%A2%A8%E7%85%8E%E9%9B%AA/P5522-yLOI2019-%E6%A3%A0%E6%A2%A8%E7%85%8E%E9%9B%AA/">阅读全文<span class="seo-reader-text">P5522 [yLOI2019] 棠梨煎雪</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
     </ul>
 
     <div class="home-paginator px-7 py-5">
@@ -1240,7 +1248,7 @@ $f_{i,j,0&#x2F;1}$ 考虑前 $i$ 个数，选了 $j$ 个，当前数选&#x2F;不
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 120 篇文章
+                        共撰写了 119 篇文章
                     </span>
                     
                 </p>

@@ -97,7 +97,10 @@
 
 
 <body>
-	<div class="progress-bar-container">
+	<meta name="referrer" content="no-referrer" />
+<meta http-equiv="Content-Security-Policy" ontent="upgrade-insecure-requests">
+
+<div class="progress-bar-container">
 	
 	<span class="scroll-progress-bar"></span>
 	
@@ -340,7 +343,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">120</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">119</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -421,7 +424,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">120</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">119</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -436,87 +439,6 @@
 			<div class="main-content">
 				<div class="home-content-container">
     <ul class="home-article-list">
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/undefined/P5522-yLOI2019-%E6%A3%A0%E6%A2%A8%E7%85%8E%E9%9B%AA/P5522-yLOI2019-%E6%A3%A0%E6%A2%A8%E7%85%8E%E9%9B%AA/">
-                            P5522 [yLOI2019] 棠梨煎雪
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            题意：能否把编号在 $[l,r]$ 通过填 $?$ 的方式把它变成同一个字符串 $S$，求 $S$ 的个数
-我们考虑按每一列来做，这一列的情况有几种
-
-$1,0$ 都有，不合法
-只有 $1,?&#x2F;0,?$ 答案为 $1$
-只有 $?$ 答案为 $2$
-
-我们考虑把每一行出现 $0$ 和 $1$ 的地方压成两个二进制数，然后直接放到线段树上维护即可
-具体就是合并两个儿子 $or$ 一下...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Oct 09 2023 21:52:37 GMT+0800">
-                
-                    2023-10-09
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/problem/">problem</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/">状态压缩</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/undefined/P5522-yLOI2019-%E6%A3%A0%E6%A2%A8%E7%85%8E%E9%9B%AA/P5522-yLOI2019-%E6%A3%A0%E6%A2%A8%E7%85%8E%E9%9B%AA/">阅读全文<span class="seo-reader-text">P5522 [yLOI2019] 棠梨煎雪</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
         
             <li class="home-article-item">
 
@@ -1188,6 +1110,76 @@ P1367 蚂蚁 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)
                 </div>
             </li>
         
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/undefined/ABC248-F/ABC248-F/">
+                            ABC248 F
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            考虑枚举列，两个点一起做，同时这两个点的相互关系影响了联通，也需要加入状态
+$f_{i,j,0&#x2F;1}$ 考虑前 $i$ 列，删除了 $j$ 条边，第 $i$ 列上下两点之间是否连边
+讨论 $i+1$ 删多少条边，怎么删，是否联通转移，$0$ 转移的时候至少要保证一个点在连通块内，同时 $0$ 只能是类似两横行这样的状态，这样后面 $1$ 才可以接上让它变联通，同时因为 $0$ 可能...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Oct 04 2023 22:14:23 GMT+0800">
+                
+                    2023-10-04
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/problem/">problem</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E7%BA%BF%E6%80%A7-Dp/">线性 Dp</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/undefined/ABC248-F/ABC248-F/">阅读全文<span class="seo-reader-text">ABC248 F</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
     </ul>
 
     <div class="home-paginator px-7 py-5">
@@ -1218,7 +1210,7 @@ P1367 蚂蚁 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 120 篇文章
+                        共撰写了 119 篇文章
                     </span>
                     
                 </p>

@@ -97,7 +97,10 @@
 
 
 <body>
-	<div class="progress-bar-container">
+	<meta name="referrer" content="no-referrer" />
+<meta http-equiv="Content-Security-Policy" ontent="upgrade-insecure-requests">
+
+<div class="progress-bar-container">
 	
 	<span class="scroll-progress-bar"></span>
 	
@@ -340,7 +343,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">120</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">119</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -421,7 +424,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">120</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">119</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -436,76 +439,6 @@
 			<div class="main-content">
 				<div class="home-content-container">
     <ul class="home-article-list">
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/undefined/ABC248-F/ABC248-F/">
-                            ABC248 F
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            考虑枚举列，两个点一起做，同时这两个点的相互关系影响了联通，也需要加入状态
-$f_{i,j,0&#x2F;1}$ 考虑前 $i$ 列，删除了 $j$ 条边，第 $i$ 列上下两点之间是否连边
-讨论 $i+1$ 删多少条边，怎么删，是否联通转移，$0$ 转移的时候至少要保证一个点在连通块内，同时 $0$ 只能是类似两横行这样的状态，这样后面 $1$ 才可以接上让它变联通，同时因为 $0$ 可能...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed Oct 04 2023 22:14:23 GMT+0800">
-                
-                    2023-10-04
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/problem/">problem</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E7%BA%BF%E6%80%A7-Dp/">线性 Dp</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/undefined/ABC248-F/ABC248-F/">阅读全文<span class="seo-reader-text">ABC248 F</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
         
             <li class="home-article-item">
 
@@ -1177,6 +1110,83 @@ T2 P7300 [USACO21JAN] No Time to Paint S给定序列 $A$ ，$Q$ 次询问 $[L,R]
                 </div>
             </li>
         
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/undefined/P6381-%E3%80%8EMdOI-R2%E3%80%8FOdyssey/P6381-%E3%80%8EMdOI-R2%E3%80%8FOdyssey/">
+                            P6381『MdOI R2』Odyssey
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            考虑 $topsort$ 
+我们发现每个点的状态只有它的出边个数个，可以跑
+我们考虑到每次传入一个状态，都需要枚举对应出点的所有出边，这样复杂度太高了，可以卡到 $O(m^2)$
+我们考虑压缩边的状态，显然可以想到质因数分解，然后判断指数 $\mod k \equiv 0$ 
+具体来说，对于一条边，我们可以枚举它的每个因子 $p^a$ ，同时 $a,mod&#x3D;k$，然后每个因子乘起来...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Mon Oct 02 2023 22:17:21 GMT+0800">
+                
+                    2023-10-02
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/problem/">problem</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Topsort/">Topsort</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/undefined/P6381-%E3%80%8EMdOI-R2%E3%80%8FOdyssey/P6381-%E3%80%8EMdOI-R2%E3%80%8FOdyssey/">阅读全文<span class="seo-reader-text">P6381『MdOI R2』Odyssey</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
     </ul>
 
     <div class="home-paginator px-7 py-5">
@@ -1207,7 +1217,7 @@ T2 P7300 [USACO21JAN] No Time to Paint S给定序列 $A$ ，$Q$ 次询问 $[L,R]
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 120 篇文章
+                        共撰写了 119 篇文章
                     </span>
                     
                 </p>

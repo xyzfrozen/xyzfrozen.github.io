@@ -97,7 +97,10 @@
 
 
 <body>
-	<div class="progress-bar-container">
+	<meta name="referrer" content="no-referrer" />
+<meta http-equiv="Content-Security-Policy" ontent="upgrade-insecure-requests">
+
+<div class="progress-bar-container">
 	
 	<span class="scroll-progress-bar"></span>
 	
@@ -340,7 +343,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">120</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">119</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -421,7 +424,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">120</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">119</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -436,84 +439,6 @@
 			<div class="main-content">
 				<div class="home-content-container">
     <ul class="home-article-list">
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/undefined/%E6%A0%91%E5%A5%97%E6%A0%91/%E6%A0%91%E5%A5%97%E6%A0%91/">
-                            树套树
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            <p>Here’s something encrypted, password is required to continue reading.</p>
-
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Dec 23 2023 19:11:16 GMT+0800">
-                
-                    2023-12-23
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/note/">note</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E6%A0%91%E5%A5%97%E6%A0%91/">树套树</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E6%9D%83%E5%80%BC%E7%BA%BF%E6%AE%B5%E6%A0%91/">权值线段树</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E5%8A%A8%E6%80%81%E5%BC%80%E7%82%B9/">动态开点</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/undefined/%E6%A0%91%E5%A5%97%E6%A0%91/%E6%A0%91%E5%A5%97%E6%A0%91/">阅读全文<span class="seo-reader-text">树套树</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
         
             <li class="home-article-item">
 
@@ -1225,6 +1150,86 @@ U93147 旅行诗（lyric） - 洛谷...
                 </div>
             </li>
         
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/undefined/%E6%B5%85%E8%B0%88%E9%9B%86%E5%90%88%E9%80%89%E6%95%B0%E5%89%8D-k-%E5%A4%A7/%E6%B5%85%E8%B0%88%E9%9B%86%E5%90%88%E9%80%89%E6%95%B0%E5%89%8D-k-%E5%A4%A7/">
+                            浅谈集合选数前 k 大
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            集合选数前 $k$ 大利用堆维护当前状态，然后删除当前状态，加入后继状态
+原理是如果当前状态合法，则前驱一定合法
+初始要排序
+例题 $1$
+给定序列 $a$，求第 $k$ 大子集的和，子集的大小定义为所有元素相加
+$n \leq 1e5,k\leq 1e5$
+序列先降序排序
+钦定一个子集的前驱是：如果子集只有一个数，那么它的前驱是它前面的数，如果子集有大于一个数，那么考虑它最靠后的两个数，如...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Nov 01 2023 23:24:17 GMT+0800">
+                
+                    2023-11-01
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/note/">note</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E8%B4%AA%E5%BF%83/">贪心</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E5%A0%86/">堆</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/undefined/%E6%B5%85%E8%B0%88%E9%9B%86%E5%90%88%E9%80%89%E6%95%B0%E5%89%8D-k-%E5%A4%A7/%E6%B5%85%E8%B0%88%E9%9B%86%E5%90%88%E9%80%89%E6%95%B0%E5%89%8D-k-%E5%A4%A7/">阅读全文<span class="seo-reader-text">浅谈集合选数前 k 大</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
     </ul>
 
     <div class="home-paginator px-7 py-5">
@@ -1255,7 +1260,7 @@ U93147 旅行诗（lyric） - 洛谷...
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 120 篇文章
+                        共撰写了 119 篇文章
                     </span>
                     
                 </p>

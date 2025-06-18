@@ -97,7 +97,10 @@
 
 
 <body>
-	<div class="progress-bar-container">
+	<meta name="referrer" content="no-referrer" />
+<meta http-equiv="Content-Security-Policy" ontent="upgrade-insecure-requests">
+
+<div class="progress-bar-container">
 	
 	<span class="scroll-progress-bar"></span>
 	
@@ -340,7 +343,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">120</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">119</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -421,7 +424,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">120</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">119</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -436,83 +439,6 @@
 			<div class="main-content">
 				<div class="home-content-container">
     <ul class="home-article-list">
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/undefined/P6381-%E3%80%8EMdOI-R2%E3%80%8FOdyssey/P6381-%E3%80%8EMdOI-R2%E3%80%8FOdyssey/">
-                            P6381『MdOI R2』Odyssey
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            考虑 $topsort$ 
-我们发现每个点的状态只有它的出边个数个，可以跑
-我们考虑到每次传入一个状态，都需要枚举对应出点的所有出边，这样复杂度太高了，可以卡到 $O(m^2)$
-我们考虑压缩边的状态，显然可以想到质因数分解，然后判断指数 $\mod k \equiv 0$ 
-具体来说，对于一条边，我们可以枚举它的每个因子 $p^a$ ，同时 $a,mod&#x3D;k$，然后每个因子乘起来...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Oct 02 2023 22:17:21 GMT+0800">
-                
-                    2023-10-02
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/problem/">problem</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/Topsort/">Topsort</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/undefined/P6381-%E3%80%8EMdOI-R2%E3%80%8FOdyssey/P6381-%E3%80%8EMdOI-R2%E3%80%8FOdyssey/">阅读全文<span class="seo-reader-text">P6381『MdOI R2』Odyssey</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
         
             <li class="home-article-item">
 
@@ -1197,6 +1123,79 @@ $BFS$ 转 $DFS$ 就是利用 $IDA*$ 实现 $BFS$ 框架，并且利用 $DFS$ 的
                 </div>
             </li>
         
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/undefined/%E8%BF%9E%E7%BB%AD%E6%AE%B5-Dp/%E8%BF%9E%E7%BB%AD%E6%AE%B5-Dp/">
+                            连续段 Dp
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            连续段 Dp简介求个满足条件的排列数个数，存在一些例如 $a_i \lt a_j$ 的限制条件
+假如我们记录哪些数出现过，那么显然状态会爆炸，无法记录
+我们可以从大到小，或从小到大来填数
+状态转移的过程可能与相邻的已插入元素的具体信息相关，如插入一个新元素时，需要知道与其插入位置相邻的两个元素的值是多少
+推荐文章
+基本操作它的元素插入操作只会在连续段的两端进行，通过新建连续段，插入至已有连续...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Sep 30 2023 00:04:57 GMT+0800">
+                
+                    2023-09-30
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/note/">note</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E8%BF%9E%E7%BB%AD%E6%AE%B5-Dp/">连续段 Dp</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/undefined/%E8%BF%9E%E7%BB%AD%E6%AE%B5-Dp/%E8%BF%9E%E7%BB%AD%E6%AE%B5-Dp/">阅读全文<span class="seo-reader-text">连续段 Dp</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
     </ul>
 
     <div class="home-paginator px-7 py-5">
@@ -1227,7 +1226,7 @@ $BFS$ 转 $DFS$ 就是利用 $IDA*$ 实现 $BFS$ 框架，并且利用 $DFS$ 的
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 120 篇文章
+                        共撰写了 119 篇文章
                     </span>
                     
                 </p>
