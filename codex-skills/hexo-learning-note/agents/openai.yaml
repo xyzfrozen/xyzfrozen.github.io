@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hexo Learning Note"
+  short_description: "Turn learning sessions into Hexo notes"
+  default_prompt: "Use $hexo-learning-note to plan a learning session and publish the final note to my Hexo blog."
