@@ -445,7 +445,7 @@ mjx-container[display="true"] + br {
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">118</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">131</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
@@ -453,7 +453,7 @@ mjx-container[display="true"] + br {
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">120</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">131</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -521,12 +521,12 @@ mjx-container[display="true"] + br {
                 <div class="author flex flex-col justify-center my-2.5 mx-0">
     <div class="name">xyzfrozen</div>
     
-        <div class="label">Lv5</div>
+        <div class="label">Lv6</div>
     
 </div>
                 <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">118</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">131</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
@@ -534,7 +534,7 @@ mjx-container[display="true"] + br {
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">120</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">131</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -559,32 +559,36 @@ mjx-container[display="true"] + br {
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/undefined/P8905-USACO22DEC-Strongest-Friendship-Group-G/P8905-USACO22DEC-Strongest-Friendship-Group-G/">
-                            P8905 [USACO22DEC] Strongest Friendship Group G
+                        <a href="/xyzfrozen/P8252-NOI-Online-2022-%E6%8F%90%E9%AB%98%E7%BB%84-%E8%AE%A8%E8%AE%BA/P8252-NOI-Online-2022-%E6%8F%90%E9%AB%98%E7%BB%84-%E8%AE%A8%E8%AE%BA/">
+                            P8252 [NOI Online 2022 提高组] 讨论
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            考虑枚举最小度数的点，则其贡献为度数  包含它的极大连通块的 
-直接枚举该点，算答案，然后暴力删除这个点，更新与它相邻的点的度数
-我们需要维护的操作有
+                            问题等价于，给定  个集合，是否存在两个集合相交且互不包含，设满足条件 
+我们考虑小集合对大集合的贡献，所以把所有集合按照大小从小到大排序
+这样做是任意元素的，我们经典套路，只考虑最近元素
+对每道题维护一个颜色，如果  当且仅当 ， 出现次数 
+我们考虑一个集合什么时候没用了
 
-找当前度数最小的点
-删除点，修改度数
 
-这是非常经典的连通块维护删点问题，直接考虑时间回溯并查集加点，用 set 维护度数
-1234567891011121314151617181920212223242526272829303132333...
+
+
+若 ，则 ，又 ，得  矛盾
+
+直接把所有  的题目在判断完后染色成  即可
+123456789101112...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed Oct 18 2023 22:17:58 GMT+0800">
+            <span class="home-article-date" data-date="Sun Nov 05 2023 23:44:27 GMT+0800">
                 
-                    2023-10-18
+                    2023-11-05
                 
             </span>
         </span>
@@ -615,17 +619,12 @@ mjx-container[display="true"] + br {
                             <a href="/tags/%E6%80%9D%E7%BB%B4/">思维</a>&nbsp;
                         </li>
                     
-                        <li>
-                            | 
-                            <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a>&nbsp;
-                        </li>
-                    
                 </ul>
             </span>
         
     </div>
 
-    <a href="/undefined/P8905-USACO22DEC-Strongest-Friendship-Group-G/P8905-USACO22DEC-Strongest-Friendship-Group-G/">阅读全文<span class="seo-reader-text">P8905 [USACO22DEC] Strongest Friendship Group G</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/xyzfrozen/P8252-NOI-Online-2022-%E6%8F%90%E9%AB%98%E7%BB%84-%E8%AE%A8%E8%AE%BA/P8252-NOI-Online-2022-%E6%8F%90%E9%AB%98%E7%BB%84-%E8%AE%A8%E8%AE%BA/">阅读全文<span class="seo-reader-text">P8252 [NOI Online 2022 提高组] 讨论</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -640,38 +639,346 @@ mjx-container[display="true"] + br {
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/undefined/P7108-%E7%A7%BB%E8%8A%B1%E6%8E%A5%E6%9C%A8/P7108-%E7%A7%BB%E8%8A%B1%E6%8E%A5%E6%9C%A8/">
-                            P7108 移花接木
+                        <a href="/xyzfrozen/%E6%B5%85%E8%B0%88%E9%9B%86%E5%90%88%E9%80%89%E6%95%B0%E5%89%8D-k-%E5%A4%A7/%E6%B5%85%E8%B0%88%E9%9B%86%E5%90%88%E9%80%89%E6%95%B0%E5%89%8D-k-%E5%A4%A7/">
+                            浅谈集合选数前 k 大
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            
+                            集合选数前  大利用堆维护当前状态，然后删除当前状态，加入后继状态
+原理是如果当前状态合法，则前驱一定合法
+初始要排序
+例题 
+给定序列 ，求第  大子集的和，子集的大小定义为所有元素相加
 
- 删掉所有  的儿子，
-
-
-
-
-​	考虑数学归纳法，设已经完成了第  层，我们只需要移花，最后删掉第  层所有的儿子
-​	则  层一共有  个儿子，我们只需要  个儿子，所以要操作  次
-
-
-
-​	换的时候可以贪心，用第  层的树枝嫁接给之前的，最后删掉第  层所有的儿子
-​	每一层的每一个都需要补  个树枝
-123456789101112131415161718192021222324...
+序列先降序排序
+钦定一个子集的前驱是：如果子集只有一个数，那么它的前驱是它前面的数，如果子集有大于一个数，那么考虑它最靠后的两个数，如果这两个数在原序列相邻相邻，那么前驱是删去最后一个数，否则前驱是删去...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed Oct 18 2023 22:17:44 GMT+0800">
+            <span class="home-article-date" data-date="Wed Nov 01 2023 23:24:17 GMT+0800">
                 
-                    2023-10-18
+                    2023-11-01
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/note/">note</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E8%B4%AA%E5%BF%83/">贪心</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E5%A0%86/">堆</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/xyzfrozen/%E6%B5%85%E8%B0%88%E9%9B%86%E5%90%88%E9%80%89%E6%95%B0%E5%89%8D-k-%E5%A4%A7/%E6%B5%85%E8%B0%88%E9%9B%86%E5%90%88%E9%80%89%E6%95%B0%E5%89%8D-k-%E5%A4%A7/">阅读全文<span class="seo-reader-text">浅谈集合选数前 k 大</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/xyzfrozen/%E6%B5%85%E8%B0%88%E5%88%86%E6%B2%BB/%E6%B5%85%E8%B0%88%E5%88%86%E6%B2%BB/">
+                            浅谈分治
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            Introduction神秘分治，求合法区间个数
+通过分治降至 ， 为每一层分治的复杂度
+
+枚举左端点，考虑右端点的贡献，此时利用单调性，控制右端点单调不降/单调不增
+考虑利用值域，如  只有  种，满足条件的合法个数满足  （ 为该右端点的某个属性）
+考虑利用性质，比如左右在操作后状态相等
+具体维护  和  的   状态，如最值，前缀和，最值前缀和，字符状态等
+考虑移动左端点的影响，同时移...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Tue Oct 31 2023 22:49:57 GMT+0800">
+                
+                    2023-10-31
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/note/">note</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E5%88%86%E6%B2%BB/">分治</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">双指针</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/xyzfrozen/%E6%B5%85%E8%B0%88%E5%88%86%E6%B2%BB/%E6%B5%85%E8%B0%88%E5%88%86%E6%B2%BB/">阅读全文<span class="seo-reader-text">浅谈分治</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/xyzfrozen/P9753-CSP-S-2023-%E6%B6%88%E6%B6%88%E4%B9%90/P9753-CSP-S-2023-%E6%B6%88%E6%B6%88%E4%B9%90/">
+                            P9753 [CSP-S 2023] 消消乐
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            <p>Here’s something encrypted, password is required to continue reading.</p>
+
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Oct 29 2023 22:21:02 GMT+0800">
+                
+                    2023-10-29
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/note/">note</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E7%BA%BF%E6%80%A7-Dp/">线性 Dp</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Trie/">Trie</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E5%88%86%E6%B2%BB/">分治</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/xyzfrozen/P9753-CSP-S-2023-%E6%B6%88%E6%B6%88%E4%B9%90/P9753-CSP-S-2023-%E6%B6%88%E6%B6%88%E4%B9%90/">阅读全文<span class="seo-reader-text">P9753 [CSP-S 2023] 消消乐</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/xyzfrozen/Last-Season-1-CSP/Last-Season-1-CSP/">
+                            Last Season.1 CSP
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            CSP-S 一个概况
+ continue 这个逆天题居然写了 40 分钟
+ 
+已经推出来了  这一步
+但是没有考虑好，想的是  必须回文，但是想到了 daccabccbd 这种情况，不知道怎么做了
+这种时候应该进一步细化想法，找到准确的  定义，并且赶快先打出来
+有时候感觉复杂度不够，要精细的算一下，相信 ccf 的数据
+合法当且仅当，回文，回文+外括号，都可以规约成 最远合法 这个状态，这...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Oct 29 2023 21:55:14 GMT+0800">
+                
+                    2023-10-29
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/">碎碎念</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+    </div>
+
+    <a href="/xyzfrozen/Last-Season-1-CSP/Last-Season-1-CSP/">阅读全文<span class="seo-reader-text">Last Season.1 CSP</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/xyzfrozen/%E6%9D%82%E9%A2%98%E7%B2%BE%E9%80%89-Oct-2-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%90%8C%E8%90%8C%E9%A2%98/%E6%9D%82%E9%A2%98%E7%B2%BE%E9%80%89-Oct-2-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%90%8C%E8%90%8C%E9%A2%98/">
+                            杂题精选 Oct.2 数据结构萌萌题
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            [P4344 SHOI2015] 脑洞治疗仪
+操作
+
+区间赋值
+区间查询  的个数，区间赋值
+区间最大区间  值
+
+操作  可视为区间最大字段和，维护 
+操作  需要维护区间  的个数，并且我们需要线段树二分找到  中第一个  的地方
+综上维护  的个数，类区间最大字段和，和  操作的 
+注意线段树二分的时候还要加上  的 ，因为我们是在  这个区间递归进去的
+1modify(l2,find...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Oct 28 2023 21:29:31 GMT+0800">
+                
+                    2023-10-28
                 
             </span>
         </span>
@@ -707,12 +1014,42 @@ mjx-container[display="true"] + br {
                             <a href="/tags/%E6%80%9D%E7%BB%B4/">思维</a>&nbsp;
                         </li>
                     
+                        <li>
+                            | 
+                            <a href="/tags/%E6%A0%91%E5%BD%A2-Dp/">树形 Dp</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Trie/">Trie</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E5%88%86%E6%B2%BB/">分治</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91%E4%BA%8C%E5%88%86/">线段树二分</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">双指针</a>&nbsp;
+                        </li>
+                    
                 </ul>
             </span>
         
     </div>
 
-    <a href="/undefined/P7108-%E7%A7%BB%E8%8A%B1%E6%8E%A5%E6%9C%A8/P7108-%E7%A7%BB%E8%8A%B1%E6%8E%A5%E6%9C%A8/">阅读全文<span class="seo-reader-text">P7108 移花接木</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/xyzfrozen/%E6%9D%82%E9%A2%98%E7%B2%BE%E9%80%89-Oct-2-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%90%8C%E8%90%8C%E9%A2%98/%E6%9D%82%E9%A2%98%E7%B2%BE%E9%80%89-Oct-2-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%90%8C%E8%90%8C%E9%A2%98/">阅读全文<span class="seo-reader-text">杂题精选 Oct.2 数据结构萌萌题</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -727,29 +1064,29 @@ mjx-container[display="true"] + br {
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/undefined/CF27E-Number-With-The-Given-Amount-Of-Divisors/CF27E-Number-With-The-Given-Amount-Of-Divisors/">
-                            CF27E Number With The Given Amount Of Divisors
+                        <a href="/xyzfrozen/%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91/%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91/">
+                            珂朵莉树
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            一个数的因数为 
-考虑到每个质因子的贡献之和选择了多少个有关，我们肯定能用小的就用小的
-但是不能只用 ，因为  和  不知道谁大，比如 
-考虑到前  个质数最劣可以贡献  个因数，我们完全没有必要选前  个质数以外的质数
- 考虑前  个质数，当前有  个因子的最小数
-123456789101112131415161718192021222324252627282930313233343536...
+                            Introduction 俗称珂朵莉树，适用于有区间赋值，即 assign 操作的题目
+ODT 用 set 维护区间，存储  这样的三元组信息
+核心操作是 split 类似 fhq ，全部先分裂再操作
+分裂一定要先 ，再 ，避免迭代器失效
+定义
+123456789#define IT set&lt;node&gt;::iteratorstruct node{    int l,r;    m...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Oct 17 2023 22:26:07 GMT+0800">
+            <span class="home-article-date" data-date="Sat Oct 28 2023 21:09:32 GMT+0800">
                 
-                    2023-10-17
+                    2023-10-28
                 
             </span>
         </span>
@@ -762,7 +1099,7 @@ mjx-container[display="true"] + br {
                     
                         
                         <li>
-                            <a href="/categories/problem/">problem</a>&nbsp;
+                            <a href="/categories/note/">note</a>&nbsp;
                         </li>
                     
                     
@@ -777,12 +1114,12 @@ mjx-container[display="true"] + br {
                     
                         <li>
                             
-                            <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>&nbsp;
+                            <a href="/tags/%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91/">珂朵莉树</a>&nbsp;
                         </li>
                     
                         <li>
                             | 
-                            <a href="/tags/%E7%BA%BF%E6%80%A7-Dp/">线性 Dp</a>&nbsp;
+                            <a href="/tags/%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90/">复杂度分析</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -790,7 +1127,7 @@ mjx-container[display="true"] + br {
         
     </div>
 
-    <a href="/undefined/CF27E-Number-With-The-Given-Amount-Of-Divisors/CF27E-Number-With-The-Given-Amount-Of-Divisors/">阅读全文<span class="seo-reader-text">CF27E Number With The Given Amount Of Divisors</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/xyzfrozen/%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91/%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91/">阅读全文<span class="seo-reader-text">珂朵莉树</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -805,29 +1142,26 @@ mjx-container[display="true"] + br {
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/undefined/AT-dp-y/AT-dp-y/">
-                            AT_dp_y
+                        <a href="/xyzfrozen/Vivia-%E4%B8%BB%E9%A2%98%E7%9B%B8%E5%85%B3/Vivia-%E4%B8%BB%E9%A2%98%E7%9B%B8%E5%85%B3/">
+                            Vivia 主题相关
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            考虑容斥，要求 
-总方案数显然 
-我们枚举一条不合法路径的起点 ，那么所有  的路径都是不合法的
-设从  的不经过任何其它的点的路径方案数为 
-考虑这条路径的不合法贡献为如何求  ? 继续容斥
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545...
+                            因为这个主题没有置顶和隐藏功能，需要换一个主题
+Vivia 的主题配置
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283# He...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Oct 17 2023 22:25:10 GMT+0800">
+            <span class="home-article-date" data-date="Sat Oct 28 2023 11:23:47 GMT+0800">
                 
-                    2023-10-17
+                    2023-10-28
                 
             </span>
         </span>
@@ -840,7 +1174,7 @@ mjx-container[display="true"] + br {
                     
                         
                         <li>
-                            <a href="/categories/problem/">problem</a>&nbsp;
+                            <a href="/categories/technology/">technology</a>&nbsp;
                         </li>
                     
                     
@@ -849,36 +1183,9 @@ mjx-container[display="true"] + br {
         </span>
         
         
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E7%BA%BF%E6%80%A7-Dp/">线性 Dp</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">组合数学</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86/">容斥原理</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
     </div>
 
-    <a href="/undefined/AT-dp-y/AT-dp-y/">阅读全文<span class="seo-reader-text">AT_dp_y</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/xyzfrozen/Vivia-%E4%B8%BB%E9%A2%98%E7%9B%B8%E5%85%B3/Vivia-%E4%B8%BB%E9%A2%98%E7%9B%B8%E5%85%B3/">阅读全文<span class="seo-reader-text">Vivia 主题相关</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -893,37 +1200,28 @@ mjx-container[display="true"] + br {
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/undefined/P7077-CSP-S2020-%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/P7077-CSP-S2020-%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/">
-                            P7077 [CSP-S2020] 函数调用
+                        <a href="/xyzfrozen/%E6%9D%82%E9%A2%98%E7%B2%BE%E9%80%89-Oct-1-The-best-People-in-life-are-free/%E6%9D%82%E9%A2%98%E7%B2%BE%E9%80%89-Oct-1-The-best-People-in-life-are-free/">
+                            杂题精选 Oct.1 The best People in life are free!
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            类似线段树的考虑
-首先把赋初值当做  次单点修改
-一个  操作的贡献为其后所有  操作贡献的积 
-一个  操作的贡献同理
-考虑到把每个操作当做点，这是一张 
-设
- 
- 
- 
-记  为按照  序列执行，从  开始的  后缀积
-则对于操作 ，所有外部操作对它的贡献为被乘 ，可以把每个函数执行的次数算出来
-考虑到  的操作不能暴力执行，我们把贡献放到  上面
-考虑操作序列 ，当前操作三为操作 
-则...
+                            太忙了，直接简写
+[P8779 蓝桥杯 2022 省 A] 推导部分和 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)
+并查集经典应用
+图论建模，然后考虑到一个类似树上两点求距离的办法，钦定连通块的头，然后用带权并查集查询两点距离
+123456789101112131415161718192021222324252627282930313233343536373839404...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Oct 16 2023 22:31:29 GMT+0800">
+            <span class="home-article-date" data-date="Tue Oct 24 2023 22:49:56 GMT+0800">
                 
-                    2023-10-16
+                    2023-10-24
                 
             </span>
         </span>
@@ -956,12 +1254,27 @@ mjx-container[display="true"] + br {
                     
                         <li>
                             | 
-                            <a href="/tags/%E7%BA%BF%E6%80%A7-Dp/">线性 Dp</a>&nbsp;
+                            <a href="/tags/%E6%80%9D%E7%BB%B4/">思维</a>&nbsp;
                         </li>
                     
                         <li>
                             | 
-                            <a href="/tags/%E6%80%9D%E7%BB%B4/">思维</a>&nbsp;
+                            <a href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/">最短路</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91%E4%BA%8C%E5%88%86/">线段树二分</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E7%8A%B6%E5%8E%8B-Dp/">状压 Dp</a>&nbsp;
                         </li>
                     
                         <li>
@@ -969,12 +1282,22 @@ mjx-container[display="true"] + br {
                             <a href="/tags/Topsort/">Topsort</a>&nbsp;
                         </li>
                     
+                        <li>
+                            | 
+                            <a href="/tags/MST/">MST</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E5%8C%BA%E9%97%B4-Dp/">区间 Dp</a>&nbsp;
+                        </li>
+                    
                 </ul>
             </span>
         
     </div>
 
-    <a href="/undefined/P7077-CSP-S2020-%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/P7077-CSP-S2020-%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/">阅读全文<span class="seo-reader-text">P7077 [CSP-S2020] 函数调用</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/xyzfrozen/%E6%9D%82%E9%A2%98%E7%B2%BE%E9%80%89-Oct-1-The-best-People-in-life-are-free/%E6%9D%82%E9%A2%98%E7%B2%BE%E9%80%89-Oct-1-The-best-People-in-life-are-free/">阅读全文<span class="seo-reader-text">杂题精选 Oct.1 The best People in life are free!</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -989,32 +1312,24 @@ mjx-container[display="true"] + br {
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/undefined/P7915-CSP-S-2021-%E5%9B%9E%E6%96%87/P7915-CSP-S-2021-%E5%9B%9E%E6%96%87/">
-                            P7915 [CSP-S 2021] 回文
+                        <a href="/xyzfrozen/Luogu-Simu7-T4/Luogu-Simu7-T4/">
+                            Luogu Simu7 T4
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
-                            
-                            暴力  设  为区间  的是否合法
-直接记搜，考虑当前决策只有  三种匹配方式，记搜即可
-区间  就考虑端点和端点匹配，端点和区间内匹配
-考虑第一步选择  的情况
-则序列可以划分成两个子问题
-vxxxxxxvxxxx ，两个  把序列分成了两份，因为剩下一个  必须最后弹出
-记左边一半  为 ，右边一半  为 
-第二次操作和倒数第二次操作移走的数必须相同，第二次操作为 ，倒数第二次操作为 
-...
+                            <p>Here’s something encrypted, password is required to continue reading.</p>
+
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Oct 16 2023 22:31:20 GMT+0800">
+            <span class="home-article-date" data-date="Tue Oct 24 2023 22:48:32 GMT+0800">
                 
-                    2023-10-16
+                    2023-10-24
                 
             </span>
         </span>
@@ -1043,159 +1358,6 @@ vxxxxxxvxxxx ，两个  把序列分成了两份，因为剩下一个  必须最
                         <li>
                             
                             <a href="/tags/%E6%80%9D%E7%BB%B4/">思维</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E5%8F%8C%E7%AB%AF%E9%98%9F%E5%88%97/">双端队列</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/undefined/P7915-CSP-S-2021-%E5%9B%9E%E6%96%87/P7915-CSP-S-2021-%E5%9B%9E%E6%96%87/">阅读全文<span class="seo-reader-text">P7915 [CSP-S 2021] 回文</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/undefined/P9745-%E3%80%8CKDOI-06-S%E3%80%8D%E6%A0%91%E4%B8%8A%E5%BC%82%E6%88%96/P9745-%E3%80%8CKDOI-06-S%E3%80%8D%E6%A0%91%E4%B8%8A%E5%BC%82%E6%88%96/">
-                            P9745 「KDOI-06-S」树上异或
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            
-考虑到值域很小，我们可以强行把值域加入  状态
-同时显然一个连通块的贡献在  处计算，由于  只满足  所以我们还需要知道剩下块的乘积
-设  表示， 为  的连通块异或和为 ，其它子树内连通块异或和的乘积
-暴力枚举值域转移  ， 为值域
-精简版代码
-123456789101112131415161718192021222324void dfs(int x){    f[x][w[x]]=1...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Oct 16 2023 22:31:10 GMT+0800">
-                
-                    2023-10-16
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/problem/">problem</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E6%A0%91%E5%BD%A2-Dp/">树形 Dp</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/undefined/P9745-%E3%80%8CKDOI-06-S%E3%80%8D%E6%A0%91%E4%B8%8A%E5%BC%82%E6%88%96/P9745-%E3%80%8CKDOI-06-S%E3%80%8D%E6%A0%91%E4%B8%8A%E5%BC%82%E6%88%96/">阅读全文<span class="seo-reader-text">P9745 「KDOI-06-S」树上异或</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/undefined/%E6%B5%85%E8%B0%88%E5%8D%9A%E5%BC%88%E8%AE%BA/%E6%B5%85%E8%B0%88%E5%8D%9A%E5%BC%88%E8%AE%BA/">
-                            浅谈博弈论
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            博弈论题，把状态压出来，然后做记忆化搜索
-[P4363 九省联考 2018] 一双木棋 chess - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)
-考虑本题性质，每一行一定连续，当前一定是一个左上三角形的局面
-考虑压缩状态，我们只需要知道每一行填到哪里了即可
-
-介绍一个奇妙的搜索  剪枝，要求 零和博弈 &amp;&amp; 博弈双方足够聪明，两个人目标相反
-【算法】极大极...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Oct 16 2023 22:31:03 GMT+0800">
-                
-                    2023-10-16
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/note/">note</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E6%90%9C%E7%B4%A2/">搜索</a>&nbsp;
                         </li>
                     
                         <li>
@@ -1205,7 +1367,7 @@ vxxxxxxvxxxx ，两个  把序列分成了两份，因为剩下一个  必须最
                     
                         <li>
                             | 
-                            <a href="/tags/%E8%BD%AE%E5%BB%93%E7%BA%BF-Dp/">轮廓线 Dp</a>&nbsp;
+                            <a href="/tags/%E8%8E%AB%E9%98%9F/">莫队</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1213,181 +1375,7 @@ vxxxxxxvxxxx ，两个  把序列分成了两份，因为剩下一个  必须最
         
     </div>
 
-    <a href="/undefined/%E6%B5%85%E8%B0%88%E5%8D%9A%E5%BC%88%E8%AE%BA/%E6%B5%85%E8%B0%88%E5%8D%9A%E5%BC%88%E8%AE%BA/">阅读全文<span class="seo-reader-text">浅谈博弈论</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/undefined/CF1876/CF1876/">
-                            CF1876
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            掉大分哩
-B赛时写挂了，直接排序 ，如果  直接买光，因为现在不用它买用  买一定更劣
-然后  直接村长买就行了
-注意开始 ，这样就强制买  最小的了
-D考察一个数的贡献
-首先即  为所有  中的最大值
-考察  的贡献为剩下数随便选的集合中的最大值都不超过它
-我们按  排序，设其为第  大，则贡献为 
-这里不用管两个值相等的情况，分析得任意一种集合选取方案一定只被算一次
-
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Oct 16 2023 00:02:56 GMT+0800">
-                
-                    2023-10-16
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/problem/">problem</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E8%B4%AA%E5%BF%83/">贪心</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/undefined/CF1876/CF1876/">阅读全文<span class="seo-reader-text">CF1876</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/undefined/%E6%B5%85%E8%B0%88%E5%AD%97%E7%AC%A6%E4%B8%B2/%E6%B5%85%E8%B0%88%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-                            浅谈字符串
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            主要是复习一下字符串
-定义   的前  个字符构成的前缀
-  的后  个字符构成的后缀
- ：满足  的 ，且 ，记为 
- ：满足  的 ，且 
-设 
-性质
-若  为    为 
-
-​	因为 
-应用：最短的字符串 ，满足  为  的子串，
-前面的就用  拼，后面由于  的性质，可以直接把  拼在后面
-
- 的传递性：
- 若 ，，则 
- 若 ，， ，则 
-
-
- 为  的全部 
-problemP71...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sun Oct 15 2023 10:30:16 GMT+0800">
-                
-                    2023-10-15
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/note/">note</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/KMP/">KMP</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/undefined/%E6%B5%85%E8%B0%88%E5%AD%97%E7%AC%A6%E4%B8%B2/%E6%B5%85%E8%B0%88%E5%AD%97%E7%AC%A6%E4%B8%B2/">阅读全文<span class="seo-reader-text">浅谈字符串</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/xyzfrozen/Luogu-Simu7-T4/Luogu-Simu7-T4/">阅读全文<span class="seo-reader-text">Luogu Simu7 T4</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1397,7 +1385,7 @@ problemP71...
 
     <div class="home-paginator px-7 py-5">
         <div class="paginator">
-	<a class="extend prev" rel="prev" href="/page/4/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/6/"><i class="fa-regular fa-angle-right"></i></a>
+	<a class="extend prev" rel="prev" href="/page/4/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/6/"><i class="fa-regular fa-angle-right"></i></a>
 </div>
   
     </div>
@@ -1418,12 +1406,12 @@ problemP71...
               <span>2023</span>
               -
             
-            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">xyzfrozen</a>
+            2026&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">xyzfrozen</a>
             
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 120 篇文章
+                        共撰写了 131 篇文章
                     </span>
                     
                 </p>

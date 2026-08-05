@@ -445,7 +445,7 @@ mjx-container[display="true"] + br {
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">118</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">131</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
@@ -453,7 +453,7 @@ mjx-container[display="true"] + br {
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">120</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">131</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -521,12 +521,12 @@ mjx-container[display="true"] + br {
                 <div class="author flex flex-col justify-center my-2.5 mx-0">
     <div class="name">xyzfrozen</div>
     
-        <div class="label">Lv5</div>
+        <div class="label">Lv6</div>
     
 </div>
                 <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">118</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">131</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
@@ -534,7 +534,7 @@ mjx-container[display="true"] + br {
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">120</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">131</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -559,571 +559,35 @@ mjx-container[display="true"] + br {
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/undefined/EXSTL-Rope/EXSTL-Rope/">
-                            EXSTL-Rope
+                        <a href="/xyzfrozen/%E5%9F%BA%E7%8E%AF%E6%A0%91-Dp/%E5%9F%BA%E7%8E%AF%E6%A0%91-Dp/">
+                            基环树 Dp
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            奇淫巧技-Rope 的可持久化平衡树，无法做区间第  大
-内部为块状链表实现
-12345678910111213141516#include &lt;ext/rope&gt;using namespace __gnu_cxx;rope&lt;int&gt; rp;rope&lt;int&gt; rp[N]rp.push_back(x);rp.insert(pos,x); //a[pos]=x...
+                            基环树  个点  条边的图，一个或多个一个环上挂了一堆树的单元组成
+对于基环树的题，常见的套路就是断掉其中一条边，变成树的处理方式
+需要注意的是，如果出现重边，只可能是 ， 这样的二元环构成
+例题P1453 城市环路
+考虑树怎么做，就是没有上司的舞会
+
+并查集找环，标记环上任意两点和这条边
+
+分别对两个点跑树形 ，然后取 
+
+
+注意这里断边必须标记边，而不是标记点，否则就会被二元环卡掉，因为...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Sep 29 2023 23:31:17 GMT+0800">
+            <span class="home-article-date" data-date="Sat Sep 30 2023 00:05:52 GMT+0800">
                 
-                    2023-09-29
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/note/">note</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E5%B9%B3%E8%A1%A1%E6%A0%91/">可持久化平衡树</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E5%B9%B6%E6%9F%A5%E9%9B%86/">可持久化并查集</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91/">可持久化线段树</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/undefined/EXSTL-Rope/EXSTL-Rope/">阅读全文<span class="seo-reader-text">EXSTL-Rope</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/undefined/Tarjan-%E5%9C%86%E6%96%B9%E6%A0%91/Tarjan-%E5%9C%86%E6%96%B9%E6%A0%91/">
-                            Tarjan &amp;&amp; 圆方树
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            <p>Here’s something encrypted, password is required to continue reading.</p>
-
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Sep 29 2023 23:30:59 GMT+0800">
-                
-                    2023-09-29
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/note/">note</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/Tarjan/">Tarjan</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E5%9C%86%E6%96%B9%E6%A0%91/">圆方树</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/undefined/Tarjan-%E5%9C%86%E6%96%B9%E6%A0%91/Tarjan-%E5%9C%86%E6%96%B9%E6%A0%91/">阅读全文<span class="seo-reader-text">Tarjan &amp;&amp; 圆方树</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/undefined/%E6%A6%82%E7%8E%87%E6%9C%9F%E6%9C%9B/%E6%A6%82%E7%8E%87%E6%9C%9F%E6%9C%9B/">
-                            概率期望
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            <p>Here’s something encrypted, password is required to continue reading.</p>
-
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Sep 29 2023 23:30:42 GMT+0800">
-                
-                    2023-09-29
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/note/">note</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E6%9C%9F%E6%9C%9B/">期望</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E7%BA%BF%E6%80%A7-Dp/">线性 Dp</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E6%A6%82%E7%8E%87/">概率</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/undefined/%E6%A6%82%E7%8E%87%E6%9C%9F%E6%9C%9B/%E6%A6%82%E7%8E%87%E6%9C%9F%E6%9C%9B/">阅读全文<span class="seo-reader-text">概率期望</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/undefined/%E5%AE%9A%E4%B9%89/%E5%AE%9A%E4%B9%89/">
-                            Chapter 1 定义
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            Chapter 1 定义定义在有向图 ，不考虑反向边，记 ， 为源点和汇点
-，均有，为这条边的流量上限，称为容量
-注：，
-， 表示  到  这条边的流量
-形象理解：有一个水泵一直出水，从各个水管流向最终的汇点
-
-
-1.1 可行流若为可行流 (针对整个流网络而言)，记为 ，则满足条件
-
-即容量限制和流量守恒
-注：若存在反向边，则满足斜对称 
-该网络图的流量值 
-注：一般的图没有后面一项
-
-1....
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Sep 29 2023 23:30:23 GMT+0800">
-                
-                    2023-09-29
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/note/">note</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/undefined/%E5%AE%9A%E4%B9%89/%E5%AE%9A%E4%B9%89/">阅读全文<span class="seo-reader-text">Chapter 1 定义</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/undefined/%E8%B4%B9%E7%94%A8%E6%B5%81/%E8%B4%B9%E7%94%A8%E6%B5%81/">
-                            Chapter 6 费用流
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            <p>Here’s something encrypted, password is required to continue reading.</p>
-
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Sep 29 2023 23:30:16 GMT+0800">
-                
-                    2023-09-29
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/note/">note</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E8%B4%B9%E7%94%A8%E6%B5%81/">费用流</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/undefined/%E8%B4%B9%E7%94%A8%E6%B5%81/%E8%B4%B9%E7%94%A8%E6%B5%81/">阅读全文<span class="seo-reader-text">Chapter 6 费用流</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/undefined/%E6%9C%80%E5%B0%8F%E5%89%B2/%E6%9C%80%E5%B0%8F%E5%89%B2/">
-                            Chapter 4,5 最小割
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            <p>Here’s something encrypted, password is required to continue reading.</p>
-
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Sep 29 2023 23:30:07 GMT+0800">
-                
-                    2023-09-29
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/note/">note</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E6%9C%80%E5%B0%8F%E5%89%B2/">最小割</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/undefined/%E6%9C%80%E5%B0%8F%E5%89%B2/%E6%9C%80%E5%B0%8F%E5%89%B2/">阅读全文<span class="seo-reader-text">Chapter 4,5 最小割</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/undefined/%E6%9C%80%E5%A4%A7%E6%B5%81/%E6%9C%80%E5%A4%A7%E6%B5%81/">
-                            Chapter 2,3 最大流
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            <p>Here’s something encrypted, password is required to continue reading.</p>
-
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Sep 29 2023 23:29:56 GMT+0800">
-                
-                    2023-09-29
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/note/">note</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E6%9C%80%E5%A4%A7%E6%B5%81/">最大流</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/undefined/%E6%9C%80%E5%A4%A7%E6%B5%81/%E6%9C%80%E5%A4%A7%E6%B5%81/">阅读全文<span class="seo-reader-text">Chapter 2,3 最大流</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/undefined/%E6%A0%91/%E6%A0%91/">
-                            树
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            <p>Here’s something encrypted, password is required to continue reading.</p>
-
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Sep 29 2023 23:29:27 GMT+0800">
-                
-                    2023-09-29
+                    2023-09-30
                 
             </span>
         </span>
@@ -1156,7 +620,7 @@ mjx-container[display="true"] + br {
                     
                         <li>
                             | 
-                            <a href="/tags/%E6%8D%A2%E6%A0%B9-Dp/">换根 Dp</a>&nbsp;
+                            <a href="/tags/%E5%9F%BA%E7%8E%AF%E6%A0%91/">基环树</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1164,7 +628,7 @@ mjx-container[display="true"] + br {
         
     </div>
 
-    <a href="/undefined/%E6%A0%91/%E6%A0%91/">阅读全文<span class="seo-reader-text">树</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/xyzfrozen/%E5%9F%BA%E7%8E%AF%E6%A0%91-Dp/%E5%9F%BA%E7%8E%AF%E6%A0%91-Dp/">阅读全文<span class="seo-reader-text">基环树 Dp</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1179,32 +643,29 @@ mjx-container[display="true"] + br {
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/undefined/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
-                            组合数学
+                        <a href="/xyzfrozen/%E8%BF%9E%E7%BB%AD%E6%AE%B5-Dp/%E8%BF%9E%E7%BB%AD%E6%AE%B5-Dp/">
+                            连续段 Dp
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            组合数学包含基本推导，容斥，二项式反演等内容
-杨辉三角相关 link
-结论定义式：
-对称恒等式（下指标反转）：吸收恒等式：加法递推式：列递推式：列前缀和：组合意义：枚举选的最后一个
-斜前缀和：组合意义：枚举选一个后缀
-二项式定理：【推论1】第行求和
-每一种组合方案映射到长度为  的  串，共有  种
-【推论2】第行交错求和【推论3】第行偶数和奇数和上指标反转：
-交错行前缀和：用上指标反转可证...
+                            连续段 Dp简介求个满足条件的排列数个数，存在一些例如  的限制条件
+假如我们记录哪些数出现过，那么显然状态会爆炸，无法记录
+我们可以从大到小，或从小到大来填数
+状态转移的过程可能与相邻的已插入元素的具体信息相关，如插入一个新元素时，需要知道与其插入位置相邻的两个元素的值是多少
+推荐文章
+基本操作它的元素插入操作只会在连续段的两端进行，通过新建连续段，插入至已有连续段的两端，合并两连续段三类...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Sep 29 2023 23:29:21 GMT+0800">
+            <span class="home-article-date" data-date="Sat Sep 30 2023 00:04:57 GMT+0800">
                 
-                    2023-09-29
+                    2023-09-30
                 
             </span>
         </span>
@@ -1232,17 +693,7 @@ mjx-container[display="true"] + br {
                     
                         <li>
                             
-                            <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">组合数学</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E5%AE%B9%E6%96%A5/">容斥</a>&nbsp;
+                            <a href="/tags/%E8%BF%9E%E7%BB%AD%E6%AE%B5-Dp/">连续段 Dp</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1250,7 +701,7 @@ mjx-container[display="true"] + br {
         
     </div>
 
-    <a href="/undefined/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">阅读全文<span class="seo-reader-text">组合数学</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/xyzfrozen/%E8%BF%9E%E7%BB%AD%E6%AE%B5-Dp/%E8%BF%9E%E7%BB%AD%E6%AE%B5-Dp/">阅读全文<span class="seo-reader-text">连续段 Dp</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1265,8 +716,94 @@ mjx-container[display="true"] + br {
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/undefined/%E7%BD%91%E7%BB%9C%E6%B5%81/%E7%BD%91%E7%BB%9C%E6%B5%81/">
-                            网络流
+                        <a href="/xyzfrozen/%E6%96%9C%E7%8E%87%E4%BC%98%E5%8C%96-Dp/%E6%96%9C%E7%8E%87%E4%BC%98%E5%8C%96-Dp/">
+                            斜率优化 Dp
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            斜率优化 介绍一般为  等降掉一个  的  优化
+本质上基于决策单调性，单调队列维护
+ 方程大概长成：
+
+注： 为常数
+https://www.cnblogs.com/MashiroSky/p/6009685.html
+https://www.cnblogs.com/Xing-Ling/p/11210179.html
+
+StepP3195 [HNOI2008] 玩具装箱
+例题
+朴素 
+
+
+化...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Sep 30 2023 00:04:14 GMT+0800">
+                
+                    2023-09-30
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/note/">note</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E7%BA%BF%E6%80%A7-Dp/">线性 Dp</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E6%96%9C%E7%8E%87%E4%BC%98%E5%8C%96-Dp/">斜率优化 Dp</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/xyzfrozen/%E6%96%9C%E7%8E%87%E4%BC%98%E5%8C%96-Dp/%E6%96%9C%E7%8E%87%E4%BC%98%E5%8C%96-Dp/">阅读全文<span class="seo-reader-text">斜率优化 Dp</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/xyzfrozen/cdq-%E5%88%86%E6%B2%BB/cdq-%E5%88%86%E6%B2%BB/">
+                            cdq 分治
                         </a>
                     </h3>
 
@@ -1280,7 +817,266 @@ mjx-container[display="true"] + br {
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Sep 29 2023 23:28:12 GMT+0800">
+            <span class="home-article-date" data-date="Sat Sep 30 2023 00:03:02 GMT+0800">
+                
+                    2023-09-30
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/note/">note</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E5%88%86%E6%B2%BB/">分治</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">归并排序</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E5%81%8F%E5%BA%8F/">偏序</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/xyzfrozen/cdq-%E5%88%86%E6%B2%BB/cdq-%E5%88%86%E6%B2%BB/">阅读全文<span class="seo-reader-text">cdq 分治</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/xyzfrozen/Dfn%E5%BA%8F-%E6%AC%A7%E6%8B%89%E5%BA%8F/Dfn%E5%BA%8F-%E6%AC%A7%E6%8B%89%E5%BA%8F/">
+                            Dfn序 &amp;&amp; 欧拉序
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            Dfn 序
+点修改+子树查询/子树修改+点查询
+
+树状数组维护单点/差分
+
+子树修改+子树查询
+
+线段树区间加区间和
+
+路径修改+点查询
+
+维护  和每个点到根的路径和，转成 ，，，
+
+从下往上差分，一个点的差分为它的值-所有儿子的值
+1234mdf(dfn[x],d);mdf(dfn[y],d);mdf(dfn[p],-d);if(fa[p]) mdf(dfn[fa[p]],-d);pri...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Sep 30 2023 00:01:45 GMT+0800">
+                
+                    2023-09-30
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/note/">note</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/LCA/">LCA</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">树状数组</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/xyzfrozen/Dfn%E5%BA%8F-%E6%AC%A7%E6%8B%89%E5%BA%8F/Dfn%E5%BA%8F-%E6%AC%A7%E6%8B%89%E5%BA%8F/">阅读全文<span class="seo-reader-text">Dfn序 &amp;&amp; 欧拉序</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/xyzfrozen/Extra-%E7%BA%BF%E6%AE%B5%E6%A0%91-%E4%BC%98%E5%8C%96%E5%BB%BA%E5%9B%BE/Extra-%E7%BA%BF%E6%AE%B5%E6%A0%91-%E4%BC%98%E5%8C%96%E5%BB%BA%E5%9B%BE/">
+                            Extra 线段树-优化建图
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            常见线段树 
+一般是区间/点向区间/点连边
+线段树的本质就是区间向点的映射，我们利用这一点优化
+P6348 [PA2011] Journeys
+我们建立一颗入树和出树，如下图
+
+左边是出树， 右边是入树， 蓝色边权为 
+当我们需要从  建边，就 对   建立两个虚点，虚点之间连边
+
+1234567891011121314151617181920212223242526272829303132...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Sep 30 2023 00:00:58 GMT+0800">
+                
+                    2023-09-30
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/note/">note</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/">最短路</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/xyzfrozen/Extra-%E7%BA%BF%E6%AE%B5%E6%A0%91-%E4%BC%98%E5%8C%96%E5%BB%BA%E5%9B%BE/Extra-%E7%BA%BF%E6%AE%B5%E6%A0%91-%E4%BC%98%E5%8C%96%E5%BB%BA%E5%9B%BE/">阅读全文<span class="seo-reader-text">Extra 线段树-优化建图</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/xyzfrozen/Extra-%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/Extra-%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">
+                            Extra 树状数组
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            单点加+矩阵求和123456void add(int x,int y,int v){    for (int i=x;i&lt;=n;i+=lowbit(i))        for (int j=y;j&lt;=m;j+=lowbit(j))            a[i][j]+=v;}
+
+12345678910111213int sum(int x,int y){  int res=0...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Sep 29 2023 23:59:59 GMT+0800">
                 
                     2023-09-29
                 
@@ -1310,7 +1106,12 @@ mjx-container[display="true"] + br {
                     
                         <li>
                             
-                            <a href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a>&nbsp;
+                            <a href="/tags/%E5%89%8D%E7%BC%80%E5%92%8C/">前缀和</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%82%B9/">二维数点</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1318,7 +1119,253 @@ mjx-container[display="true"] + br {
         
     </div>
 
-    <a href="/undefined/%E7%BD%91%E7%BB%9C%E6%B5%81/%E7%BD%91%E7%BB%9C%E6%B5%81/">阅读全文<span class="seo-reader-text">网络流</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/xyzfrozen/Extra-%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/Extra-%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">阅读全文<span class="seo-reader-text">Extra 树状数组</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/xyzfrozen/%E6%A0%91%E5%89%96/%E6%A0%91%E5%89%96/">
+                            树剖
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            树链剖分将树上问题转到序列上，转而方便用数据结构维护
+重子节点：表示其子节点中子树最大的子结点
+如果有多个子树最大的子结点，取其一
+如果没有子节点，就无重子节点
+轻子节点：表示剩余的所有子结点
+重边：从这个结点到重子节点的边为
+轻边：到其他轻子节点的边为
+重链：若干条首尾衔接的重边构成
+把落单的结点也当作重链，那么整棵树就被剖分成若干条重链
+
+树上每个节点都属于且仅属于一条重链
+在剖分时，重...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Sep 29 2023 23:58:53 GMT+0800">
+                
+                    2023-09-29
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/note/">note</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E6%A0%91%E5%89%96/">树剖</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/xyzfrozen/%E6%A0%91%E5%89%96/%E6%A0%91%E5%89%96/">阅读全文<span class="seo-reader-text">树剖</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/xyzfrozen/%E4%B8%89%E5%88%86/%E4%B8%89%E5%88%86/">
+                            三分
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            三分法求单峰函数极值点，当发现类似双指针的结构最值时，可以考虑三分
+https://blog.csdn.net/Mr_dimple/article/details/126361376
+实数三分例题
+https://www.luogu.com.cn/problem/P3382
+给出一个  次函数，保证在范围  内存在一点 ，使得  上单调增， 上单调减。试求出  的值
+
+ 时， 就没用了，这就...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Sep 29 2023 23:58:11 GMT+0800">
+                
+                    2023-09-29
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/note/">note</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E4%B8%89%E5%88%86/">三分</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/xyzfrozen/%E4%B8%89%E5%88%86/%E4%B8%89%E5%88%86/">阅读全文<span class="seo-reader-text">三分</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/xyzfrozen/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">
+                            线性代数
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            <p>Here’s something encrypted, password is required to continue reading.</p>
+
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Sep 29 2023 23:50:00 GMT+0800">
+                
+                    2023-09-29
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/note/">note</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E7%BA%BF%E6%80%A7-Dp/">线性 Dp</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E6%A0%91%E5%BD%A2-Dp/">树形 Dp</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83/">高斯消元</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/xyzfrozen/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">阅读全文<span class="seo-reader-text">线性代数</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1328,7 +1375,7 @@ mjx-container[display="true"] + br {
 
     <div class="home-paginator px-7 py-5">
         <div class="paginator">
-	<a class="extend prev" rel="prev" href="/page/11/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span>
+	<a class="extend prev" rel="prev" href="/page/11/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/13/"><i class="fa-regular fa-angle-right"></i></a>
 </div>
   
     </div>
@@ -1349,12 +1396,12 @@ mjx-container[display="true"] + br {
               <span>2023</span>
               -
             
-            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">xyzfrozen</a>
+            2026&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">xyzfrozen</a>
             
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 120 篇文章
+                        共撰写了 131 篇文章
                     </span>
                     
                 </p>
