@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="xyzfrozen">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+            <link rel="preconnect" href="https://evan.beee.top" crossorigin>
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://xyzfrozen.github.io/xyzfrozen/opencv-c-基础学习阶段总结/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenCV C++ 基础学习阶段总结">
+<meta property="og:url" content="https://xyzfrozen.github.io/xyzfrozen/OpenCV-C-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93/">
+<meta property="og:site_name" content="xyzfrozen の 小站">
+<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xyzfrozen.github.io/images/redefine-og.webp">
+<meta property="article:published_time" content="2026-08-17T02:06:33.000Z">
+<meta property="article:modified_time" content="2026-08-23T10:47:13.040Z">
+<meta property="article:author" content="xyzfrozen">
+<meta property="article:tag" content="OpenCV">
+<meta property="article:tag" content="计算机视觉">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xyzfrozen.github.io/images/redefine-og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            OpenCV C++ 基础学习阶段总结 | xyzfrozen の 小站
+        
+    </title>
+
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fonts/Chillax/chillax.css">
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/css/build/tailwind.css">
+    
+
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fonts/GeistMono/geist-mono.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fonts/Geist/geist.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"xyzfrozen.github.io","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":6,"number":true,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/image/miku x Darling.png","dark":"/image/Miku.png"},"title":"xyzfrozen の 小站","subtitle":{"text":["My darling,stay gold"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":"https://github.com/xyzfrozen","instagram":null,"zhihu":null,"twitter":null,"email":"1685550699@qq.com","Luogu":"https://www.luogu.com.cn/user/749714","cnblogs":"https://www.cnblogs.com/xyzfrozen/"},"qrs":{"weixin":"w6861k2k"}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"https://xyzfrozen.github.io/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"About":{"icon":"fa-regular fa-user","submenus":null,"path":"/about","Me":"/about"}},"search":{"enable":true,"preload":true},"tags":{"Tags":{"icon":"fa-solid fa-tags","path":"/tags"}},"categories":{"Categories":{"icon":"fa-solid fa-folder","path":"/categories"}}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":"Welcome","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":10}},"footerStart":"2023/9/30 23:45:14"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/fontawesome/regular.min.css">
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="/atom.xml" title="xyzfrozen の 小站" type="application/atom+xml">
+</head>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+	<span class="scroll-progress-bar"></span>
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                xyzfrozen の 小站
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="https://xyzfrozen.github.io/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    归档
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/about"
+                                        >
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    关于
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="https://xyzfrozen.github.io/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                归档
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/about"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-regular fa-user fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">137</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">9</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">137</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			<div class="w-full flex items-center pt-6 justify-start">
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">OpenCV C++ 基础学习阶段总结</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/image/author.jpg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">xyzfrozen</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv6</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2026-08-17 10:06:33</span>
+        <span class="mobile">2026-08-17 10:06:33</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2026-08-23 18:47:13</span>
+            <span class="mobile">2026-08-23 18:47:13</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/note/">note</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/OpenCV/">OpenCV</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/">计算机视觉</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<h2 id="Learning-Resources"><a href="#Learning-Resources" class="headerlink" title="Learning Resources"></a>Learning Resources</h2><h3 id="Web-Pages"><a href="#Web-Pages" class="headerlink" title="Web Pages"></a>Web Pages</h3><ul>
+<li><a class="link" target="_blank" rel="noopener" href="https://www.computervision.zone/courses/opencv-cv/">Computer Vision Zone - OpenCV C++ Course<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+<h3 id="Videos"><a href="#Videos" class="headerlink" title="Videos"></a>Videos</h3><ul>
+<li><a class="link" target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV11A411T7rL/">4h 上手 C++ 版 OpenCV<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+<h2 id="Raw-Notes"><a href="#Raw-Notes" class="headerlink" title="Raw Notes"></a>Raw Notes</h2><h3 id="1-图片、视频与摄像头输入"><a href="#1-图片、视频与摄像头输入" class="headerlink" title="1. 图片、视频与摄像头输入"></a>1. 图片、视频与摄像头输入</h3><div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Mat img=<span class="built_in">imread</span>(path);</span><br><span class="line"><span class="built_in">imshow</span>(<span class="string">"Image"</span>,img);</span><br><span class="line"><span class="built_in">waitKey</span>(<span class="number">0</span>);</span><br></pre></td></tr></table></figure></div>
+
+<p><code>imread</code> 把磁盘图片读取为 <code>Mat</code>，<code>imshow</code> 提交窗口显示内容，<code>waitKey</code> 等待按键并处理窗口事件</p>
+<p>视频和摄像头通过 <code>VideoCapture</code> 读取：</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">VideoCapture <span class="title">cap</span><span class="params">(path)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">{</span><br><span class="line">    Mat img;</span><br><span class="line">    cap.<span class="built_in">read</span>(img);</span><br><span class="line">    <span class="keyword">if</span>(img.<span class="built_in">empty</span>())<span class="keyword">break</span>;</span><br><span class="line">    <span class="built_in">imshow</span>(<span class="string">"Video"</span>,img);</span><br><span class="line">    <span class="built_in">waitKey</span>(<span class="number">20</span>);</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<p>USB 摄像头在 Ubuntu 中通常表现为 <code>/dev/video0</code>、<code>/dev/video1</code> 等设备一个摄像头可能暴露多个视频节点，因此程序打不开时要依次确认设备编号、<code>cap.isOpened()</code>、空帧和用户的 <code>video</code> 组权限</p>
+<h3 id="2-基础图像处理"><a href="#2-基础图像处理" class="headerlink" title="2. 基础图像处理"></a>2. 基础图像处理</h3><div class="code-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">原图 → 灰度图 → 高斯模糊 → Canny 边缘 → 膨胀/腐蚀</span><br></pre></td></tr></table></figure></div>
+
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cvtColor</span>(img,imggray,COLOR_BGR2GRAY);</span><br><span class="line"><span class="built_in">GaussianBlur</span>(img,imgblur,<span class="built_in">Size</span>(<span class="number">5</span>,<span class="number">5</span>),<span class="number">0</span>);</span><br><span class="line"><span class="built_in">Canny</span>(img,imgcanny,<span class="number">25</span>,<span class="number">75</span>);</span><br><span class="line"></span><br><span class="line">Mat kernel=<span class="built_in">getStructuringElement</span>(MORPH_RECT,<span class="built_in">Size</span>(<span class="number">3</span>,<span class="number">3</span>));</span><br><span class="line"><span class="built_in">dilate</span>(imgcanny,imgdil,kernel);</span><br><span class="line"><span class="built_in">erode</span>(imgcanny,imgero,kernel);</span><br></pre></td></tr></table></figure></div>
+
+<p>当前练习代码虽然生成了 <code>imggray</code> 和 <code>imgblur</code>，但 <code>Canny</code> 仍然传入 <code>img</code>，如果要让灰度化和高斯模糊真正参与边缘检测，应该写成 <code>Canny(imgblur,imgcanny,25,75)</code></p>
+<ul>
+<li><p><code>cvtColor</code>：转换颜色空间，例如 BGR 转灰度或 HSV</p>
+</li>
+<li><p><code>GaussianBlur</code>：平滑图像并抑制噪声，避免边缘检测产生过多碎边</p>
+</li>
+<li><p><code>Canny</code>：检测灰度变化明显的位置，输出二值边缘图</p>
+</li>
+<li><p><code>dilate</code>：扩大白色区域，可连接断裂边缘</p>
+</li>
+<li><p><code>erode</code>：缩小白色区域，可去除小噪点</p>
+</li>
+</ul>
+<p>使用 <code>Size(1,1)</code> 核时，膨胀和腐蚀几乎不会产生变化</p>
+<h3 id="3-缩放、裁剪与-ROI"><a href="#3-缩放、裁剪与-ROI" class="headerlink" title="3. 缩放、裁剪与 ROI"></a>3. 缩放、裁剪与 ROI</h3><p><code>resize</code> 用于调整图像尺寸：</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">resize</span>(img,imageresize,<span class="built_in">Size</span>(),<span class="number">0.5</span>,<span class="number">0.5</span>);</span><br></pre></td></tr></table></figure></div>
+
+<p>当 <code>Size()</code> 为空时，后面的 <code>fx</code>、<code>fy</code> 表示横向和纵向缩放倍率</p>
+<p>裁剪通过 ROI 完成：</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Rect <span class="title">cut</span><span class="params">(<span class="number">200</span>,<span class="number">100</span>,<span class="number">300</span>,<span class="number">300</span>)</span></span>;</span><br><span class="line">Mat imgcut=<span class="built_in">img</span>(cut);</span><br></pre></td></tr></table></figure></div>
+
+<p><code>Rect(x,y,width,height)</code> 中，<code>x</code>、<code>y</code> 是左上角坐标，坐标原点位于图像左上角，向右为 <code>x</code> 正方向，向下为 <code>y</code> 正方向</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Mat view=<span class="built_in">img</span>(rect);         <span class="comment">// 与原图共享像素数据</span></span><br><span class="line">Mat copy=<span class="built_in">img</span>(rect).<span class="built_in">clone</span>(); <span class="comment">// 独立复制像素数据</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="4-绘图与文字"><a href="#4-绘图与文字" class="headerlink" title="4. 绘图与文字"></a>4. 绘图与文字</h3><p>OpenCV 可以创建空白画布并绘制图形：</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Mat <span class="title">img</span><span class="params">(<span class="number">512</span>,<span class="number">512</span>,CV_8UC3,Scalar(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>))</span></span>;</span><br><span class="line"><span class="built_in">circle</span>(img,<span class="built_in">Point</span>(<span class="number">256</span>,<span class="number">256</span>),<span class="number">155</span>,<span class="built_in">Scalar</span>(<span class="number">0</span>,<span class="number">69</span>,<span class="number">255</span>),FILLED);</span><br><span class="line"><span class="built_in">rectangle</span>(img,<span class="built_in">Point</span>(<span class="number">130</span>,<span class="number">226</span>),<span class="built_in">Point</span>(<span class="number">382</span>,<span class="number">286</span>),<span class="built_in">Scalar</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>),FILLED);</span><br><span class="line"><span class="built_in">line</span>(img,<span class="built_in">Point</span>(<span class="number">130</span>,<span class="number">296</span>),<span class="built_in">Point</span>(<span class="number">382</span>,<span class="number">296</span>),<span class="built_in">Scalar</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>),<span class="number">2</span>);</span><br><span class="line"><span class="built_in">putText</span>(img,<span class="string">"xyzfrozen"</span>,<span class="built_in">Point</span>(<span class="number">145</span>,<span class="number">266</span>),FONT_HERSHEY_DUPLEX,<span class="number">1.45</span>,<span class="built_in">Scalar</span>(<span class="number">0</span>,<span class="number">69</span>,<span class="number">255</span>),<span class="number">2</span>);</span><br></pre></td></tr></table></figure></div>
+
+<p> <code>Point</code>、<code>Scalar</code>、线宽和填充方式， 默认颜色顺序是 BGR</p>
+<h3 id="5-透视变换"><a href="#5-透视变换" class="headerlink" title="5. 透视变换"></a>5. 透视变换</h3><p>透视变换可以把倾斜的平面区域拉正，常用于文档扫描、卡片矫正、车道鸟瞰图等任务</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Point2f src[<span class="number">4</span>]={{<span class="number">529</span>,<span class="number">142</span>},{<span class="number">771</span>,<span class="number">190</span>},{<span class="number">405</span>,<span class="number">395</span>},{<span class="number">674</span>,<span class="number">457</span>}};</span><br><span class="line">Point2f dst[<span class="number">4</span>]={{<span class="number">0.0</span>,<span class="number">0.0</span>},{w,<span class="number">0.0</span>},{<span class="number">0.0</span>,h},{w,h}};</span><br><span class="line"></span><br><span class="line">Mat matrix=<span class="built_in">getPerspectiveTransform</span>(src,dst);</span><br><span class="line"><span class="built_in">warpPerspective</span>(img,imgWarp,matrix,<span class="built_in">Size</span>(w,h));</span><br></pre></td></tr></table></figure></div>
+
+<p><code>getPerspectiveTransform</code> 根据四组对应点计算 <code>3×3</code> 透视矩阵，<code>warpPerspective</code> 再根据矩阵重新采样整张图像</p>
+<p>四个点必须一一对应，并保持一致顺序，左上、右上、左下、右下</p>
+<h3 id="6-HSV-颜色检测与滑动条"><a href="#6-HSV-颜色检测与滑动条" class="headerlink" title="6. HSV 颜色检测与滑动条"></a>6. HSV 颜色检测与滑动条</h3><p>颜色检测先把 BGR 图像转换为 HSV：</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cvtColor</span>(img,imgHSV,COLOR_BGR2HSV);</span><br></pre></td></tr></table></figure></div>
+
+<p>HSV 将颜色、饱和度和亮度分开：</p>
+<ul>
+<li>H：色相，OpenCV 中范围为 <code>0~179</code></li>
+<li>S：饱和度，范围为 <code>0~255</code></li>
+<li>V：明度，范围为 <code>0~255</code></li>
+</ul>
+<p><code>inRange</code> 对每个像素进行范围判断：</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Scalar <span class="title">lower</span><span class="params">(hmin,smin,vmin)</span></span>;</span><br><span class="line"><span class="function">Scalar <span class="title">upper</span><span class="params">(hmax,smax,vmax)</span></span>;</span><br><span class="line"><span class="built_in">inRange</span>(imgHSV,lower,upper,mask);</span><br></pre></td></tr></table></figure></div>
+
+<p>三个通道全部位于上下界之间时，输出 mask 的对应像素为 <code>255</code>；否则为 <code>0</code>因此 mask 是一张用于表达“保留哪些区域”的单通道二值图</p>
+<p><code>namedWindow</code> 创建窗口，<code>createTrackbar</code> 把滑动条位置与变量绑定：</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">namedWindow</span>(<span class="string">"Trackbars"</span>,WINDOW_NORMAL);</span><br><span class="line"><span class="built_in">resizeWindow</span>(<span class="string">"Trackbars"</span>,<span class="number">640</span>,<span class="number">200</span>);</span><br><span class="line"><span class="built_in">createTrackbar</span>(<span class="string">"Hue Min"</span>,<span class="string">"Trackbars"</span>,&amp;hmin,<span class="number">179</span>);</span><br></pre></td></tr></table></figure></div>
+
+<p><code>lower</code> 和 <code>upper</code> 放在循环内部，是为了每一轮都读取滑动条更新后的值这里不是程序显式创建了两个线程，而是主循环交替完成：</p>
+<div class="code-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">读取当前变量 → inRange → imshow → waitKey 处理窗口事件 → 下一轮</span><br></pre></td></tr></table></figure></div>
+
+<p><code>waitKey(1)</code> 不只是等待按键，还会让 OpenCV 处理窗口重绘、鼠标、键盘和滑动条事件</p>
+<h3 id="7-轮廓与形状识别"><a href="#7-轮廓与形状识别" class="headerlink" title="7. 轮廓与形状识别"></a>7. 轮廓与形状识别</h3><p>完整流程为：</p>
+<div class="code-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">灰度化 → 模糊 → Canny → 膨胀 → findContours → 面积过滤 → 多边形近似 → 外接矩形 → 形状分类</span><br></pre></td></tr></table></figure></div>
+
+<p><code>findContours</code> 从二值图中提取白色区域的边界：</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;vector&lt;Point&gt;&gt; contours;</span><br><span class="line">vector&lt;Vec4i&gt; hierarchy;</span><br><span class="line"><span class="built_in">findContours</span>(imgdil,contours,hierarchy,RETR_EXTERNAL,CHAIN_APPROX_SIMPLE);</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><code>contours[i]</code> 表示第 <code>i</code> 个轮廓</li>
+<li>每个轮廓是按边界顺序排列的一组 <code>Point</code></li>
+<li><code>RETR_EXTERNAL</code> 只取最外层轮廓</li>
+<li><code>CHAIN_APPROX_SIMPLE</code> 压缩共线点，只保留关键点</li>
+</ul>
+<p><code>contourArea</code> 把轮廓点视为闭合多边形，计算几何面积：<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.781ex;" xmlns="http://www.w3.org/2000/svg" width="24.587ex" height="2.737ex" role="img" focusable="false" viewBox="0 -864.9 10867.6 1209.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mfrac"><g data-mml-node="mn" transform="translate(220,394) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mn" transform="translate(220,-345) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><rect width="553.6" height="60" x="120" y="220"></rect></g><g data-mml-node="mo" transform="translate(1015.8,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mrow" transform="translate(2016,0)"><g data-mml-node="mo" transform="translate(0 -0.5)"><path data-c="7C" d="M139 -249H137Q125 -249 119 -235V251L120 737Q130 750 139 750Q152 750 159 735V-235Q151 -249 141 -249H139Z"></path></g><g data-mml-node="mo" transform="translate(278,0)"><path data-c="2211" d="M61 748Q64 750 489 750H913L954 640Q965 609 976 579T993 533T999 516H979L959 517Q936 579 886 621T777 682Q724 700 655 705T436 710H319Q183 710 183 709Q186 706 348 484T511 259Q517 250 513 244L490 216Q466 188 420 134T330 27L149 -187Q149 -188 362 -188Q388 -188 436 -188T506 -189Q679 -189 778 -162T936 -43Q946 -27 959 6H999L913 -249L489 -250Q65 -250 62 -248Q56 -246 56 -239Q56 -234 118 -161Q186 -81 245 -11L428 206Q428 207 242 462L57 717L56 728Q56 744 61 748Z"></path></g><g data-mml-node="mo" transform="translate(1334,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="msub" transform="translate(1723,0)"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mi" transform="translate(605,-150) scale(0.707)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g><g data-mml-node="msub" transform="translate(2622,0)"><g data-mml-node="mi"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="TeXAtom" transform="translate(523,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(345,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mn" transform="translate(1123,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g><g data-mml-node="mo" transform="translate(4564.8,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="msub" transform="translate(5565,0)"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="TeXAtom" transform="translate(605,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(345,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mn" transform="translate(1123,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g><g data-mml-node="msub" transform="translate(7367.7,0)"><g data-mml-node="mi"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(523,-150) scale(0.707)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g><g data-mml-node="mo" transform="translate(8184.6,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(8573.6,0) translate(0 -0.5)"><path data-c="7C" d="M139 -249H137Q125 -249 119 -235V251L120 737Q130 750 139 750Q152 750 159 735V-235Q151 -249 141 -249H139Z"></path></g></g></g></g></svg></mjx-container></p>
+<p>形状识别部分使用：</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">float</span> peri=<span class="built_in">arcLength</span>(contours[i],<span class="literal">true</span>);</span><br><span class="line"><span class="built_in">approxPolyDP</span>(contours[i],conPoly[i],<span class="number">0.02</span>*peri,<span class="literal">true</span>);</span><br><span class="line">boundRect[i]=<span class="built_in">boundingRect</span>(conPoly[i]);</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><code>arcLength</code>：计算轮廓周长，<code>true</code> 代表闭合曲线</li>
+<li><code>approxPolyDP</code>：用较少顶点近似轮廓</li>
+<li><code>boundingRect</code>：返回能够包围指定点集或非零像素的最小水平外接矩形</li>
+<li>顶点为 3 个时判断为三角形</li>
+<li>顶点为 4 个时通过宽高比区分正方形和矩形</li>
+<li>顶点多于 4 个时粗略判断为圆</li>
+</ul>
+<h3 id="8-Haar-级联分类器"><a href="#8-Haar-级联分类器" class="headerlink" title="8. Haar 级联分类器"></a>8. Haar 级联分类器</h3><p>使用预训练 XML 分类器完成人脸检测：</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">CascadeClassifier faceCascade;</span><br><span class="line">faceCascade.<span class="built_in">load</span>(<span class="string">"Resources/haarcascade_frontalface_default.xml"</span>);</span><br><span class="line"></span><br><span class="line">vector&lt;Rect&gt; faces;</span><br><span class="line">faceCascade.<span class="built_in">detectMultiScale</span>(img,faces,<span class="number">1.1</span>,<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>;i&lt;faces.<span class="built_in">size</span>();i++)</span><br><span class="line">    <span class="built_in">rectangle</span>(img,faces[i].<span class="built_in">tl</span>(),faces[i].<span class="built_in">br</span>(),<span class="built_in">Scalar</span>(<span class="number">255</span>,<span class="number">0</span>,<span class="number">255</span>),<span class="number">3</span>);</span><br></pre></td></tr></table></figure></div>
+
+<p><code>detectMultiScale</code> 会在不同尺度上搜索目标，结果以 <code>vector&lt;Rect&gt;</code> 返回，每个 <code>Rect</code> 都是一个检测框之后使用 <code>rectangle</code> 把结果画到原图上</p>
+<p><code>1.1</code>：缩放比例检测器会把图片按不同比例缩放来找不同大小的人脸</p>
+<ul>
+<li>越接近 <code>1.0</code>，检测更细，可能更准，但更慢</li>
+<li><code>1.1</code> 是常用值</li>
+</ul>
+<p><code>10</code>：邻近框数量阈值</p>
+<ul>
+<li>数值越大，要求越严格，误检少，但可能漏检</li>
+<li>数值越小，容易检测出更多框，但误检也可能变多</li>
+</ul>
+<h2 id="Projects"><a href="#Projects" class="headerlink" title="Projects"></a>Projects</h2><h3 id="Project-1：虚拟画板"><a href="#Project-1：虚拟画板" class="headerlink" title="Project 1：虚拟画板"></a>Project 1：虚拟画板</h3><p>项目处理链路：</p>
+<div class="code-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">摄像头画面</span><br><span class="line">   ↓</span><br><span class="line">BGR 转 HSV</span><br><span class="line">   ↓</span><br><span class="line">根据多组 HSV 上下界生成 mask</span><br><span class="line">   ↓</span><br><span class="line">查找轮廓并过滤小面积噪声</span><br><span class="line">   ↓</span><br><span class="line">求外接矩形顶部中心点</span><br><span class="line">   ↓</span><br><span class="line">把历史点保存到 newPoints</span><br><span class="line">   ↓</span><br><span class="line">按颜色索引在画面上连续画圆</span><br></pre></td></tr></table></figure></div>
+
+<p>这个项目把输入、颜色分割、轮廓定位和结果绘制组合成了一个实时系统<code>newPoints</code> 持续保存检测点，所以物体移动后会留下轨迹</p>
+<p>当前实现可以继续加强：检查摄像头是否打开、优先选择最大有效轮廓、对 mask 做形态学去噪，并限制历史点数量</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/imgcodecs.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/highgui.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/imgproc.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line">Mat img;</span><br><span class="line"><span class="function">VideoCapture <span class="title">cap</span><span class="params">(<span class="number">0</span>)</span></span>;</span><br><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; newPoints;  <span class="comment">// to store all points</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// hmin, smin, vmin hmax, smax, vmax</span></span><br><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; myColors{ {<span class="number">124</span>,<span class="number">48</span>,<span class="number">117</span>,<span class="number">143</span>,<span class="number">170</span>,<span class="number">255</span>}, <span class="comment">// Purple</span></span><br><span class="line">                                {<span class="number">68</span>,<span class="number">72</span>,<span class="number">156</span>,<span class="number">102</span>,<span class="number">126</span>,<span class="number">255</span>} };<span class="comment">// Green</span></span><br><span class="line">vector&lt;Scalar&gt; myColorValues{ {<span class="number">255</span>,<span class="number">0</span>,<span class="number">255</span>},        <span class="comment">// Purple</span></span><br><span class="line">                                {<span class="number">0</span>,<span class="number">255</span>,<span class="number">0</span>} };<span class="comment">// Green</span></span><br><span class="line"></span><br><span class="line"><span class="function">Point <span class="title">getContours</span><span class="params">(Mat image)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    vector&lt;vector&lt;Point&gt;&gt; contours;</span><br><span class="line">    vector&lt;Vec4i&gt; hierarchy;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">findContours</span>(image, contours, hierarchy, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);</span><br><span class="line">    <span class="comment">//drawContours(img, contours, -1, Scalar(255, 0, 255), 2);</span></span><br><span class="line">    vector&lt;vector&lt;Point&gt;&gt; <span class="built_in">conPoly</span>(contours.<span class="built_in">size</span>());</span><br><span class="line">    <span class="function">vector&lt;Rect&gt; <span class="title">boundRect</span><span class="params">(contours.size())</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">Point <span class="title">myPoint</span><span class="params">(<span class="number">0</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; contours.<span class="built_in">size</span>(); i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="type">int</span> area = <span class="built_in">contourArea</span>(contours[i]);</span><br><span class="line">        cout &lt;&lt; area &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">        string objectType;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (area &gt; <span class="number">1000</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="type">float</span> peri = <span class="built_in">arcLength</span>(contours[i], <span class="literal">true</span>);</span><br><span class="line">            <span class="built_in">approxPolyDP</span>(contours[i], conPoly[i], <span class="number">0.02</span> * peri, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">            cout &lt;&lt; conPoly[i].<span class="built_in">size</span>() &lt;&lt; endl;</span><br><span class="line">            boundRect[i] = <span class="built_in">boundingRect</span>(conPoly[i]);</span><br><span class="line">            myPoint.x = boundRect[i].x + boundRect[i].width / <span class="number">2</span>;</span><br><span class="line">            myPoint.y = boundRect[i].y;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//drawContours(img, conPoly, i, Scalar(255, 0, 255), 2);</span></span><br><span class="line">            <span class="comment">//rectangle(img, boundRect[i].tl(), boundRect[i].br(), Scalar(0, 255, 0), 5);</span></span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> myPoint;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">findColor</span>(Mat img)</span><br><span class="line">{</span><br><span class="line">    Mat imgHSV;</span><br><span class="line">    <span class="built_in">cvtColor</span>(img, imgHSV, COLOR_BGR2HSV);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; myColors.<span class="built_in">size</span>(); i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="function">Scalar <span class="title">lower</span><span class="params">(myColors[i][<span class="number">0</span>], myColors[i][<span class="number">1</span>], myColors[i][<span class="number">2</span>])</span></span>;</span><br><span class="line">        <span class="function">Scalar <span class="title">upper</span><span class="params">(myColors[i][<span class="number">3</span>], myColors[i][<span class="number">4</span>], myColors[i][<span class="number">5</span>])</span></span>;</span><br><span class="line">        Mat mask;</span><br><span class="line">        <span class="built_in">inRange</span>(imgHSV, lower, upper, mask);</span><br><span class="line">        <span class="comment">//imshow(to_string(i), mask);</span></span><br><span class="line">        Point myPoint = <span class="built_in">getContours</span>(mask);</span><br><span class="line">        <span class="keyword">if</span>(myPoint.x)</span><br><span class="line">            newPoints.<span class="built_in">push_back</span>({ myPoint.x,myPoint.y,i });</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> newPoints;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">drawOnCanvas</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; newPoints, vector&lt;Scalar&gt; myColorValues)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; newPoints.<span class="built_in">size</span>(); i++)</span><br><span class="line">        <span class="built_in">circle</span>(img, <span class="built_in">Point</span>(newPoints[i][<span class="number">0</span>],newPoints[i][<span class="number">1</span>]), <span class="number">10</span>, myColorValues[newPoints[i][<span class="number">2</span>]], FILLED);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    {</span><br><span class="line">        cap.<span class="built_in">read</span>(img);</span><br><span class="line">        newPoints = <span class="built_in">findColor</span>(img);</span><br><span class="line">        <span class="built_in">drawOnCanvas</span>(newPoints, myColorValues);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">imshow</span>(<span class="string">"Image"</span>, img);</span><br><span class="line">        <span class="built_in">waitKey</span>(<span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="Project-2：文档扫描器"><a href="#Project-2：文档扫描器" class="headerlink" title="Project 2：文档扫描器"></a>Project 2：文档扫描器</h3><p>项目处理链路：</p>
+<div class="code-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">读取纸张图片</span><br><span class="line">   ↓</span><br><span class="line">灰度、模糊、Canny、膨胀</span><br><span class="line">   ↓</span><br><span class="line">寻找面积最大的四边形轮廓</span><br><span class="line">   ↓</span><br><span class="line">按照左上、右上、左下、右下重排角点</span><br><span class="line">   ↓</span><br><span class="line">透视变换为固定大小</span><br><span class="line">   ↓</span><br><span class="line">通过 ROI 裁掉边缘</span><br></pre></td></tr></table></figure></div>
+
+<p><code>reorder</code> 使用坐标和与坐标差判断四个角点：</p>
+<ul>
+<li><code>x+y</code> 最小：左上角</li>
+<li><code>x+y</code> 最大：右下角</li>
+<li><code>x-y</code> 最大：右上角</li>
+<li><code>x-y</code> 最小：左下角</li>
+</ul>
+<p>这个项目把轮廓提取、几何判断、透视变换和 ROI 串成了一条完整的传统视觉流水线</p>
+<p>需要补充的边界保护是：没有找到四边形时，不能直接调用 <code>reorder</code>；ROI 的宽高也必须为正并位于图像内部</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/imgcodecs.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/highgui.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/imgproc.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line">Mat imgorigin,imgWarp;</span><br><span class="line">vector&lt;Point&gt; initPoints,docs;</span><br><span class="line"></span><br><span class="line"><span class="function">Mat <span class="title">preprocess</span><span class="params">(Mat img)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    Mat imggray,imgblur,imgcanny;</span><br><span class="line">    <span class="built_in">cvtColor</span>(img,imggray,COLOR_BGR2GRAY);</span><br><span class="line">    <span class="built_in">GaussianBlur</span>(img,imgblur,<span class="built_in">Size</span>(<span class="number">5</span>,<span class="number">5</span>),<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">Canny</span>(img,imgcanny,<span class="number">25</span>,<span class="number">75</span>);</span><br><span class="line"></span><br><span class="line">    Mat imgdil,imgero;</span><br><span class="line">    Mat kernel=<span class="built_in">getStructuringElement</span>(MORPH_RECT,<span class="built_in">Size</span>(<span class="number">1</span>,<span class="number">1</span>));</span><br><span class="line">    <span class="built_in">dilate</span>(imgcanny,imgdil,kernel);</span><br><span class="line">    <span class="keyword">return</span> imgdil;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function">vector&lt;Point&gt; <span class="title">getContours</span><span class="params">(Mat image)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    vector&lt;vector&lt;Point&gt;&gt; contours;</span><br><span class="line">    vector&lt;Vec4i&gt; hierarchy;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">findContours</span>(image, contours, hierarchy, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);</span><br><span class="line">    <span class="comment">//drawContours(img, contours, -1, Scalar(255, 0, 255), 2);</span></span><br><span class="line">    vector&lt;vector&lt;Point&gt;&gt; <span class="built_in">conPoly</span>(contours.<span class="built_in">size</span>());</span><br><span class="line">    <span class="function">vector&lt;Rect&gt; <span class="title">boundRect</span><span class="params">(contours.size())</span></span>;</span><br><span class="line"></span><br><span class="line">    vector&lt;Point&gt; biggest;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> mxArea=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>;i&lt;contours.<span class="built_in">size</span>();i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="type">int</span> area=<span class="built_in">contourArea</span>(contours[i]);</span><br><span class="line">        cout&lt;&lt;area&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">        string objectType;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (area&gt;<span class="number">1000</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="type">float</span> peri = <span class="built_in">arcLength</span>(contours[i], <span class="literal">true</span>);</span><br><span class="line">            <span class="built_in">approxPolyDP</span>(contours[i], conPoly[i], <span class="number">0.02</span> * peri, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(area&gt;mxArea &amp;&amp; conPoly[i].<span class="built_in">size</span>()==<span class="number">4</span>)</span><br><span class="line">            {</span><br><span class="line">                mxArea=area;</span><br><span class="line">                biggest={conPoly[i][<span class="number">0</span>],conPoly[i][<span class="number">1</span>],conPoly[i][<span class="number">2</span>],conPoly[i][<span class="number">3</span>]};</span><br><span class="line">                <span class="built_in">drawContours</span>(imgorigin, conPoly, i, <span class="built_in">Scalar</span>(<span class="number">255</span>, <span class="number">0</span>, <span class="number">255</span>), <span class="number">2</span>);</span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">            <span class="comment">//rectangle(img, boundRect[i].tl(), boundRect[i].br(), Scalar(0, 255, 0), 5);</span></span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> biggest;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">drawPoints</span><span class="params">(vector&lt;Point&gt; points,Scalar color)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;points.<span class="built_in">size</span>();i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">circle</span>(imgorigin,points[i],<span class="number">5</span>,color,FILLED);</span><br><span class="line">        <span class="built_in">putText</span>(imgorigin,<span class="built_in">to_string</span>(i),points[i],FONT_HERSHEY_PLAIN,<span class="number">5</span>,color,<span class="number">5</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function">vector&lt;Point&gt; <span class="title">reorder</span><span class="params">(vector&lt;Point&gt; points)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; sumPoints,subPoints;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)</span><br><span class="line">    {</span><br><span class="line">        sumPoints.<span class="built_in">push_back</span>(points[i].x+points[i].y);</span><br><span class="line">        subPoints.<span class="built_in">push_back</span>(points[i].x-points[i].y);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> vector&lt;Point&gt;{</span><br><span class="line">        {points[<span class="built_in">min_element</span>(sumPoints.<span class="built_in">begin</span>(),sumPoints.<span class="built_in">end</span>())-sumPoints.<span class="built_in">begin</span>()]},</span><br><span class="line">        {points[<span class="built_in">max_element</span>(subPoints.<span class="built_in">begin</span>(),subPoints.<span class="built_in">end</span>())-subPoints.<span class="built_in">begin</span>()]},</span><br><span class="line">        {points[<span class="built_in">min_element</span>(subPoints.<span class="built_in">begin</span>(),subPoints.<span class="built_in">end</span>())-subPoints.<span class="built_in">begin</span>()]},</span><br><span class="line">        {points[<span class="built_in">max_element</span>(sumPoints.<span class="built_in">begin</span>(),sumPoints.<span class="built_in">end</span>())-sumPoints.<span class="built_in">begin</span>()]}</span><br><span class="line">    };</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">float</span> w=<span class="number">420</span>,h=<span class="number">596</span>;</span><br><span class="line"><span class="function">Mat <span class="title">getWarp</span><span class="params">(Mat img,vector&lt;Point&gt; points,<span class="type">float</span> w,<span class="type">float</span> h)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    Point2f src[<span class="number">4</span>]={points[<span class="number">0</span>],points[<span class="number">1</span>],points[<span class="number">2</span>],points[<span class="number">3</span>]};</span><br><span class="line">    Point2f dst[<span class="number">4</span>]={{<span class="number">0.0</span>,<span class="number">0.0</span>},{w,<span class="number">0.0</span>},{<span class="number">0.0</span>,h},{w,h}};</span><br><span class="line"></span><br><span class="line">    Mat matrix=<span class="built_in">getPerspectiveTransform</span>(src,dst);</span><br><span class="line">    <span class="built_in">warpPerspective</span>(img,imgWarp,matrix,<span class="built_in">Point</span>(w,h));</span><br><span class="line">    <span class="keyword">return</span> imgWarp;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    string path=<span class="string">"Resources/paper.jpg"</span>;</span><br><span class="line">    imgorigin=<span class="built_in">imread</span>(path);</span><br><span class="line">    <span class="comment">// resize(imgorigin,imgorigin,Size(),0.5,0.5);</span></span><br><span class="line"></span><br><span class="line">    Mat img=<span class="built_in">preprocess</span>(imgorigin);</span><br><span class="line">    initPoints=<span class="built_in">getContours</span>(img);</span><br><span class="line">    <span class="comment">// drawPoints(initPoints,Scalar(0,0,255));</span></span><br><span class="line">    docs=<span class="built_in">reorder</span>(initPoints);</span><br><span class="line">    <span class="comment">// drawPoints(docs,Scalar(0,0,255));</span></span><br><span class="line"></span><br><span class="line">    imgWarp=<span class="built_in">getWarp</span>(imgorigin,docs,w,h);</span><br><span class="line">    <span class="type">int</span> cropv=<span class="number">5</span>;</span><br><span class="line">    <span class="function">Rect <span class="title">roi</span><span class="params">(cropv,cropv,w-(cropv&lt;&lt;<span class="number">1</span>),h-(cropv&lt;&lt;<span class="number">1</span>))</span></span>;</span><br><span class="line">    Mat imgcrop=<span class="built_in">imgWarp</span>(roi);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">imshow</span>(<span class="string">"imgorigin"</span>,imgorigin);</span><br><span class="line">    <span class="built_in">imshow</span>(<span class="string">"Image"</span>,img);</span><br><span class="line">    <span class="built_in">imshow</span>(<span class="string">"Image"</span>,imgWarp);</span><br><span class="line">    <span class="built_in">imshow</span>(<span class="string">"Image"</span>,imgcrop);</span><br><span class="line">    <span class="built_in">waitKey</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="Project-3：车牌检测与裁剪"><a href="#Project-3：车牌检测与裁剪" class="headerlink" title="Project 3：车牌检测与裁剪"></a>Project 3：车牌检测与裁剪</h3><p>项目处理链路：</p>
+<div class="code-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">摄像头画面</span><br><span class="line">   ↓</span><br><span class="line">Haar 级联分类器检测车牌</span><br><span class="line">   ↓</span><br><span class="line">得到 vector&lt;Rect&gt; 检测框</span><br><span class="line">   ↓</span><br><span class="line">img(plates[i]) 获取车牌 ROI</span><br><span class="line">   ↓</span><br><span class="line">显示并保存裁剪结果</span><br><span class="line">   ↓</span><br><span class="line">在原图上绘制检测框</span><br></pre></td></tr></table></figure></div>
+
+<p>裁剪：</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Mat imgCrop=<span class="built_in">img</span>(plates[i]);</span><br></pre></td></tr></table></figure></div>
+
+<p><code>plates[i]</code> 是 <code>Rect(x,y,width,height)</code>这行代码创建的是原图对应区域的视图，通常不复制像素如果裁剪图需要脱离原图长期保存或单独修改，可以使用：</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Mat imgCrop=<span class="built_in">img</span>(plates[i]).<span class="built_in">clone</span>();</span><br></pre></td></tr></table></figure></div>
+<p>写入文件</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">imwrite</span>(<span class="string">"Resources/Plates/"</span>+<span class="built_in">to_string</span>(i)+<span class="string">".png"</span>,imgCrop);</span><br></pre></td></tr></table></figure></div>
+
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/imgcodecs.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/highgui.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/imgproc.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/objdetect.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">plate_detection</span><span class="params">(Mat img)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    CascadeClassifier plateCascade;</span><br><span class="line">    plateCascade.<span class="built_in">load</span>(<span class="string">"Resources/haarcascade_russian_plate_number.xml"</span>);</span><br><span class="line"></span><br><span class="line">    vector&lt;Rect&gt; plates;</span><br><span class="line">    plateCascade.<span class="built_in">detectMultiScale</span>(img,plates,<span class="number">1.1</span>,<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>;i&lt;plates.<span class="built_in">size</span>();i++)</span><br><span class="line">    {</span><br><span class="line">        Mat imgCrop=<span class="built_in">img</span>(plates[i]);</span><br><span class="line">        <span class="built_in">imshow</span>(<span class="built_in">to_string</span>(i),imgCrop);</span><br><span class="line">        <span class="built_in">imwrite</span>(<span class="string">"Resources/Plates/"</span>+<span class="built_in">to_string</span>(i)+<span class="string">".png"</span>,imgCrop);</span><br><span class="line">        <span class="built_in">rectangle</span>(img,plates[i].<span class="built_in">tl</span>(),plates[i].<span class="built_in">br</span>(),<span class="built_in">Scalar</span>(<span class="number">255</span>,<span class="number">0</span>,<span class="number">255</span>),<span class="number">3</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="built_in">imshow</span>(<span class="string">"Image"</span>,img);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="function">VideoCapture <span class="title">cap</span><span class="params">(<span class="number">0</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    {</span><br><span class="line">        Mat img;</span><br><span class="line">        cap.<span class="built_in">read</span>(img);</span><br><span class="line">        <span class="keyword">if</span>(img.<span class="built_in">empty</span>()) <span class="keyword">break</span>;</span><br><span class="line">        <span class="built_in">plate_detection</span>(img);</span><br><span class="line">        <span class="built_in">waitKey</span>(<span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+
+
+
+
+<h2 id="OpenCV-函数功能说明"><a href="#OpenCV-函数功能说明" class="headerlink" title="OpenCV 函数功能说明"></a>OpenCV 函数功能说明</h2><h3 id="图片、视频与窗口"><a href="#图片、视频与窗口" class="headerlink" title="图片、视频与窗口"></a>图片、视频与窗口</h3><ul>
+<li><code>imread</code>：从磁盘读取图片并返回一个 <code>Mat</code></li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">cv::Mat <span class="title">cv::imread</span><span class="params">(<span class="type">const</span> cv::String&amp; filename,<span class="type">int</span> flags=cv::IMREAD_COLOR)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>filename</code>：图片路径，支持由文件扩展名识别的常见图片格式</p>
+</li>
+<li><p><code>flags</code>：读取模式，<code>IMREAD_COLOR</code> 读取 BGR 彩色图，<code>IMREAD_GRAYSCALE</code> 读取灰度图，<code>IMREAD_UNCHANGED</code> 保留原始通道</p>
+</li>
+<li><p>返回值：读取成功时返回图像矩阵，失败时返回空 <code>Mat</code>，可以使用 <code>empty()</code> 检查</p>
+</li>
+<li><p><code>imshow</code>：把图像提交到指定窗口显示</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">cv::imshow</span><span class="params">(<span class="type">const</span> cv::String&amp; winname,cv::InputArray mat)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>winname</code>：窗口名称，同名窗口会复用</p>
+</li>
+<li><p><code>mat</code>：需要显示的图像</p>
+</li>
+<li><p><code>imshow</code> 负责提交画面，窗口刷新和事件响应通常还需要配合 <code>waitKey</code></p>
+</li>
+<li><p><code>waitKey</code>：等待键盘输入并处理 OpenCV 窗口事件</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">cv::waitKey</span><span class="params">(<span class="type">int</span> delay=<span class="number">0</span>)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>delay</code>：等待时间，单位为毫秒，传 <code>0</code> 表示一直等待，传正数表示至少等待对应时间</p>
+</li>
+<li><p>返回值：检测到按键时返回按键码，没有按键时通常返回 <code>-1</code></p>
+</li>
+<li><p>除了读取键盘，它还负责窗口重绘、鼠标和 trackbar 等 HighGUI 事件</p>
+</li>
+<li><p><code>VideoCapture</code>：打开摄像头或视频文件</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">cv::VideoCapture <span class="title">cap</span><span class="params">(index,apiPreference)</span></span>;</span><br><span class="line"><span class="function">cv::VideoCapture <span class="title">cap</span><span class="params">(filename,apiPreference)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>index</code>：摄像头编号，<code>0</code> 通常对应 <code>/dev/video0</code></p>
+</li>
+<li><p><code>filename</code>：视频文件路径</p>
+</li>
+<li><p><code>apiPreference</code>：视频后端，Ubuntu 下可以指定 <code>cv::CAP_V4L2</code>，省略时由 OpenCV 自动选择</p>
+</li>
+<li><p>一个 USB 摄像头可能对应多个 <code>/dev/video*</code>，需要确认哪个节点能输出正常图像流</p>
+</li>
+<li><p><code>VideoCapture::isOpened</code>：检查摄像头或视频是否成功打开</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bool</span> cv::VideoCapture::<span class="built_in">isOpened</span>() <span class="type">const</span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p>返回 <code>true</code> 表示输入源已经打开</p>
+</li>
+<li><p>返回 <code>false</code> 时不能继续假设后续帧有效</p>
+</li>
+<li><p><code>VideoCapture::read</code>：从视频或摄像头读取下一帧</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bool</span> cv::VideoCapture::<span class="built_in">read</span>(cv::OutputArray image);</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>image</code>：用于接收当前帧的 <code>Mat</code></p>
+</li>
+<li><p>返回值：成功读取一帧时返回 <code>true</code>，读取失败或视频结束时返回 <code>false</code></p>
+</li>
+<li><p>即使返回值未被使用，也应该用 <code>img.empty()</code> 保护后续图像处理</p>
+</li>
+<li><p><code>Mat::empty</code>：判断 <code>Mat</code> 是否没有有效图像数据</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bool</span> cv::Mat::<span class="built_in">empty</span>() <span class="type">const</span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p>返回 <code>true</code> 表示矩阵没有元素或没有绑定有效数据</p>
+</li>
+<li><p>常用于检查 <code>imread</code>、摄像头帧和视频帧是否有效</p>
+</li>
+<li><p><code>Mat::size</code>：获取图像宽高</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cv::Size size=img.<span class="built_in">size</span>();</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>返回的 <code>Size</code> 中，<code>width</code> 对应列数，<code>height</code> 对应行数</li>
+</ul>
+<h3 id="基础图像处理"><a href="#基础图像处理" class="headerlink" title="基础图像处理"></a>基础图像处理</h3><ul>
+<li><code>cvtColor</code>：在不同颜色空间之间转换图像</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">cv::cvtColor</span><span class="params">(cv::InputArray src,cv::OutputArray dst,<span class="type">int</span> code,<span class="type">int</span> dstCn=<span class="number">0</span>)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>src</code>：输入图像</p>
+</li>
+<li><p><code>dst</code>：转换后的输出图像</p>
+</li>
+<li><p><code>code</code>：转换方式，例如 <code>COLOR_BGR2GRAY</code>、<code>COLOR_BGR2HSV</code></p>
+</li>
+<li><p><code>dstCn</code>：输出通道数，传 <code>0</code> 时由 <code>code</code> 自动决定</p>
+</li>
+<li><p><code>GaussianBlur</code>：使用高斯核平滑图像并抑制噪声</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">cv::GaussianBlur</span><span class="params">(cv::InputArray src,cv::OutputArray dst,cv::Size ksize,<span class="type">double</span> sigmaX,<span class="type">double</span> sigmaY=<span class="number">0</span>,<span class="type">int</span> borderType=cv::BORDER_DEFAULT)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>src</code>：输入图像</p>
+</li>
+<li><p><code>dst</code>：模糊后的图像</p>
+</li>
+<li><p><code>ksize</code>：高斯核大小，宽高通常使用正奇数，例如 <code>(3,3)</code>、<code>(5,5)</code>、<code>(7,7)</code></p>
+</li>
+<li><p><code>sigmaX</code>：X 方向高斯标准差，传 <code>0</code> 时由 <code>ksize</code> 自动计算</p>
+</li>
+<li><p><code>sigmaY</code>：Y 方向高斯标准差，传 <code>0</code> 时使用 <code>sigmaX</code></p>
+</li>
+<li><p><code>borderType</code>：计算图像边缘时的像素补齐方式，通常使用 <code>BORDER_DEFAULT</code></p>
+</li>
+<li><p><code>Canny</code>：检测灰度变化明显的边缘并输出二值边缘图</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">cv::Canny</span><span class="params">(cv::InputArray image,cv::OutputArray edges,<span class="type">double</span> threshold1,<span class="type">double</span> threshold2,<span class="type">int</span> apertureSize=<span class="number">3</span>,<span class="type">bool</span> L2gradient=<span class="literal">false</span>)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>image</code>：输入图像，通常先灰度化和模糊</p>
+</li>
+<li><p><code>edges</code>：输出的单通道二值边缘图</p>
+</li>
+<li><p><code>threshold1</code>：低阈值，低于该值的梯度通常被舍弃</p>
+</li>
+<li><p><code>threshold2</code>：高阈值，高于该值的梯度被视为强边缘</p>
+</li>
+<li><p><code>apertureSize</code>：Sobel 算子的孔径大小，通常为 <code>3</code></p>
+</li>
+<li><p><code>L2gradient</code>：是否使用更精确的 L2 梯度计算，默认使用较快的 L1 近似</p>
+</li>
+<li><p><code>getStructuringElement</code>：创建膨胀和腐蚀使用的结构元素</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">cv::Mat <span class="title">cv::getStructuringElement</span><span class="params">(<span class="type">int</span> shape,cv::Size ksize,cv::Point anchor=cv::Point(<span class="number">-1</span>,<span class="number">-1</span>))</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>shape</code>：核形状，常用 <code>MORPH_RECT</code>、<code>MORPH_CROSS</code>、<code>MORPH_ELLIPSE</code></p>
+</li>
+<li><p><code>ksize</code>：核的宽和高，<code>Size(1,1)</code> 基本不会改变图像，常用 <code>Size(3,3)</code> 或 <code>Size(5,5)</code></p>
+</li>
+<li><p><code>anchor</code>：锚点位置，<code>Point(-1,-1)</code> 表示使用核中心</p>
+</li>
+<li><p><code>dilate</code>：扩大二值图中的白色区域</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">cv::dilate</span><span class="params">(cv::InputArray src,cv::OutputArray dst,cv::InputArray kernel,cv::Point anchor=cv::Point(<span class="number">-1</span>,<span class="number">-1</span>),<span class="type">int</span> iterations=<span class="number">1</span>,<span class="type">int</span> borderType=cv::BORDER_CONSTANT,<span class="type">const</span> cv::Scalar&amp; borderValue=cv::morphologyDefaultBorderValue())</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>src</code>：输入图像</p>
+</li>
+<li><p><code>dst</code>：膨胀结果</p>
+</li>
+<li><p><code>kernel</code>：结构元素</p>
+</li>
+<li><p><code>anchor</code>：核的锚点，默认使用中心</p>
+</li>
+<li><p><code>iterations</code>：膨胀次数，次数越多白色区域扩张越明显</p>
+</li>
+<li><p><code>borderType</code>：图像边界的像素扩展方式</p>
+</li>
+<li><p><code>borderValue</code>：固定边界模式使用的填充值</p>
+</li>
+<li><p>常用于连接断裂边缘和填补小空隙</p>
+</li>
+<li><p><code>erode</code>：缩小二值图中的白色区域</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">cv::erode</span><span class="params">(cv::InputArray src,cv::OutputArray dst,cv::InputArray kernel,cv::Point anchor=cv::Point(<span class="number">-1</span>,<span class="number">-1</span>),<span class="type">int</span> iterations=<span class="number">1</span>,<span class="type">int</span> borderType=cv::BORDER_CONSTANT,<span class="type">const</span> cv::Scalar&amp; borderValue=cv::morphologyDefaultBorderValue())</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>src</code>：输入图像</p>
+</li>
+<li><p><code>dst</code>：腐蚀结果</p>
+</li>
+<li><p><code>kernel</code>：结构元素</p>
+</li>
+<li><p><code>iterations</code>：腐蚀次数，次数越多白色区域缩小越明显</p>
+</li>
+<li><p><code>borderType</code>：图像边界的像素扩展方式</p>
+</li>
+<li><p><code>borderValue</code>：固定边界模式使用的填充值</p>
+</li>
+<li><p>常用于去除小白点和分离粘连区域</p>
+</li>
+<li><p><code>resize</code>：把图像缩放到指定大小或指定比例</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">cv::resize</span><span class="params">(cv::InputArray src,cv::OutputArray dst,cv::Size dsize,<span class="type">double</span> fx=<span class="number">0</span>,<span class="type">double</span> fy=<span class="number">0</span>,<span class="type">int</span> interpolation=cv::INTER_LINEAR)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><code>src</code>：输入图像</li>
+<li><code>dst</code>：缩放后的图像</li>
+<li><code>dsize</code>：目标尺寸，传空 <code>Size()</code> 时由 <code>fx</code>、<code>fy</code> 计算</li>
+<li><code>fx</code>：水平方向缩放倍率</li>
+<li><code>fy</code>：垂直方向缩放倍率</li>
+<li><code>interpolation</code>：插值方式，缩小时常用 <code>INTER_AREA</code>，放大时常用 <code>INTER_LINEAR</code> 或 <code>INTER_CUBIC</code></li>
+</ul>
+<h3 id="ROI、复制与绘图"><a href="#ROI、复制与绘图" class="headerlink" title="ROI、复制与绘图"></a>ROI、复制与绘图</h3><ul>
+<li><code>Mat::operator()(Rect)</code>：创建指定矩形区域的 ROI 视图</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cv::Mat roi=<span class="built_in">img</span>(cv::<span class="built_in">Rect</span>(x,y,width,height));</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>x</code>、<code>y</code>：ROI 左上角坐标</p>
+</li>
+<li><p><code>width</code>、<code>height</code>：ROI 宽度和高度</p>
+</li>
+<li><p>返回的 <code>Mat</code> 默认与原图共享像素数据，修改 ROI 会影响原图对应区域</p>
+</li>
+<li><p>ROI 必须完整位于图像范围内，否则会触发断言错误</p>
+</li>
+<li><p><code>Mat::clone</code>：复制一份独立的图像数据</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cv::Mat copy=roi.<span class="built_in">clone</span>();</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p>返回值：与原图内容相同但拥有独立存储空间的新 <code>Mat</code></p>
+</li>
+<li><p>当裁剪结果需要长期保存、单独修改或原图即将释放时使用</p>
+</li>
+<li><p><code>circle</code>：在图像上绘制圆或实心圆</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">cv::circle</span><span class="params">(cv::InputOutputArray img,cv::Point center,<span class="type">int</span> radius,<span class="type">const</span> cv::Scalar&amp; color,<span class="type">int</span> thickness=<span class="number">1</span>,<span class="type">int</span> lineType=cv::LINE_8,<span class="type">int</span> shift=<span class="number">0</span>)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>img</code>：被绘制的图像</p>
+</li>
+<li><p><code>center</code>：圆心坐标</p>
+</li>
+<li><p><code>radius</code>：半径</p>
+</li>
+<li><p><code>color</code>：BGR 颜色</p>
+</li>
+<li><p><code>thickness</code>：线宽，传 <code>FILLED</code> 或负数表示填充</p>
+</li>
+<li><p><code>lineType</code>：线型，<code>LINE_AA</code> 可以获得抗锯齿效果</p>
+</li>
+<li><p><code>rectangle</code>：在图像上绘制矩形</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">cv::rectangle</span><span class="params">(cv::InputOutputArray img,cv::Point pt1,cv::Point pt2,<span class="type">const</span> cv::Scalar&amp; color,<span class="type">int</span> thickness=<span class="number">1</span>,<span class="type">int</span> lineType=cv::LINE_8,<span class="type">int</span> shift=<span class="number">0</span>)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>pt1</code>：矩形左上角</p>
+</li>
+<li><p><code>pt2</code>：矩形右下角</p>
+</li>
+<li><p><code>color</code>：BGR 颜色</p>
+</li>
+<li><p><code>thickness</code>：线宽，传 <code>FILLED</code> 表示填充矩形</p>
+</li>
+<li><p>也可以直接把 <code>Rect</code> 作为矩形参数</p>
+</li>
+<li><p><code>line</code>：在两个点之间绘制线段</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">cv::line</span><span class="params">(cv::InputOutputArray img,cv::Point pt1,cv::Point pt2,<span class="type">const</span> cv::Scalar&amp; color,<span class="type">int</span> thickness=<span class="number">1</span>,<span class="type">int</span> lineType=cv::LINE_8,<span class="type">int</span> shift=<span class="number">0</span>)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>pt1</code>、<code>pt2</code>：线段起点和终点</p>
+</li>
+<li><p><code>color</code>：BGR 颜色</p>
+</li>
+<li><p><code>thickness</code>：线宽</p>
+</li>
+<li><p><code>lineType</code>：线型</p>
+</li>
+<li><p><code>putText</code>：把英文、数字和 OpenCV Hershey 字体字符绘制到图像上</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">cv::putText</span><span class="params">(cv::InputOutputArray img,<span class="type">const</span> cv::String&amp; text,cv::Point org,<span class="type">int</span> fontFace,<span class="type">double</span> fontScale,cv::Scalar color,<span class="type">int</span> thickness=<span class="number">1</span>,<span class="type">int</span> lineType=cv::LINE_8,<span class="type">bool</span> bottomLeftOrigin=<span class="literal">false</span>)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><code>text</code>：要绘制的字符串</li>
+<li><code>org</code>：文本基线左下角坐标</li>
+<li><code>fontFace</code>：字体，例如 <code>FONT_HERSHEY_PLAIN</code>、<code>FONT_HERSHEY_DUPLEX</code></li>
+<li><code>fontScale</code>：字体缩放比例</li>
+<li><code>color</code>：BGR 颜色</li>
+<li><code>thickness</code>：笔画宽度</li>
+<li>默认 <code>putText</code> 不直接支持中文字体</li>
+</ul>
+<h3 id="透视变换"><a href="#透视变换" class="headerlink" title="透视变换"></a>透视变换</h3><ul>
+<li><code>getPerspectiveTransform</code>：根据四组对应点计算 <code>3×3</code> 透视变换矩阵</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">cv::Mat <span class="title">cv::getPerspectiveTransform</span><span class="params">(<span class="type">const</span> cv::Point2f src[],<span class="type">const</span> cv::Point2f dst[],<span class="type">int</span> solveMethod=cv::DECOMP_LU)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>src</code>：原图中的四个点</p>
+</li>
+<li><p><code>dst</code>：目标图中的四个对应点</p>
+</li>
+<li><p><code>solveMethod</code>：求解线性方程组的方法，通常使用默认值</p>
+</li>
+<li><p>四个源点和目标点必须顺序对应</p>
+</li>
+<li><p>用户当前代码使用 <code>Point2f[4]</code> 静态数组，接口类型必须匹配 <code>Point2f</code></p>
+</li>
+<li><p><code>warpPerspective</code>：根据透视矩阵把整张图像映射到新视角</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">cv::warpPerspective</span><span class="params">(cv::InputArray src,cv::OutputArray dst,cv::InputArray M,cv::Size dsize,<span class="type">int</span> flags=cv::INTER_LINEAR,<span class="type">int</span> borderMode=cv::BORDER_CONSTANT,<span class="type">const</span> cv::Scalar&amp; borderValue=cv::Scalar())</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><code>src</code>：输入图像</li>
+<li><code>dst</code>：透视变换后的输出图像</li>
+<li><code>M</code>：<code>3×3</code> 透视矩阵</li>
+<li><code>dsize</code>：输出图像尺寸</li>
+<li><code>flags</code>：插值方式，默认使用双线性插值</li>
+<li><code>borderMode</code>：映射到原图范围外时的边界处理方式</li>
+<li><code>borderValue</code>：使用固定边界时的填充值，默认是黑色</li>
+</ul>
+<h3 id="HSV、掩膜与交互控件"><a href="#HSV、掩膜与交互控件" class="headerlink" title="HSV、掩膜与交互控件"></a>HSV、掩膜与交互控件</h3><ul>
+<li><code>inRange</code>：判断每个像素的所有通道是否位于指定上下界之间</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">cv::inRange</span><span class="params">(cv::InputArray src,cv::InputArray lowerb,cv::InputArray upperb,cv::OutputArray dst)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>src</code>：输入图像，颜色检测时通常使用 HSV 图</p>
+</li>
+<li><p><code>lowerb</code>：每个通道的下界</p>
+</li>
+<li><p><code>upperb</code>：每个通道的上界</p>
+</li>
+<li><p><code>dst</code>：单通道二值 mask，符合全部范围条件时为 <code>255</code>，否则为 <code>0</code></p>
+</li>
+<li><p><code>namedWindow</code>：创建一个用于显示图像或放置 trackbar 的窗口</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">cv::namedWindow</span><span class="params">(<span class="type">const</span> cv::String&amp; winname,<span class="type">int</span> flags=cv::WINDOW_AUTOSIZE)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>winname</code>：窗口名称</p>
+</li>
+<li><p><code>flags</code>：窗口模式，<code>WINDOW_AUTOSIZE</code> 自动匹配图像大小，<code>WINDOW_NORMAL</code> 允许调整窗口尺寸</p>
+</li>
+<li><p><code>(640,200)</code> 在 C++ 中是逗号表达式，不是窗口尺寸</p>
+</li>
+<li><p><code>resizeWindow</code>：设置 <code>WINDOW_NORMAL</code> 窗口的大小</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">cv::resizeWindow</span><span class="params">(<span class="type">const</span> cv::String&amp; winname,<span class="type">int</span> width,<span class="type">int</span> height)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>winname</code>：已经创建的窗口名称</p>
+</li>
+<li><p><code>width</code>、<code>height</code>：目标窗口宽度和高度</p>
+</li>
+<li><p><code>createTrackbar</code>：在窗口中创建滑动条并绑定整数值</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">cv::createTrackbar</span><span class="params">(<span class="type">const</span> cv::String&amp; trackbarname,<span class="type">const</span> cv::String&amp; winname,<span class="type">int</span>* value,<span class="type">int</span> count,cv::TrackbarCallback onChange=<span class="number">0</span>,<span class="type">void</span>* userdata=<span class="number">0</span>)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><code>trackbarname</code>：滑动条名称</li>
+<li><code>winname</code>：滑动条所在窗口</li>
+<li><code>value</code>：与滑动条绑定的整数变量地址</li>
+<li><code>count</code>：滑动条最大值，最小值默认为 <code>0</code></li>
+<li><code>onChange</code>：数值变化时调用的回调函数，传 <code>0</code> 表示不使用回调</li>
+<li><code>userdata</code>：传给回调函数的自定义数据</li>
+<li>当前代码没有使用回调，而是在循环中不断读取被 trackbar 更新的变量</li>
+</ul>
+<h3 id="轮廓与形状分析"><a href="#轮廓与形状分析" class="headerlink" title="轮廓与形状分析"></a>轮廓与形状分析</h3><ul>
+<li><code>findContours</code>：从二值图中提取轮廓点集合</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">cv::findContours</span><span class="params">(cv::InputArray image,cv::OutputArrayOfArrays contours,cv::OutputArray hierarchy,<span class="type">int</span> mode,<span class="type">int</span> method,cv::Point offset=cv::Point())</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>image</code>：输入二值图，通常由阈值、<code>inRange</code> 或 <code>Canny</code> 得到</p>
+</li>
+<li><p><code>contours</code>：输出轮廓集合，每个轮廓都是一个 <code>vector&lt;Point&gt;</code></p>
+</li>
+<li><p><code>hierarchy</code>：输出轮廓层级，每项记录相邻、子轮廓和父轮廓索引</p>
+</li>
+<li><p><code>mode</code>：轮廓检索方式，<code>RETR_EXTERNAL</code> 只保留最外层轮廓</p>
+</li>
+<li><p><code>method</code>：点保存方式，<code>CHAIN_APPROX_SIMPLE</code> 会压缩共线点</p>
+</li>
+<li><p><code>offset</code>：给所有轮廓点增加的坐标偏移量</p>
+</li>
+<li><p><code>drawContours</code>：把一个或多个轮廓绘制到图像上</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">cv::drawContours</span><span class="params">(cv::InputOutputArray image,cv::InputArrayOfArrays contours,<span class="type">int</span> contourIdx,<span class="type">const</span> cv::Scalar&amp; color,<span class="type">int</span> thickness=<span class="number">1</span>,<span class="type">int</span> lineType=cv::LINE_8,cv::InputArray hierarchy=cv::noArray(),<span class="type">int</span> maxLevel=INT_MAX,cv::Point offset=cv::Point())</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>image</code>：被绘制的图像</p>
+</li>
+<li><p><code>contours</code>：轮廓集合</p>
+</li>
+<li><p><code>contourIdx</code>：需要绘制的轮廓索引，传 <code>-1</code> 表示绘制全部</p>
+</li>
+<li><p><code>color</code>：BGR 颜色</p>
+</li>
+<li><p><code>thickness</code>：线宽，传负数可以填充轮廓内部</p>
+</li>
+<li><p><code>hierarchy</code>、<code>maxLevel</code>：控制按层级绘制的范围</p>
+</li>
+<li><p><code>contourArea</code>：计算轮廓围成的几何面积</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">double</span> <span class="title">cv::contourArea</span><span class="params">(cv::InputArray contour,<span class="type">bool</span> oriented=<span class="literal">false</span>)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>contour</code>：轮廓点集合</p>
+</li>
+<li><p><code>oriented</code>：传 <code>false</code> 返回绝对面积，传 <code>true</code> 返回带方向符号的面积</p>
+</li>
+<li><p>内部根据轮廓点形成的闭合多边形计算面积，不等同于简单统计白色像素数量</p>
+</li>
+<li><p><code>arcLength</code>：计算曲线长度或闭合轮廓周长</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">double</span> <span class="title">cv::arcLength</span><span class="params">(cv::InputArray curve,<span class="type">bool</span> closed)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>curve</code>：输入点集</p>
+</li>
+<li><p><code>closed</code>：传 <code>true</code> 时把最后一个点和第一个点连接，按闭合轮廓计算</p>
+</li>
+<li><p>返回值：曲线长度</p>
+</li>
+<li><p><code>approxPolyDP</code>：使用 Douglas-Peucker 算法减少轮廓点并得到多边形近似</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">cv::approxPolyDP</span><span class="params">(cv::InputArray curve,cv::OutputArray approxCurve,<span class="type">double</span> epsilon,<span class="type">bool</span> closed)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>curve</code>：原始轮廓</p>
+</li>
+<li><p><code>approxCurve</code>：近似后的点集</p>
+</li>
+<li><p><code>epsilon</code>：允许的最大近似误差，常写成轮廓周长的某个比例，例如 <code>0.02*peri</code></p>
+</li>
+<li><p><code>closed</code>：是否把曲线视为闭合轮廓</p>
+</li>
+<li><p><code>epsilon</code> 越大，近似越粗，保留的顶点通常越少</p>
+</li>
+<li><p><code>boundingRect</code>：计算能够包围点集或非零像素的最小水平外接矩形</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">cv::Rect <span class="title">cv::boundingRect</span><span class="params">(cv::InputArray array)</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>array</code>：二维点集或单通道非零像素图</p>
+</li>
+<li><p>返回值：<code>Rect(x,y,width,height)</code></p>
+</li>
+<li><p>水平外接矩形不会随物体角度旋转</p>
+</li>
+<li><p><code>Rect::tl</code> 和 <code>Rect::br</code>：获取矩形左上角和右下角</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cv::Point topLeft=rect.<span class="built_in">tl</span>();</span><br><span class="line">cv::Point bottomRight=rect.<span class="built_in">br</span>();</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><code>tl()</code> 返回 <code>(x,y)</code></li>
+<li><code>br()</code> 返回 <code>(x+width,y+height)</code></li>
+<li>常与 <code>rectangle</code> 配合绘制检测框</li>
+</ul>
+<h3 id="级联检测与图片保存"><a href="#级联检测与图片保存" class="headerlink" title="级联检测与图片保存"></a>级联检测与图片保存</h3><ul>
+<li><code>CascadeClassifier::load</code>：从 XML 文件加载 Haar 或 LBP 级联分类器</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bool</span> cv::CascadeClassifier::<span class="built_in">load</span>(<span class="type">const</span> cv::String&amp; filename);</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>filename</code>：分类器 XML 文件路径</p>
+</li>
+<li><p>返回值：加载成功返回 <code>true</code>，失败返回 <code>false</code></p>
+</li>
+<li><p>分类器加载失败时不能继续调用检测逻辑</p>
+</li>
+<li><p><code>CascadeClassifier::detectMultiScale</code>：在多个缩放尺度上检测目标</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> cv::CascadeClassifier::<span class="built_in">detectMultiScale</span>(cv::InputArray image,std::vector&lt;cv::Rect&gt;&amp; objects,<span class="type">double</span> scaleFactor=<span class="number">1.1</span>,<span class="type">int</span> minNeighbors=<span class="number">3</span>,<span class="type">int</span> flags=<span class="number">0</span>,cv::Size minSize=cv::<span class="built_in">Size</span>(),cv::Size maxSize=cv::<span class="built_in">Size</span>());</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p><code>image</code>：输入图像</p>
+</li>
+<li><p><code>objects</code>：输出检测框集合</p>
+</li>
+<li><p><code>scaleFactor</code>：相邻尺度之间的缩放比例，越接近 <code>1.0</code> 搜索越细但速度越慢</p>
+</li>
+<li><p><code>minNeighbors</code>：候选框需要获得的邻近支持数量，越大越严格，误检通常越少</p>
+</li>
+<li><p><code>flags</code>：旧版兼容参数，通常传 <code>0</code></p>
+</li>
+<li><p><code>minSize</code>：允许检测的最小目标尺寸</p>
+</li>
+<li><p><code>maxSize</code>：允许检测的最大目标尺寸</p>
+</li>
+<li><p><code>imwrite</code>：把图像编码并保存到磁盘</p>
+</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cv::imwrite</span><span class="params">(<span class="type">const</span> cv::String&amp; filename,cv::InputArray img,<span class="type">const</span> std::vector&lt;<span class="type">int</span>&gt;&amp; params=std::vector&lt;<span class="type">int</span>&gt;())</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><code>filename</code>：输出路径，文件扩展名决定编码格式</li>
+<li><code>img</code>：需要保存的图像</li>
+<li><code>params</code>：可选编码参数，例如 JPEG 质量或 PNG 压缩级别</li>
+<li>返回值：保存成功返回 <code>true</code>，失败返回 <code>false</code></li>
+<li>连续视频帧使用相同文件名时会不断覆盖旧图片</li>
+</ul>
+<h2 id="API-Map"><a href="#API-Map" class="headerlink" title="API Map"></a>API Map</h2><table>
+<thead>
+<tr>
+<th>任务</th>
+<th>主要 API</th>
+<th>输出</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>读取图片</td>
+<td><code>imread</code></td>
+<td><code>Mat</code></td>
+</tr>
+<tr>
+<td>读取视频/摄像头</td>
+<td><code>VideoCapture</code>、<code>read</code></td>
+<td>连续图像帧</td>
+</tr>
+<tr>
+<td>颜色空间转换</td>
+<td><code>cvtColor</code></td>
+<td>灰度图或 HSV 图</td>
+</tr>
+<tr>
+<td>平滑去噪</td>
+<td><code>GaussianBlur</code></td>
+<td>模糊图</td>
+</tr>
+<tr>
+<td>边缘检测</td>
+<td><code>Canny</code></td>
+<td>二值边缘图</td>
+</tr>
+<tr>
+<td>形态学处理</td>
+<td><code>dilate</code>、<code>erode</code></td>
+<td>修整后的二值图</td>
+</tr>
+<tr>
+<td>颜色范围筛选</td>
+<td><code>inRange</code></td>
+<td>mask</td>
+</tr>
+<tr>
+<td>查找轮廓</td>
+<td><code>findContours</code></td>
+<td><code>vector&lt;vector&lt;Point&gt;&gt;</code></td>
+</tr>
+<tr>
+<td>轮廓分析</td>
+<td><code>contourArea</code>、<code>arcLength</code>、<code>approxPolyDP</code></td>
+<td>面积、周长、近似多边形</td>
+</tr>
+<tr>
+<td>定位区域</td>
+<td><code>boundingRect</code>、ROI</td>
+<td>检测框或裁剪图</td>
+</tr>
+<tr>
+<td>透视矫正</td>
+<td><code>getPerspectiveTransform</code>、<code>warpPerspective</code></td>
+<td>拉正后的图像</td>
+</tr>
+<tr>
+<td>传统目标检测</td>
+<td><code>CascadeClassifier</code>、<code>detectMultiScale</code></td>
+<td><code>vector&lt;Rect&gt;</code></td>
+</tr>
+</tbody></table>
+<h2 id="Stage-Summary"><a href="#Stage-Summary" class="headerlink" title="Stage Summary"></a>Stage Summary</h2><ul>
+<li>使用 <code>Mat</code> 表示图像，读取和显示图片、视频与摄像头画面</li>
+<li>使用灰度、模糊、Canny、膨胀和腐蚀进行基础预处理</li>
+<li>使用 HSV、<code>inRange</code> 和 trackbar 交互式寻找颜色阈值</li>
+<li>使用轮廓面积、周长、多边形近似和外接矩形分析形状</li>
+<li>使用四点透视变换完成卡片和文档矫正</li>
+<li>使用 Haar 级联分类器完成人脸或车牌区域检测</li>
+<li>使用 ROI 裁剪目标区域</li>
+<li>将多个基础 API 组合成虚拟画板、文档扫描器和车牌检测项目</li>
+</ul>
+
+		</div>
+
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> OpenCV C++ 基础学习阶段总结</li>
+        <li><strong>作者:</strong> xyzfrozen</li>
+        <li><strong>创建于
+                :</strong> 2026-08-17 10:06:33</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2026-08-23 18:47:13
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://xyzfrozen.github.io/xyzfrozen/OpenCV-C-基础学习阶段总结/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
+</div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/OpenCV/">#OpenCV</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/">#计算机视觉</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/xyzfrozen/Hdu-Summer-2026-9/Hdu-Summer-2026-9/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">Hdu-Summer-2026-9</span>
+						<span class="post-nav-item">上一篇</span>
+					</span>
+				</a>
+			</div>
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/xyzfrozen/Hdu-Summer-2026-8/Hdu-Summer-2026-8/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">Hdu-Summer-2026-8</span>
+						<span class="post-nav-item">下一篇</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        评论
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://example.example.com',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: false,
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+		</div>
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">目录</div>
+		<div class="page-title">OpenCV C++ 基础学习阶段总结</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Learning-Resources"><span class="nav-number">1.</span> <span class="nav-text">Learning Resources</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Web-Pages"><span class="nav-number">1.1.</span> <span class="nav-text">Web Pages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Videos"><span class="nav-number">1.2.</span> <span class="nav-text">Videos</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Raw-Notes"><span class="nav-number">2.</span> <span class="nav-text">Raw Notes</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%9B%BE%E7%89%87%E3%80%81%E8%A7%86%E9%A2%91%E4%B8%8E%E6%91%84%E5%83%8F%E5%A4%B4%E8%BE%93%E5%85%A5"><span class="nav-number">2.1.</span> <span class="nav-text">1. 图片、视频与摄像头输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%9F%BA%E7%A1%80%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86"><span class="nav-number">2.2.</span> <span class="nav-text">2. 基础图像处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E7%BC%A9%E6%94%BE%E3%80%81%E8%A3%81%E5%89%AA%E4%B8%8E-ROI"><span class="nav-number">2.3.</span> <span class="nav-text">3. 缩放、裁剪与 ROI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E7%BB%98%E5%9B%BE%E4%B8%8E%E6%96%87%E5%AD%97"><span class="nav-number">2.4.</span> <span class="nav-text">4. 绘图与文字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E9%80%8F%E8%A7%86%E5%8F%98%E6%8D%A2"><span class="nav-number">2.5.</span> <span class="nav-text">5. 透视变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-HSV-%E9%A2%9C%E8%89%B2%E6%A3%80%E6%B5%8B%E4%B8%8E%E6%BB%91%E5%8A%A8%E6%9D%A1"><span class="nav-number">2.6.</span> <span class="nav-text">6. HSV 颜色检测与滑动条</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E8%BD%AE%E5%BB%93%E4%B8%8E%E5%BD%A2%E7%8A%B6%E8%AF%86%E5%88%AB"><span class="nav-number">2.7.</span> <span class="nav-text">7. 轮廓与形状识别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-Haar-%E7%BA%A7%E8%81%94%E5%88%86%E7%B1%BB%E5%99%A8"><span class="nav-number">2.8.</span> <span class="nav-text">8. Haar 级联分类器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Projects"><span class="nav-number">3.</span> <span class="nav-text">Projects</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-1%EF%BC%9A%E8%99%9A%E6%8B%9F%E7%94%BB%E6%9D%BF"><span class="nav-number">3.1.</span> <span class="nav-text">Project 1：虚拟画板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-2%EF%BC%9A%E6%96%87%E6%A1%A3%E6%89%AB%E6%8F%8F%E5%99%A8"><span class="nav-number">3.2.</span> <span class="nav-text">Project 2：文档扫描器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-3%EF%BC%9A%E8%BD%A6%E7%89%8C%E6%A3%80%E6%B5%8B%E4%B8%8E%E8%A3%81%E5%89%AA"><span class="nav-number">3.3.</span> <span class="nav-text">Project 3：车牌检测与裁剪</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OpenCV-%E5%87%BD%E6%95%B0%E5%8A%9F%E8%83%BD%E8%AF%B4%E6%98%8E"><span class="nav-number">4.</span> <span class="nav-text">OpenCV 函数功能说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E3%80%81%E8%A7%86%E9%A2%91%E4%B8%8E%E7%AA%97%E5%8F%A3"><span class="nav-number">4.1.</span> <span class="nav-text">图片、视频与窗口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86"><span class="nav-number">4.2.</span> <span class="nav-text">基础图像处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ROI%E3%80%81%E5%A4%8D%E5%88%B6%E4%B8%8E%E7%BB%98%E5%9B%BE"><span class="nav-number">4.3.</span> <span class="nav-text">ROI、复制与绘图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%8F%E8%A7%86%E5%8F%98%E6%8D%A2"><span class="nav-number">4.4.</span> <span class="nav-text">透视变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HSV%E3%80%81%E6%8E%A9%E8%86%9C%E4%B8%8E%E4%BA%A4%E4%BA%92%E6%8E%A7%E4%BB%B6"><span class="nav-number">4.5.</span> <span class="nav-text">HSV、掩膜与交互控件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AE%E5%BB%93%E4%B8%8E%E5%BD%A2%E7%8A%B6%E5%88%86%E6%9E%90"><span class="nav-number">4.6.</span> <span class="nav-text">轮廓与形状分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%A7%E8%81%94%E6%A3%80%E6%B5%8B%E4%B8%8E%E5%9B%BE%E7%89%87%E4%BF%9D%E5%AD%98"><span class="nav-number">4.7.</span> <span class="nav-text">级联检测与图片保存</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#API-Map"><span class="nav-number">5.</span> <span class="nav-text">API Map</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stage-Summary"><span class="nav-number">6.</span> <span class="nav-text">Stage Summary</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2026&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">xyzfrozen</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 137 篇文章
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.2</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="站内搜索您需要的内容..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
+
+
+<script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/Swup.min.js" ></script><script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/SwupSlideTheme.min.js" ></script><script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/SwupScriptsPlugin.min.js" ></script><script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/SwupProgressPlugin.min.js" ></script><script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/SwupScrollPlugin.min.js" ></script><script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/SwupPreloadPlugin.min.js" ></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+	<script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/imageViewer.js" ></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/utils.js" ></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/main.js" ></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/layouts/navbarShrink.js" ></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/scrollTopBottom.js" ></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/lightDarkSwitch.js" ></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/layouts/categoryList.js" ></script>
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/localSearch.js" ></script>
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/codeBlock.js" ></script>
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/layouts/lazyload.js" ></script>
+
+
+
+    <script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/runtime.js" ></script>
+    <script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/odometer.min.js" ></script>
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/Typed.min.js" ></script>
+  <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/plugins/typed.js" ></script>
+
+
+
+
+
+
+
+    <script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/anime.min.js" ></script>
+
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/tools/tocToggle.js" data-swup-reload-script></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/layouts/toc.js" data-swup-reload-script></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/plugins/tabs.js" data-swup-reload-script></script>
+
+
+<script  src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/libs/moment-with-locales.min.js" data-swup-reload-script></script>
+<script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.8.2/source/js/build/layouts/essays.js" data-swup-reload-script></script>
+
+
+
+
+	
+</body>
+
+</html>
