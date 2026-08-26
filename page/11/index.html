@@ -942,8 +942,12 @@ mjx-container[display="true"] + br {
                     <div class="home-article-content markdown-body">
                         
                             
-                            前后缀思维T1 01 背包，求去掉第 $i$ 个物品后的最大价值$pre_{i,j} 表示考虑前, i 个的背包，suf_{i,j} 表示考虑后,i 个的背包$$$\max_{j&#x3D;0}^m pre_{i-1,j}+suf_{i+1,m-j}$$
-T2 P7300 [USACO21JAN] No Time to Paint S给定序列 $A$ ，$Q$ 次询问 $[L,R]$ ，每个...
+                            前后缀思维T1 01 背包，求去掉第  个物品后的最大价值表示考虑前个的背包，表示考虑后个的背包
+T2 P7300 [USACO21JAN] No Time to Paint S给定序列  ， 次询问  ，每个点有一种颜色，任选区间染色，较深颜色覆盖较浅颜色（字典序）
+，颜色仅由小写字母构成
+对于这种中间空着的，就维护前后缀， 很多预处理
+显然，深色不影响浅色，浅色影响深色
+如果之前有某个颜...
                         
                     </div>
 
