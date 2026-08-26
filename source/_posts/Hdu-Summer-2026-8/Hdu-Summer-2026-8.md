@@ -3,6 +3,7 @@ title: Hdu-Summer-2026-8
 date: 2026-08-15 22:37:07
 tags:
 - 树形 Dp
+mathjax: true
 ---
 
 

@@ -5,6 +5,7 @@ tags:
 - 线性Dp
 - 数学
 - 思维
+mathjax: true
 ---
 
 
@@ -63,4 +64,3 @@ while(a[v])
     	}
 }
 ```
-

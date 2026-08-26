@@ -5,6 +5,7 @@ tags:
 - 计算几何
 - 凸包
 - 线性 Dp
+mathjax: true
 ---
 
 
@@ -148,4 +149,3 @@ void solve()
     fw(ans),nl;
 }
 ```
-

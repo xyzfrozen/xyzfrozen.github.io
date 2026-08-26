@@ -5,6 +5,7 @@ tags:
 - 数学
 - 莫队
 - 分块
+mathjax: true
 ---
 
 

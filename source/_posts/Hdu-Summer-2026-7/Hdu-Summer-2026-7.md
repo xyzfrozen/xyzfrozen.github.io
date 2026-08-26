@@ -5,6 +5,7 @@ tags:
 - 线性 Dp
 - Hash
 - 树同构
+mathjax: true
 ---
 
 

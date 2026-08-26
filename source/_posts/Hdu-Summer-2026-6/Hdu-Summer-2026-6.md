@@ -2,6 +2,7 @@
 title: Hdu-Summer-2026-6
 date: 2026-08-08 16:26:10
 tags:
+mathjax: true
 ---
 
 

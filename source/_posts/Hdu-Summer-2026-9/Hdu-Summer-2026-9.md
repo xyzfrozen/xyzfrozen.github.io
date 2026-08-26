@@ -5,6 +5,7 @@ tags:
 - 构造
 - 笛卡尔树
 - kmp
+mathjax: true
 ---
 
 
